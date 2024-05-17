@@ -5,13 +5,91 @@ date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
-url: https://bookdown.org/yihui/bookdown
+url: https://ashanjayamal.github.io/ConformalMapping/
 description: |
   This is personal files for studing complex Confromal mapping
 link-citations: yes
 github-repo: rstudio/bookdown-demo
 ---
 
-# THE CONVERGENCE OF SEQUENCES OF ANALYTIC AND HARMONIC FUNCTIONS 
+# The Convergence Of Sequences of Analytic And Harmonic Functions
 
 ## The convergence of sequences of analytic functions 
+
+Various branches of complex variable function theory, especially the geometric function theory, utilize the fundamental characteristics of converging sequences of analytic functions in their proofs. These characteristics allow for proofs that are relatively straightforward and refined compared to corresponding proofs in real analysis.
+
+Let us give some definitions.
+
+```{definition,name='Point wise convergent'}
+Let $\{f_n (z)\}$, for $n = 1, 2, \ldots$, denote a sequence of single-valued functions defined on a set $E$ of points in the $z$-plane. 
+This sequence is said to **converge at a point $z_0 \in E$** if the sequence of numbers $f_n (z_0)$ converges.
+```
+
+```{definition}
+ A sequence of such functions $f_n (z)$ is said to **converge on $E$** if it converges at every point of $E$. 
+
+In such a case, we may speak of the limit function $f(z) = \lim_{n\to\infty} f_n (z)$ defined on $E$.
+```
+
+```{definition}
+ The sequence ${f_n (z)}$ is said to **converge uniformly on $E$** to a function $f(z)$, which is finite on $E$, if, 
+
+\[\forall \epsilon > 0 \exists N > 0 , \forall z \in E \text{ such that } n > N \implies |f_n (z) - f(z)| < \epsilon \]. 
+
+```{definition}
+On the other hand, if $f(z) = \infty$ on $E$, the sequence $f_n (z)$ is said, by definition, to **converge uniformly on $E$ to $\infty$** if, 
+\[\forall M > 0 \exists N > 0,  \forall z \in E \text{ such that } n > N \implies |f_n (z)| > M\].
+```
+
+
+```{definition}
+The sequence $\{f_n(z)\}$ is a **uniform Cauchy sequence in $E$**, if, 
+\[\forall \epsilon > 0 \exists N > 0 \text{ such that } \forall z \in D, m, n > N \implies |f_n(z) - f_m(z)| < \epsilon\].
+
+```{proposition}
+Suppose that $E \subseteq \mathbb{C}$ is a region. A sequence of complex valued functions $\{f_n(z)\}$ converges uniformly in $E$ if and only if it is a uniform Cauchy sequence in $E$.
+```
+
+```{proof}
+easy 
+
+Later I will do it.
+```
+
+If the functions $f_n (z)$ are defined on a domain $B$, we shall need, besides the concept of uniform convergence of a sequence in the domain $B$, the concept of uniform convergence of a sequence in the interior of the domain $B$.
+
+```{definition}
+Let functions $f_n (z)$ be defined on a domain $B$. Then $f_n(z)$ is called **uniform convergent in the interior of the domain $B$** if there is uniform convergence of $|f_n (z)|$ on every closed set $E \subseteq B$.
+
+```
+
+```{remark}
+Uniform convergence in the interior of $B$ is a weaker requirement than uniform convergence in $B$.
+```   
+
+```{definition}
+A single-valued function $f(z)$, defined and finite on a set $E$ not including $\infty$, is said to be **continuous on $E$** if, 
+\[\forall z_0 \in E \forall a\epsilon > 0, \exists \delta > 0 \text { such that } z \in E \text{ and } |z - z_0| < \delta \implies |f(z) - f(z_0)| < \epsilon\].
+
+```
+
+```{theorem}
+\textbf{Statement:} If a sequence $f_n (z)$ of functions that are continuous on a set $E$ converges uniformly to a finite function $f(z)$ defined on $E$, this function $f(z)$ is also continuous on $E$.
+```
+
+
+```{proof} 
+To see this, let $z_0 \in E$. Then, since $f_n(z)$ is unifromaly continous, for given $\epsilon > 0$, there exists a number $n$ such that, for all $z \in E$, we have $|f_n (z) - f(z)| < \frac{\epsilon}{3}$. 
+
+Furthermore, since $f_n(z)$ is continuous, there exists a number $\delta > 0$ such that, for all $z \in E$ satisfying the inequality $|z - z_0| < \delta$, we have $|f_n (z) - f_n (z_0)| < \frac{\epsilon}{3}$ (because of the continuity of $f_n (z)$ on $E$). Therefore, for $z \in E$ and $|z - z_0| < \delta$, we have 
+
+$$
+|f(z)-f(z_0)| \leq |f(z)- f_n (z)| + |f_n (z) - f_n (z_0)| + |f_n (z_0) -f(z_0)| < \epsilon,
+$$
+
+which means that $f(z)$ is continuous at the point $z_0 \in E$. It then follows that, if the functions $f_n (z)$ are continuous in the domain $B$ and if a sequence of them converges in the interior of $B$ to a finite function $f(z)$, then $f(z)$ is continuous in $B$.
+```
+
+
+
+

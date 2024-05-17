@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Uniformization by square domains | Conformal Mapping</title>
+  <meta name="description" content="This is personal files for studing complex Confromal mapping" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Uniformization by square domains | Conformal Mapping" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is personal files for studing complex Confromal mapping" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Uniformization by square domains | Conformal Mapping" />
+  
+  <meta name="twitter:description" content="This is personal files for studing complex Confromal mapping" />
+  
+
+<meta name="author" content="Ashan J" />
+
+
+<meta name="date" content="2024-05-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="conformal-mappings.html"/>
+<link rel="next" href="riemann-mapping-theorem.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Conformal Mapping</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> The Convergence Of Sequences of Analytic And Harmonic Functions</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#the-convergence-of-sequences-of-analytic-functions"><i class="fa fa-check"></i><b>1.1</b> The convergence of sequences of analytic functions</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="univalent-mapping-of-multiply-connected-domains.html"><a href="univalent-mapping-of-multiply-connected-domains.html"><i class="fa fa-check"></i><b>2</b> UNIVALENT MAPPING OF MULTIPLY CONNECTED DOMAINS</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="univalent-mapping-of-multiply-connected-domains.html"><a href="univalent-mapping-of-multiply-connected-domains.html#univalent-conformal-mapping-of-a-doubly-connected-domain-onto-an-annulus"><i class="fa fa-check"></i><b>2.1</b> Univalent conformal mapping of a doubly connected domain onto an annulus</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="univalent-mapping-of-multiply-connected-domains.html"><a href="univalent-mapping-of-multiply-connected-domains.html#page-206"><i class="fa fa-check"></i><b>2.1.1</b> page 206</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="conformal-mappings.html"><a href="conformal-mappings.html"><i class="fa fa-check"></i><b>3</b> Conformal Mappings</a></li>
+<li class="chapter" data-level="4" data-path="uniformization-by-square-domains.html"><a href="uniformization-by-square-domains.html"><i class="fa fa-check"></i><b>4</b> Uniformization by square domains</a></li>
+<li class="chapter" data-level="5" data-path="riemann-mapping-theorem.html"><a href="riemann-mapping-theorem.html"><i class="fa fa-check"></i><b>5</b> Riemann Mapping Theorem</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="riemann-mapping-theorem.html"><a href="riemann-mapping-theorem.html#hyperbolic-geomeery"><i class="fa fa-check"></i><b>5.1</b> Hyperbolic Geomeery</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Conformal Mapping</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="uniformization-by-square-domains" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Uniformization by square domains<a href="uniformization-by-square-domains.html#uniformization-by-square-domains" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="definition">
+<p><span id="def:unnamed-chunk-19" class="definition"><strong>Definition 4.1  (Domain) </strong></span>A subset <span class="math inline">\(D\)</span> of the complex plane is a domain if <span class="math inline">\(D\)</span> is open and if any two points of <span class="math inline">\(D\)</span> can be connected by a broken line segment in <span class="math inline">\(D\)</span>.</p>
+</div>
+<p><img src="figures/Mario_Bonk/fig1.png" /><!-- --></p>
+<div class="example">
+<p><span id="exm:unnamed-chunk-21" class="example"><strong>Example 4.1  </strong></span></p>
+<ul>
+<li><strong>Examples</strong>:
+<ul>
+<li>Open half planes</li>
+<li>Open disks</li>
+<li>Open sectors</li>
+<li>Open annuli,</li>
+<li>Open punctured disks.</li>
+</ul></li>
+<li><strong>Non Examples</strong>:
+<ul>
+<li>Union of the open upper and lower half-planes <span class="math inline">\(=U = \mathbb{C}\setminus\mathbb{R}\)</span>.<br />
+(It is impossible to connect a point in the upper half-plane to a point in the lower half-plane by a broken line segment that does not cross the real line. )</li>
+</ul></li>
+</ul>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-22" class="definition"><strong>Definition 4.2  (Riemann Sphere) </strong></span>The Riemann sphere, also called the extended complex plane consist of the complex numbers <span class="math inline">\(\mathbb{C}\)</span> together with <span class="math inline">\(\infty\)</span>. The set of extended complex numbers may be written as <span class="math inline">\(\mathbb{C} \cup \{\infty\}\)</span>.</p>
+</div>
+<p><strong>Notation</strong>: <span class="math inline">\(\hat{\mathbb{C}}=\mathbb{C} \cup \{\infty\}\)</span></p>
+<p><img src="figures/Mario_Bonk/fig2.png" height="50%" style="display: block; margin: auto;" /></p>
+<div class="definition">
+<p><span id="def:unnamed-chunk-24" class="definition"><strong>Definition 4.3  </strong></span>A domain in the plane is “simply connected” if it has no “holes.”</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-25" class="example"><strong>Example 4.2  </strong></span></p>
+<ul>
+<li><strong>Example</strong>
+<ul>
+<li>Disks</li>
+<li>Rectangles</li>
+</ul></li>
+<li>*<strong>Non Example</strong>
+<ul>
+<li>Annuli</li>
+<li>Punctured disks</li>
+<li>Punctured plane<br />
+(Becasue they have “holes”)</li>
+</ul></li>
+</ul>
+</div>
+<p>Later we discuss this more precise</p>
+<div class="definition">
+<p><span id="def:unnamed-chunk-26" class="definition"><strong>Definition 4.4  (Meromophic) </strong></span>A function <span class="math inline">\(f(z)\)</span> is meromorphic on a domain <span class="math inline">\(D\)</span> if <span class="math inline">\(f(z)\)</span> is analytic on <span class="math inline">\(D\)</span> except possibly at isolated singularities, each of which is a pole.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-5" class="proof"><em>Proof</em>. </span>(Proof of Therom 1.1 in th paper)<br />
+Let <span class="math inline">\(\Omega\)</span> be a finitely connected domain in <span class="math inline">\(\hat{\mathbb{C}}\)</span> with <span class="math inline">\(\infty\in \Omega\)</span> It is a known fact that there exists a conformal map <span class="math inline">\(g\)</span> of <span class="math inline">\(\Omega\)</span> onto a square domain <span class="math inline">\(\tilde{\Omega}\)</span> with the normalization
+<span class="math display">\[g(z) = z + \frac{b_1}{z} + \ldots\]</span>
+near <span class="math inline">\(\infty\)</span>.</p>
+<p>The map <span class="math inline">\(f \in \mathcal{F} \mapsto \tilde{f} := f \circ g^{-1}\)</span> is a bijection between <span class="math inline">\(\mathcal{F}\)</span> and <span class="math inline">\(\tilde{\mathcal{F}}\)</span>. Moreover, if
+<span class="math display">\[f(z) = z + \frac{a_1}{z} + \ldots ~\text{ and } \tilde{f}(z) = z + \frac{\tilde{a_1}}{z} + \ldots\]</span> near <span class="math inline">\(\infty\)</span>, then <span class="math inline">\(\tilde{a}_1 = a_1 - b_1\)</span>.</p>
+</div>
+<p>Let <span class="math inline">\(f\)</span> be as in the statement. We consider the rectangle <span class="math inline">\(R = [-l,l] \times [-r,r] \subset \mathbb{C}\)</span> for large <span class="math inline">\(r &gt; 0\)</span>. Here we chose <span class="math inline">\(l= = r^{2/3}\)</span> so that
+<span class="math display">\[ \frac{l}{r} \to  0 \quad \text{and} \quad \frac{r}{l^2} \to 0\]</span>
+as <span class="math inline">\(r \to \infty\)</span>.</p>
+<p>In the following, we assume that <span class="math inline">\(r\)</span> is so large that <span class="math inline">\(\widetilde{C}\setminus \Omega\)</span> is contained in the interior of <span class="math inline">\(R\)</span>. Then <span class="math inline">\(\partial R \subset \widetilde{C}\setminus \Omega\)</span> and <span class="math inline">\(j=f(R)\)</span> is a Jordan curve in <span class="math inline">\(\mathbb{C}\)</span>. We want to</p>
+<p><span class="math display">\[\begin{eqnarray}
+A &amp;=&amp; \frac{1}{2i} \int_J \bar{w} dw\\
+&amp;=&amp; \frac{1}{2i} \int_{\partial R} \bar{f(z)}f&#39;(z) dz\\
+&amp;=&amp; \frac{1}{2i} \int_{\partial R} \overline{\left(z + \frac{a_1}{z} + \ldots \right)} \left(1 - \frac{a_1}{z^2} + \ldots \right) dz\\
+&amp;=&amp; \frac{1}{2i} \int_{\partial R} \left(\bar{z} + \frac{\bar{a}_1}{\overline{z}}-\frac{\bar{a}_1\bar{z}}{z^2} + O\left(\frac{1}{|z|^2}\right)\right) dz\\
+&amp;=&amp; 4rl + \int_{\partial R} \text{Im} \left(\frac{\bar{a}_1 z}{\bar{z}}\right) \frac{dz}{z} + o(1).
+\end{eqnarray}\]</span></p>
+<p>Sure, I can provide a proof for the proposition. Here it goes:</p>
+<p><strong>Proposition</strong>: If a set <span class="math inline">\(A\)</span> is a subset of the interior of another set <span class="math inline">\(B\)</span> (denoted as <span class="math inline">\(A \subseteq Int(B)\)</span>), then the complement of <span class="math inline">\(A\)</span> (denoted as <span class="math inline">\(A^c\)</span>) is a subset of the boundary of <span class="math inline">\(B\)</span> (denoted as <span class="math inline">\(bd(B)\)</span>).</p>
+<p><strong>Proof</strong>:</p>
+<p>Let’s denote the interior of <span class="math inline">\(B\)</span> as <span class="math inline">\(Int(B)\)</span> and the boundary of <span class="math inline">\(B\)</span> as <span class="math inline">\(bd(B)\)</span>. By definition, we have:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(Int(B) = B - bd(B)\)</span></li>
+<li><span class="math inline">\(A^c = U - A\)</span> where <span class="math inline">\(U\)</span> is the universal set.</li>
+</ol>
+<p>Given that <span class="math inline">\(A \subseteq Int(B)\)</span>, we can say that <span class="math inline">\(A\)</span> does not contain any points from <span class="math inline">\(bd(B)\)</span>. Therefore, all points in <span class="math inline">\(bd(B)\)</span> must be in <span class="math inline">\(A^c\)</span>.</p>
+<p>Hence, <span class="math inline">\(A^c \subseteq bd(B)\)</span>.</p>
+<p>This completes the proof. Please note that this is a general proof and the specifics might vary depending on the exact definitions and properties of the sets and the topological space they are in. If you have a specific example or further questions, feel free to ask!</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="conformal-mappings.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="riemann-mapping-theorem.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/03-Mario_Bonk.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

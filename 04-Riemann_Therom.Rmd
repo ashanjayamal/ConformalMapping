@@ -1,0 +1,39 @@
+# Riemann Mapping Theorem
+```{theorem,name='Riemann Mapping Theorem'}
+If $D$ is a simply connected domain in the complex plane, and $D$ is not the entire complex plane, then there is a conformal map of $D$ onto the open unit disk $\mathbb{D}$.
+```
+
+## Hyperbolic Geomeery
+Suppose $w = f(z)$ is a conformal self-map of the open unit disk $\mathbb{D}$. From Pick's lemma we then have equality, 
+$$\left|\frac{d\omega}{dz}\right|=\frac{1-|\omega|^2}{1-|z|^2}$$
+In differential form this becomes 
+$$\frac{|dw|}{1-|w|^2} = \frac{|dz|}{1-|z|^2},$$
+which means that if $\gamma$ is any smooth curve in $\mathbb{D}$, and $\omega=f(z)$ is a conformal self-map of $\mathbb{D}$, then 
+$$\int_{f\circ \gamma}\frac{|dw|}{1-|w|^2} =\int_{\gamma} \frac{|dz|}{1-|z|^2}.$$
+Thus to obtain a length function that is invariant under conformal self-maps of $\mathbb{D}$,we are led to make the following definition. We define the 
+length of $\gamma$ in the hyperbolic metric by 
+\[\text{hyperbolic length of } \gamma = =\int_{\gamma} \frac{|dz|}{1-|z|^2}\] 
+## Proof of Riemann Mapping Theorem
+Recall the following theorem.
+
+```{theorem,label='thm1'}
+The following properties are equivalent, for a domain $D$ in the complex plane:
+
+i. $D$ is simply connected, 
+ii. every closed differential on $D$ is exact, 
+iii. for each $z_0 \in \mathbb{C} \setminus D$, there is an analytic branch of $\log(z - z_0)$ defined 
+on $D$, 
+iv. each closed curve $\gamma$ in $D$ has winding number $W(\gamma, z_0) = 0$ about all points $z_0 \in \mathbb{C} \setminus D$, 
+(v) the complement of $D$ in the extended complex plane $\hat{\mathbb{C}}$ is connected.
+```
+Suppose that $D$ is simply connected and that $D \neq \mathbb{C}$. Choose $a \in \mathbb{C} \setminus D$. By the characterization of simple connectivity,
+By theorem \@ref(thm:thm1), there is an analytic branch $g(z)$ of $\log(z - a)$ in $D$. 
+Then,
+$$h(z) = e^{g(z)/2}=e^{\left(\frac{log(z-a)}{2}\right)}=(z-a)^{\frac{1}{2}}=\sqrt{z-a}$$
+So, $h(z) = e^{g(z)/2}$ is an analytic branch of $\sqrt{z - a}$ in $D$, and $(h(z))^2 = z - a \neq 0$ (Since $a\not\in D$) in $D$. If $h(z_1) = h(z_2)$, then $$z_1 = (h(z_1))^2 + a = (h(z_2))^2 + a = z_2$$. 
+Thus $h(z)$ is univalent, and $h(z)$ maps $D$ conformally onto $h(D)$. Finally, note that if $w_0 \in h(D)$, then $-w_0 \notin h(D)$. Indeed, if $w_0 = h(z_0)$ and $-w_0 = h(z_1)$ for $z_0, z_1 \in D$, then $z_0 = h(z_0)^2 + a = w_0^2 + a = h(z_1)^2 + a = z_1$, which is impossible. We summarize.
+
+```{lemma}
+Let $D$ be a simply connected domain. Suppose $a \notin D$, and let 
+$h(z)$ be an analytic branch of $\sqrt{z - a}$ in $D$. Then $h(z)$ is univalent on $D$, and further, $h(D)$ is disjoint from $-h(D)$.
+```
