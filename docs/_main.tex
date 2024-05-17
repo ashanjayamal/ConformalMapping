@@ -36,46 +36,6 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{#1}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -109,7 +69,7 @@
 \fi
 \usepackage[]{natbib}
 \bibliographystyle{plainnat}
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
@@ -120,7 +80,7 @@
 
 \title{Conformal Mapping}
 \author{Ashan J}
-\date{2024-04-24}
+\date{2024-05-18}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -146,211 +106,343 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-\hypertarget{section}{%
-\chapter{}\label{section}}
+\chapter{The Convergence Of Sequences of Analytic And Harmonic Functions}\label{the-convergence-of-sequences-of-analytic-and-harmonic-functions}
 
-\hypertarget{hello-bookdown}{%
-\chapter{Hello bookdown}\label{hello-bookdown}}
+\section{The convergence of sequences of analytic functions}\label{the-convergence-of-sequences-of-analytic-functions}
 
-All chapters start with a first-level heading followed by your chapter title, like the line above. There should be only one first-level heading (\texttt{\#}) per .Rmd file.
+Various branches of complex variable function theory, especially the geometric function theory, utilize the fundamental characteristics of converging sequences of analytic functions in their proofs. These characteristics allow for proofs that are relatively straightforward and refined compared to corresponding proofs in real analysis.
 
-\hypertarget{a-section}{%
-\section{A section}\label{a-section}}
+Let us give some definitions.
 
-All chapter sections start with a second-level (\texttt{\#\#}) or higher heading followed by your section title, like the sections above and below here. You can have as many as you want within a chapter.
+\begin{definition}[Point wise convergent]
+\protect\hypertarget{def:unnamed-chunk-1}{}\label{def:unnamed-chunk-1}Let \(\{f_n (z)\}\), for \(n = 1, 2, \ldots\), denote a sequence of single-valued functions defined on a set \(E\) of points in the \(z\)-plane.
+This sequence is said to \textbf{converge at a point \(z_0 \in E\)} if the sequence of numbers \(f_n (z_0)\) converges.
+\end{definition}
 
-\hypertarget{an-unnumbered-section}{%
-\subsection*{An unnumbered section}\label{an-unnumbered-section}}
-\addcontentsline{toc}{subsection}{An unnumbered section}
+\begin{definition}
+\protect\hypertarget{def:unnamed-chunk-2}{}\label{def:unnamed-chunk-2}A sequence of such functions \(f_n (z)\) is said to \textbf{converge on \(E\)} if it converges at every point of \(E\).
 
-Chapters and sections are numbered by default. To un-number a heading, add a \texttt{\{.unnumbered\}} or the shorter \texttt{\{-\}} at the end of the heading, like in this section.
+In such a case, we may speak of the limit function \(f(z) = \lim_{n\to\infty} f_n (z)\) defined on \(E\).
+\end{definition}
 
-\hypertarget{cross}{%
-\chapter{Cross-references}\label{cross}}
+\begin{definition}
+\protect\hypertarget{def:unnamed-chunk-3}{}\label{def:unnamed-chunk-3}The sequence \({f_n (z)}\) is said to \textbf{converge uniformly on \(E\)} to a function \(f(z)\), which is finite on \(E\), if,
 
-Cross-references make it easier for your readers to find and link to elements in your book.
+\[\forall \epsilon > 0 \exists N > 0 , \forall z \in E \text{ such that } n > N \implies |f_n (z) - f(z)| < \epsilon \].
+\end{definition}
 
-\hypertarget{chapters-and-sub-chapters}{%
-\section{Chapters and sub-chapters}\label{chapters-and-sub-chapters}}
+\begin{definition}
+\protect\hypertarget{def:unnamed-chunk-4}{}\label{def:unnamed-chunk-4}On the other hand, if \(f(z) = \infty\) on \(E\), the sequence \(f_n (z)\) is said, by definition, to \textbf{converge uniformly on \(E\) to \(\infty\)} if,
+\[\forall M > 0 \exists N > 0,  \forall z \in E \text{ such that } n > N \implies |f_n (z)| > M\].
+\end{definition}
 
-There are two steps to cross-reference any heading:
+\begin{definition}
+\protect\hypertarget{def:unnamed-chunk-5}{}\label{def:unnamed-chunk-5}The sequence \(\{f_n(z)\}\) is a \textbf{uniform Cauchy sequence in \(E\)}, if,
+\[\forall \epsilon > 0 \exists N > 0 \text{ such that } \forall z \in D, m, n > N \implies |f_n(z) - f_m(z)| < \epsilon\].
+\end{definition}
+
+\begin{proposition}
+\protect\hypertarget{prp:unnamed-chunk-6}{}\label{prp:unnamed-chunk-6}Suppose that \(E \subseteq \mathbb{C}\) is a region. A sequence of complex valued functions \(\{f_n(z)\}\) converges uniformly in \(E\) if and only if it is a uniform Cauchy sequence in \(E\).
+\end{proposition}
+
+\begin{proof}
+easy
+
+Later I will do it.
+\end{proof}
+
+If the functions \(f_n (z)\) are defined on a domain \(B\), we shall need, besides the concept of uniform convergence of a sequence in the domain \(B\), the concept of uniform convergence of a sequence in the interior of the domain \(B\).
+
+\begin{definition}
+\protect\hypertarget{def:unnamed-chunk-8}{}\label{def:unnamed-chunk-8}Let functions \(f_n (z)\) be defined on a domain \(B\). Then \(f_n(z)\) is called \textbf{uniform convergent in the interior of the domain \(B\)} if there is uniform convergence of \(|f_n (z)|\) on every closed set \(E \subseteq B\).
+\end{definition}
+
+\begin{remark}
+Uniform convergence in the interior of \(B\) is a weaker requirement than uniform convergence in \(B\).
+\end{remark}
+
+\begin{definition}
+\protect\hypertarget{def:unnamed-chunk-10}{}\label{def:unnamed-chunk-10}A single-valued function \(f(z)\), defined and finite on a set \(E\) not including \(\infty\), is said to be \textbf{continuous on \(E\)} if,
+\[\forall z_0 \in E \forall a\epsilon > 0, \exists \delta > 0 \text { such that } z \in E \text{ and } |z - z_0| < \delta \implies |f(z) - f(z_0)| < \epsilon\].
+\end{definition}
+
+\begin{theorem}
+\protect\hypertarget{thm:unnamed-chunk-11}{}\label{thm:unnamed-chunk-11}\textbf{Statement:} If a sequence \(f_n (z)\) of functions that are continuous on a set \(E\) converges uniformly to a finite function \(f(z)\) defined on \(E\), this function \(f(z)\) is also continuous on \(E\).
+\end{theorem}
+
+\begin{proof}
+To see this, let \(z_0 \in E\). Then, since \(f_n(z)\) is unifromaly continous, for given \(\epsilon > 0\), there exists a number \(n\) such that, for all \(z \in E\), we have \(|f_n (z) - f(z)| < \frac{\epsilon}{3}\).
+
+Furthermore, since \(f_n(z)\) is continuous, there exists a number \(\delta > 0\) such that, for all \(z \in E\) satisfying the inequality \(|z - z_0| < \delta\), we have \(|f_n (z) - f_n (z_0)| < \frac{\epsilon}{3}\) (because of the continuity of \(f_n (z)\) on \(E\)). Therefore, for \(z \in E\) and \(|z - z_0| < \delta\), we have
+
+\[
+|f(z)-f(z_0)| \leq |f(z)- f_n (z)| + |f_n (z) - f_n (z_0)| + |f_n (z_0) -f(z_0)| < \epsilon,
+\]
+
+which means that \(f(z)\) is continuous at the point \(z_0 \in E\). It then follows that, if the functions \(f_n (z)\) are continuous in the domain \(B\) and if a sequence of them converges in the interior of \(B\) to a finite function \(f(z)\), then \(f(z)\) is continuous in \(B\).
+\end{proof}
+
+\chapter{UNIVALENT MAPPING OF MULTIPLY CONNECTED DOMAINS}\label{univalent-mapping-of-multiply-connected-domains}
+
+\section{Univalent conformal mapping of a doubly connected domain onto an annulus}\label{univalent-conformal-mapping-of-a-doubly-connected-domain-onto-an-annulus}
+
+\subsection{page 206}\label{page-206}
+
+Let us now begin with the simplest case of the problem posed, namely, the
+case of doubly connected domains. Let us show that every doubly connected
+domain can be mapped univalently onto some circular annulus, whose boundary
+circles may degenerate to points.
+
+Let \(B\) denote a doubly connected domain in the \(z\)-plane.
+
+If it has an isolated boundary point \(z_0\), then, by adjoining it to the domain \(B\), we obtain a simply connected domain that we can then map univalently either onto the disk \(I (I < I)\) or onto the \((-\)plane with the point \((= \infty)\) excluded. We can do this in such a way that the point \(z = z_0\) is mapped into \((= 0)\). The domain \(B\) is thus univalently mapped either onto the annulus \(0 < |z| < I\) or onto the annulus \(0 < |z| < \infty\).
+
+Suppose now that the boundary of the domain \(B\) consists of two continua \(K_1\) and \(K_2\). One of these, let us say \(K_1\) is necessarily bounded. The complement of \(K_1\) in the \(z\)-plane is an open set consisting of two disjoint domains. One of these domains, let us say \(B_1\) contains the domain \(B\). The domain \(B_1\) is simply connected. Therefore, it can be mapped conformally onto the disk \(|z'| < I\). Under this mapping, the continuum \(K_2\) is mapped into a continuum \(K\) contained in \(|z' | < I\), and the domain \(B\) is mapped into a domain \(B'\).
+
+Let us now map whichever of the simply connected domains complementary to \(K\) contains \(B'\) onto the domain \(|z''| > I\) in such a way that \(z' = \infty\) is mapped into \(z'' = \infty\). Under this mapping, the circle \(|z'| = I\) is mapped into an analytic Jordan curve contained in the domain \(|z''| > I\) and the domain \(B'\) is mapped into a doubly connected domain \(B''\) that does not include \(\infty\) and that is bounded by this curve and by the circle \(|z''| = I\).
+
+The composite of these two mappings constitutes a univalent mapping of the domain \(B\) onto the domain \(B''\). Furthermore, on the basis of \(\S 3\) of Chapter II, we conclude that this mapping sets up a one-to-one correspondence between the prime ends of the domain \(B\) and the boundary points of the domain \(B''\). Here, just as in \(\S 3\) of Chapter II, by the prime end of the domain \(B\) that corresponds to the point \(z\) on the boundary of the domain \(B''\), we mean the set of all cluster points of all sequences of points of the domain \(B\) that approach the boundary point \(z\).
+
+\chapter{Conformal Mappings}\label{conformal-mappings}
+
+\begin{definition}[Tanagent Vector]
+\protect\hypertarget{def:unnamed-chunk-13}{}\label{def:unnamed-chunk-13}Let \(\gamma(t) = x(t) + iy(t), 0\leq  t \leq  1\), be a smooth parameterized curve terminating at \(z_0 = \gamma(0)\). We refer to
+\[\gamma'(0) = \lim_{t \to 0} \frac{\gamma(t)-\gamma(0)}{t} = x'(0) + iy'(0)\]
+as the tangent vector to the curve 'Y at ZOo
+\end{definition}
+
+\begin{definition}[Angle between two curves ]
+\protect\hypertarget{def:unnamed-chunk-14}{}\label{def:unnamed-chunk-14}We define the angle between two curves
+at \(z_0\) to be the angle between their tangent vectors at \(z_O\).
+\end{definition}
+
+\includegraphics{figures/Confromal_mapping/fig1.png}
+
+\begin{theorem}
+\protect\hypertarget{thm:unnamed-chunk-16}{}\label{thm:unnamed-chunk-16}If \(\gamma(t)\), \(0 \leq t \leq 1\), is a smooth parameterized curve terminating at \(z_0 = \gamma(0)\), and \(f(z)\) is analytic at \(z_0\), then the tangent to the curve \(f(\gamma(t))\) terminating at \(f(z_0)\) is given by:
+\begin{equation}
+(f \circ \gamma)'(0) = f'(z_0)\gamma'(0)
+\end{equation}
+\end{theorem}
+
+\includegraphics{figures/Confromal_mapping/fig2.png}
+
+\begin{proof}
+\leavevmode
+
+\begin{itemize}
+\tightlist
+\item
+  If \(\gamma'(0) \neq 0\), then \(\gamma(t) \neq \gamma(0)\) for \(t\) near \(0\), \(t \neq 0\), so we may write
+  \begin{equation}
+  \frac{f(\gamma(t)) - f(\gamma(0))}{t} = \frac{f(\gamma(t)) - f(\gamma(0))}{\gamma(t) - \gamma(0)} \cdot \frac{\gamma(t) - \gamma(0)}{t}
+  \end{equation}
+  and pass to the limit, to obtain the formula (6.1).
+\item
+  If \(\gamma'(0) = 0\), then proceeding as in Section 2, we obtain \((f \circ \gamma)'(0) = 0\), and again the formula holds.
+\end{itemize}
+
+\end{proof}
+
+\chapter{Uniformization by square domains}\label{uniformization-by-square-domains}
+
+\begin{definition}[Domain]
+\protect\hypertarget{def:unnamed-chunk-19}{}\label{def:unnamed-chunk-19}A subset \(D\) of the complex plane is a domain if \(D\) is open and if any two points of \(D\) can be connected by a broken line segment in \(D\).
+\end{definition}
+
+\includegraphics{figures/Mario_Bonk/fig1.png}
+
+\begin{example}
+\protect\hypertarget{exm:unnamed-chunk-21}{}\label{exm:unnamed-chunk-21}\leavevmode
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Examples}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Open half planes
+  \item
+    Open disks
+  \item
+    Open sectors
+  \item
+    Open annuli,
+  \item
+    Open punctured disks.
+  \end{itemize}
+\item
+  \textbf{Non Examples}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Union of the open upper and lower half-planes \(=U = \mathbb{C}\setminus\mathbb{R}\).\\
+    (It is impossible to connect a point in the upper half-plane to a point in the lower half-plane by a broken line segment that does not cross the real line. )
+  \end{itemize}
+\end{itemize}
+
+\end{example}
+
+\begin{definition}[Riemann Sphere]
+\protect\hypertarget{def:unnamed-chunk-22}{}\label{def:unnamed-chunk-22}The Riemann sphere, also called the extended complex plane consist of the complex numbers \(\mathbb{C}\) together with \(\infty\). The set of extended complex numbers may be written as \(\mathbb{C} \cup \{\infty\}\).
+\end{definition}
+
+\textbf{Notation}: \(\hat{\mathbb{C}}=\mathbb{C} \cup \{\infty\}\)
+
+\begin{center}\includegraphics[height=0.5\textheight]{figures/Mario_Bonk/fig2} \end{center}
+
+\begin{definition}
+\protect\hypertarget{def:unnamed-chunk-24}{}\label{def:unnamed-chunk-24}A domain in the plane is ``simply connected'' if it has no ``holes.''
+\end{definition}
+
+\begin{example}
+\protect\hypertarget{exm:unnamed-chunk-25}{}\label{exm:unnamed-chunk-25}\leavevmode
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Example}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Disks
+  \item
+    Rectangles
+  \end{itemize}
+\item
+  *\textbf{Non Example}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Annuli
+  \item
+    Punctured disks
+  \item
+    Punctured plane\\
+    (Becasue they have ``holes'')
+  \end{itemize}
+\end{itemize}
+
+\end{example}
+
+Later we discuss this more precise
+
+\begin{definition}[Meromophic]
+\protect\hypertarget{def:unnamed-chunk-26}{}\label{def:unnamed-chunk-26}A function \(f(z)\) is meromorphic on a domain \(D\) if \(f(z)\) is analytic on \(D\) except possibly at isolated singularities, each of which is a pole.
+\end{definition}
+
+\begin{proof}
+(Proof of Therom 1.1 in th paper)\\
+Let \(\Omega\) be a finitely connected domain in \(\hat{\mathbb{C}}\) with \(\infty\in \Omega\) It is a known fact that there exists a conformal map \(g\) of \(\Omega\) onto a square domain \(\tilde{\Omega}\) with the normalization
+\[g(z) = z + \frac{b_1}{z} + \ldots\]
+near \(\infty\).
+
+The map \(f \in \mathcal{F} \mapsto \tilde{f} := f \circ g^{-1}\) is a bijection between \(\mathcal{F}\) and \(\tilde{\mathcal{F}}\). Moreover, if
+\[f(z) = z + \frac{a_1}{z} + \ldots ~\text{ and } \tilde{f}(z) = z + \frac{\tilde{a_1}}{z} + \ldots\] near \(\infty\), then \(\tilde{a}_1 = a_1 - b_1\).
+\end{proof}
+
+Let \(f\) be as in the statement. We consider the rectangle \(R = [-l,l] \times [-r,r] \subset \mathbb{C}\) for large \(r > 0\). Here we chose \(l= = r^{2/3}\) so that
+\[ \frac{l}{r} \to  0 \quad \text{and} \quad \frac{r}{l^2} \to 0\]
+as \(r \to \infty\).
+
+In the following, we assume that \(r\) is so large that \(\widetilde{C}\setminus \Omega\) is contained in the interior of \(R\). Then \(\partial R \subset \widetilde{C}\setminus \Omega\) and \(j=f(R)\) is a Jordan curve in \(\mathbb{C}\). We want to
+
+\begin{eqnarray}
+A &=& \frac{1}{2i} \int_J \bar{w} dw\\
+&=& \frac{1}{2i} \int_{\partial R} \bar{f(z)}f'(z) dz\\
+&=& \frac{1}{2i} \int_{\partial R} \overline{\left(z + \frac{a_1}{z} + \ldots \right)} \left(1 - \frac{a_1}{z^2} + \ldots \right) dz\\
+&=& \frac{1}{2i} \int_{\partial R} \left(\bar{z} + \frac{\bar{a}_1}{\overline{z}}-\frac{\bar{a}_1\bar{z}}{z^2} + O\left(\frac{1}{|z|^2}\right)\right) dz\\
+&=& 4rl + \int_{\partial R} \text{Im} \left(\frac{\bar{a}_1 z}{\bar{z}}\right) \frac{dz}{z} + o(1).
+\end{eqnarray}
+
+Sure, I can provide a proof for the proposition. Here it goes:
+
+\textbf{Proposition}: If a set \(A\) is a subset of the interior of another set \(B\) (denoted as \(A \subseteq Int(B)\)), then the complement of \(A\) (denoted as \(A^c\)) is a subset of the boundary of \(B\) (denoted as \(bd(B)\)).
+
+\textbf{Proof}:
+
+Let's denote the interior of \(B\) as \(Int(B)\) and the boundary of \(B\) as \(bd(B)\). By definition, we have:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Label the heading: \texttt{\#\ Hello\ world\ \{\#nice-label\}}.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Leave the label off if you like the automated heading generated based on your heading title: for example, \texttt{\#\ Hello\ world} = \texttt{\#\ Hello\ world\ \{\#hello-world\}}.
-  \item
-    To label an un-numbered heading, use: \texttt{\#\ Hello\ world\ \{-\#nice-label\}} or \texttt{\{\#\ Hello\ world\ .unnumbered\}}.
-  \end{itemize}
+  \(Int(B) = B - bd(B)\)
 \item
-  Next, reference the labeled heading anywhere in the text using \texttt{\textbackslash{}@ref(nice-label)}; for example, please see Chapter \ref{cross}.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    If you prefer text as the link instead of a numbered reference use: \protect\hyperlink{cross}{any text you want can go here}.
-  \end{itemize}
+  \(A^c = U - A\) where \(U\) is the universal set.
 \end{enumerate}
 
-\hypertarget{captioned-figures-and-tables}{%
-\section{Captioned figures and tables}\label{captioned-figures-and-tables}}
+Given that \(A \subseteq Int(B)\), we can say that \(A\) does not contain any points from \(bd(B)\). Therefore, all points in \(bd(B)\) must be in \(A^c\).
 
-Figures and tables \emph{with captions} can also be cross-referenced from elsewhere in your book using \texttt{\textbackslash{}@ref(fig:chunk-label)} and \texttt{\textbackslash{}@ref(tab:chunk-label)}, respectively.
+Hence, \(A^c \subseteq bd(B)\).
 
-See Figure \ref{fig:nice-fig}.
+This completes the proof. Please note that this is a general proof and the specifics might vary depending on the exact definitions and properties of the sets and the topological space they are in. If you have a specific example or further questions, feel free to ask!
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{par}\NormalTok{(}\AttributeTok{mar =} \FunctionTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, .}\DecValTok{1}\NormalTok{, .}\DecValTok{1}\NormalTok{))}
-\FunctionTok{plot}\NormalTok{(pressure, }\AttributeTok{type =} \StringTok{\textquotesingle{}b\textquotesingle{}}\NormalTok{, }\AttributeTok{pch =} \DecValTok{19}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
+\chapter{Riemann Mapping Theorem}\label{riemann-mapping-theorem}
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.8\linewidth]{_main_files/figure-latex/nice-fig-1} 
-
-}
-
-\caption{Here is a nice figure!}\label{fig:nice-fig}
-\end{figure}
-
-Don't miss Table \ref{tab:nice-tab}.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{kable}\NormalTok{(}
-  \FunctionTok{head}\NormalTok{(pressure, }\DecValTok{10}\NormalTok{), }\AttributeTok{caption =} \StringTok{\textquotesingle{}Here is a nice table!\textquotesingle{}}\NormalTok{,}
-  \AttributeTok{booktabs =} \ConstantTok{TRUE}
-\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{table}
-
-\caption{\label{tab:nice-tab}Here is a nice table!}
-\centering
-\begin{tabular}[t]{rr}
-\toprule
-temperature & pressure\\
-\midrule
-0 & 0.0002\\
-20 & 0.0012\\
-40 & 0.0060\\
-60 & 0.0300\\
-80 & 0.0900\\
-\addlinespace
-100 & 0.2700\\
-120 & 0.7500\\
-140 & 1.8500\\
-160 & 4.2000\\
-180 & 8.8000\\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\hypertarget{parts}{%
-\chapter{Parts}\label{parts}}
-
-You can add parts to organize one or more book chapters together. Parts can be inserted at the top of an .Rmd file, before the first-level chapter heading in that same file.
-
-Add a numbered part: \texttt{\#\ (PART)\ Act\ one\ \{-\}} (followed by \texttt{\#\ A\ chapter})
-
-Add an unnumbered part: \texttt{\#\ (PART\textbackslash{}*)\ Act\ one\ \{-\}} (followed by \texttt{\#\ A\ chapter})
-
-Add an appendix as a special kind of un-numbered part: \texttt{\#\ (APPENDIX)\ Other\ stuff\ \{-\}} (followed by \texttt{\#\ A\ chapter}). Chapters in an appendix are prepended with letters instead of numbers.
-
-\hypertarget{footnotes-and-citations}{%
-\chapter{Footnotes and citations}\label{footnotes-and-citations}}
-
-\hypertarget{footnotes}{%
-\section{Footnotes}\label{footnotes}}
-
-Footnotes are put inside the square brackets after a caret \texttt{\^{}{[}{]}}. Like this one \footnote{This is a footnote.}.
-
-\hypertarget{citations}{%
-\section{Citations}\label{citations}}
-
-Reference items in your bibliography file(s) using \texttt{@key}.
-
-For example, we are using the \textbf{bookdown} package \citep{R-bookdown} (check out the last code chunk in index.Rmd to see how this citation key was added) in this sample book, which was built on top of R Markdown and \textbf{knitr} \citep{xie2015} (this citation was added manually in an external file book.bib).
-Note that the \texttt{.bib} files need to be listed in the index.Rmd with the YAML \texttt{bibliography} key.
-
-The RStudio Visual Markdown Editor can also make it easier to insert citations: \url{https://rstudio.github.io/visual-markdown-editing/\#/citations}
-
-\hypertarget{blocks}{%
-\chapter{Blocks}\label{blocks}}
-
-\hypertarget{equations}{%
-\section{Equations}\label{equations}}
-
-Here is an equation.
-
-\begin{equation} 
-  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
-  \label{eq:binom}
-\end{equation}
-
-You may refer to using \texttt{\textbackslash{}@ref(eq:binom)}, like see Equation \eqref{eq:binom}.
-
-\hypertarget{theorems-and-proofs}{%
-\section{Theorems and proofs}\label{theorems-and-proofs}}
-
-Labeled theorems can be referenced in text using \texttt{\textbackslash{}@ref(thm:tri)}, for example, check out this smart theorem \ref{thm:tri}.
-
-\begin{theorem}
-\protect\hypertarget{thm:tri}{}\label{thm:tri}For a right triangle, if \(c\) denotes the \emph{length} of the hypotenuse
-and \(a\) and \(b\) denote the lengths of the \textbf{other} two sides, we have
-\[a^2 + b^2 = c^2\]
+\begin{theorem}[Riemann Mapping Theorem]
+\protect\hypertarget{thm:unnamed-chunk-28}{}\label{thm:unnamed-chunk-28}If \(D\) is a simply connected domain in the complex plane, and \(D\) is not the entire complex plane, then there is a conformal map of \(D\) onto the open unit disk \(\mathbb{D}\).
 \end{theorem}
 
-Read more here \url{https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html}.
+\section{Hyperbolic Geomeery}\label{hyperbolic-geomeery}
 
-\hypertarget{callout-blocks}{%
-\section{Callout blocks}\label{callout-blocks}}
+Suppose \(w = f(z)\) is a conformal self-map of the open unit disk \(\mathbb{D}\). From Pick's lemma we then have equality,
+\[\left|\frac{d\omega}{dz}\right|=\frac{1-|\omega|^2}{1-|z|^2}\]
+In differential form this becomes
+\[\frac{|dw|}{1-|w|^2} = \frac{|dz|}{1-|z|^2},\]
+which means that if \(\gamma\) is any smooth curve in \(\mathbb{D}\), and \(\omega=f(z)\) is a conformal self-map of \(\mathbb{D}\), then
+\[\int_{f\circ \gamma}\frac{|dw|}{1-|w|^2} =\int_{\gamma} \frac{|dz|}{1-|z|^2}.\]
+Thus to obtain a length function that is invariant under conformal self-maps of \(\mathbb{D}\),we are led to make the following definition. We define the
+length of \(\gamma\) in the hyperbolic metric by
+\[\text{hyperbolic length of } \gamma = =\int_{\gamma} \frac{|dz|}{1-|z|^2}\]
+\#\# Proof of Riemann Mapping Theorem
+Recall the following theorem.
 
-The R Markdown Cookbook provides more help on how to use custom blocks to design your own callouts: \url{https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html}
+\begin{theorem}
+\protect\hypertarget{thm:thm1}{}\label{thm:thm1}
 
-\hypertarget{sharing-your-book}{%
-\chapter{Sharing your book}\label{sharing-your-book}}
+The following properties are equivalent, for a domain \(D\) in the complex plane:
 
-\hypertarget{publishing}{%
-\section{Publishing}\label{publishing}}
+\begin{enumerate}
+\def\labelenumi{\roman{enumi}.}
+\tightlist
+\item
+  \(D\) is simply connected,
+\item
+  every closed differential on \(D\) is exact,
+\item
+  for each \(z_0 \in \mathbb{C} \setminus D\), there is an analytic branch of \(\log(z - z_0)\) defined
+  on \(D\),
+\item
+  each closed curve \(\gamma\) in \(D\) has winding number \(W(\gamma, z_0) = 0\) about all points \(z_0 \in \mathbb{C} \setminus D\),
+\end{enumerate}
 
-HTML books can be published online, see: \url{https://bookdown.org/yihui/bookdown/publishing.html}
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{21}
+\tightlist
+\item
+  the complement of \(D\) in the extended complex plane \(\hat{\mathbb{C}}\) is connected.
+\end{enumerate}
 
-\hypertarget{pages}{%
-\section{404 pages}\label{pages}}
+\end{theorem}
 
-By default, users will be directed to a 404 page if they try to access a webpage that cannot be found. If you'd like to customize your 404 page instead of using the default, you may add either a \texttt{\_404.Rmd} or \texttt{\_404.md} file to your project root and use code and/or Markdown syntax.
+Suppose that \(D\) is simply connected and that \(D \neq \mathbb{C}\). Choose \(a \in \mathbb{C} \setminus D\). By the characterization of simple connectivity,
+By theorem \ref{thm:thm1}, there is an analytic branch \(g(z)\) of \(\log(z - a)\) in \(D\).
+Then,
+\[h(z) = e^{g(z)/2}=e^{\left(\frac{log(z-a)}{2}\right)}=(z-a)^{\frac{1}{2}}=\sqrt{z-a}\]
+So, \(h(z) = e^{g(z)/2}\) is an analytic branch of \(\sqrt{z - a}\) in \(D\), and \((h(z))^2 = z - a \neq 0\) (Since \(a\not\in D\)) in \(D\). If \(h(z_1) = h(z_2)\), then \[z_1 = (h(z_1))^2 + a = (h(z_2))^2 + a = z_2\].
+Thus \(h(z)\) is univalent, and \(h(z)\) maps \(D\) conformally onto \(h(D)\). Finally, note that if \(w_0 \in h(D)\), then \(-w_0 \notin h(D)\). Indeed, if \(w_0 = h(z_0)\) and \(-w_0 = h(z_1)\) for \(z_0, z_1 \in D\), then \(z_0 = h(z_0)^2 + a = w_0^2 + a = h(z_1)^2 + a = z_1\), which is impossible. We summarize.
 
-\hypertarget{metadata-for-sharing}{%
-\section{Metadata for sharing}\label{metadata-for-sharing}}
-
-Bookdown HTML books will provide HTML metadata for social sharing on platforms like Twitter, Facebook, and LinkedIn, using information you provide in the \texttt{index.Rmd} YAML. To setup, set the \texttt{url} for your book and the path to your \texttt{cover-image} file. Your book's \texttt{title} and \texttt{description} are also used.
-
-This \texttt{gitbook} uses the same social sharing data across all chapters in your book- all links shared will look the same.
-
-Specify your book's source repository on GitHub using the \texttt{edit} key under the configuration options in the \texttt{\_output.yml} file, which allows users to suggest an edit by linking to a chapter's source file.
-
-Read more about the features of this output format here:
-
-\url{https://pkgs.rstudio.com/bookdown/reference/gitbook.html}
-
-Or use:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{?bookdown}\SpecialCharTok{::}\NormalTok{gitbook}
-\end{Highlighting}
-\end{Shaded}
-
+\begin{lemma}
+\protect\hypertarget{lem:unnamed-chunk-29}{}\label{lem:unnamed-chunk-29}Let \(D\) be a simply connected domain. Suppose \(a \notin D\), and let
+\(h(z)\) be an analytic branch of \(\sqrt{z - a}\) in \(D\). Then \(h(z)\) is univalent on \(D\), and further, \(h(D)\) is disjoint from \(-h(D)\).
+\end{lemma}
 
   \bibliography{book.bib,packages.bib}
 
