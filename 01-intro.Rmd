@@ -1,11 +1,20 @@
-# Hello bookdown 
+# UNIVALENT MAPPING OF MULTIPLY CONNECTED DOMAINS 
+## Univalent conformal mapping of a doubly connected domain onto an annulus
 
-All chapters start with a first-level heading followed by your chapter title, like the line above. There should be only one first-level heading (`#`) per .Rmd file.
+### page 206
 
-## A section
+Let us now begin with the simplest case of the problem posed, namely, the 
+case of doubly connected domains. Let us show that every doubly connected 
+domain can be mapped univalently onto some circular annulus, whose boundary 
+circles may degenerate to points. 
 
-All chapter sections start with a second-level (`##`) or higher heading followed by your section title, like the sections above and below here. You can have as many as you want within a chapter.
+Let $B$ denote a doubly connected domain in the $z$-plane. 
 
-### An unnumbered section {-}
+If it has an isolated boundary point $z_0$, then, by adjoining it to the domain $B$, we obtain a simply connected domain that we can then map univalently either onto the disk $I (I < I)$ or onto the $(-$plane with the point $(= \infty)$ excluded. We can do this in such a way that the point $z = z_0$ is mapped into $(= 0)$. The domain $B$ is thus univalently mapped either onto the annulus $0 < |z| < I$ or onto the annulus $0 < |z| < \infty$.
 
-Chapters and sections are numbered by default. To un-number a heading, add a `{.unnumbered}` or the shorter `{-}` at the end of the heading, like in this section.
+Suppose now that the boundary of the domain $B$ consists of two continua $K_1$ and $K_2$. One of these, let us say $K_1$ is necessarily bounded. The complement of $K_1$ in the $z$-plane is an open set consisting of two disjoint domains. One of these domains, let us say $B_1$ contains the domain $B$. The domain $B_1$ is simply connected. Therefore, it can be mapped conformally onto the disk $|z'| < I$. Under this mapping, the continuum $K_2$ is mapped into a continuum $K$ contained in $|z' | < I$, and the domain $B$ is mapped into a domain $B'$. 
+
+Let us now map whichever of the simply connected domains complementary to $K$ contains $B'$ onto the domain $|z''| > I$ in such a way that $z' = \infty$ is mapped into $z'' = \infty$. Under this mapping, the circle $|z'| = I$ is mapped into an analytic Jordan curve contained in the domain $|z''| > I$ and the domain $B'$ is mapped into a doubly connected domain $B''$ that does not include $\infty$ and that is bounded by this curve and by the circle $|z''| = I$. 
+
+The composite of these two mappings constitutes a univalent mapping of the domain $B$ onto the domain $B''$. Furthermore, on the basis of $\S 3$ of Chapter II, we conclude that this mapping sets up a one-to-one correspondence between the prime ends of the domain $B$ and the boundary points of the domain $B''$. Here, just as in $\S 3$ of Chapter II, by the prime end of the domain $B$ that corresponds to the point $z$ on the boundary of the domain $B''$, we mean the set of all cluster points of all sequences of points of the domain $B$ that approach the boundary point $z$.
+
