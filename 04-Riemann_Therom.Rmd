@@ -13,6 +13,10 @@ $$\int_{f\circ \gamma}\frac{|dw|}{1-|w|^2} =\int_{\gamma} \frac{|dz|}{1-|z|^2}.$
 Thus to obtain a length function that is invariant under conformal self-maps of $\mathbb{D}$,we are led to make the following definition. We define the 
 length of $\gamma$ in the hyperbolic metric by 
 \[\text{hyperbolic length of } \gamma = =\int_{\gamma} \frac{|dz|}{1-|z|^2}\] 
+
+
+
+
 ## Proof of Riemann Mapping Theorem
 Recall the following theorem.
 
@@ -26,6 +30,7 @@ on $D$,
 iv. each closed curve $\gamma$ in $D$ has winding number $W(\gamma, z_0) = 0$ about all points $z_0 \in \mathbb{C} \setminus D$, 
 (v) the complement of $D$ in the extended complex plane $\hat{\mathbb{C}}$ is connected.
 ```
+
 Suppose that $D$ is simply connected and that $D \neq \mathbb{C}$. Choose $a \in \mathbb{C} \setminus D$. By the characterization of simple connectivity,
 By theorem \@ref(thm:thm1), there is an analytic branch $g(z)$ of $\log(z - a)$ in $D$. 
 Then,
@@ -37,3 +42,8 @@ Thus $h(z)$ is univalent, and $h(z)$ maps $D$ conformally onto $h(D)$. Finally, 
 Let $D$ be a simply connected domain. Suppose $a \notin D$, and let 
 $h(z)$ be an analytic branch of $\sqrt{z - a}$ in $D$. Then $h(z)$ is univalent on $D$, and further, $h(D)$ is disjoint from $-h(D)$.
 ```
+
+```{proof}
+Done it earler.
+```
+
