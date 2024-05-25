@@ -10,6 +10,8 @@ description: |
   This is personal files for studing complex Confromal mapping
 link-citations: yes
 github-repo: rstudio/bookdown-demo
+includes:
+    in_header: header.html
 ---
 
 # The Convergence Of Sequences of Analytic And Harmonic Functions

@@ -10,9 +10,83 @@ In differential form this becomes
 $$\frac{|dw|}{1-|w|^2} = \frac{|dz|}{1-|z|^2},$$
 which means that if $\gamma$ is any smooth curve in $\mathbb{D}$, and $\omega=f(z)$ is a conformal self-map of $\mathbb{D}$, then 
 $$\int_{f\circ \gamma}\frac{|dw|}{1-|w|^2} =\int_{\gamma} \frac{|dz|}{1-|z|^2}.$$
-Thus to obtain a length function that is invariant under conformal self-maps of $\mathbb{D}$,we are led to make the following definition. We define the 
-length of $\gamma$ in the hyperbolic metric by 
-\[\text{hyperbolic length of } \gamma = =\int_{\gamma} \frac{|dz|}{1-|z|^2}\] 
+Thus to obtain a length function that is invariant under conformal self-maps of $\mathbb{D}$,we are led to make the following definition. 
+
+```{definition}
+We define the length of $\gamma$ in the hyperbolic metric by 
+\[\text{hyperbolic length of } \gamma =2\int_{\gamma} \frac{|dz|}{1-|z|^2}\] 
+```
+
+The factor 2 is a harmless factor, which is often omitted. (It adjusts the 
+metric so that its curvature is -1.)
+
+```{definition}
+The hyperbolic distance \(\rho(z_0, z_1)\) from \(z_0\) to \(z_1\) is defined as the infimum (greatest lower bound) of the hyperbolic lengths of all piecewise smooth curves in \(\mathbb{D}\) from \(z_0\) to \(z_1\).
+\[\rho(z_0, z_1)
+  =\inf_\gamma\left\{\text{hyperbolic length of } \gamma \right\}
+  =\inf_\gamma\left\{2\int_{\gamma} \frac{|dz|}{1-|z|^2}\right\}\]
+```
+
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Riemann_Mapping_Therom/fig1.png')
+```
+
+Since conformal self-maps of $\mathbb{D}$ preserve the hyperbolic lengths of curves, they also preserve hyperbolic distances. That is, for any conformal self-map $w = J(z)$ of $\mathbb{D}$,
+\[ \rho(f(z_0), f(z_1)) = \rho(z_0, z_1), \quad \text{where } z_0, z_1 \in \mathbb{D}. \]
+
+
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Riemann_Mapping_Therom/fig2.png')
+```
+
+```{theorem}
+For any two distinct points \(z_0, z_1\) in the open unit disk \(\mathbb{D}\), there exists a unique shortest curve in \(\mathbb{D}\) from \(z_0\) to \(z_1\) in the hyperbolic metric. Specifically, this curve corresponds to the arc of the circle passing through \(z_0\) and \(z_1\) that is orthogonal to the unit circle.
+```
+
+```{definition}
+The paths of shortest hyperbolic length between points are called **hyperbolic geodesics**.
+```
+- These hyperbolic geodesics play a role similar to that of straight lines in Euclidean geometry. They satisfy all the axioms of Euclidean geometry except for the parallel axiom (which states that through each point not on a given line, there passes a unique straight line through the point and parallel to the given line).
+
+
+
+```{r echo=FALSE}
+  knitr::include_graphics('figures/Riemann_Mapping_Therom/fig3.png')
+```
+
+```{proof}
+(proof of theorem), Let $w = f(z)$ be a conformal self-map of $\mathcal{D}$
+such that $f(z_o) = 0$.
+By multiplying by a unimodular constant, we can arrange that \(f(z_l) = r > 0\).  Since \(f(z)\) preserves hyperbolic lengths, and since \(fx(z)\) maps circles orthogonal to the unit circle onto circles orthogonal to the unit circle, it suffices to show that the straight line segment from 0 to \(r\) is a unique path of shortest hyperbolic length from 0 to \(r\).
+For this, let \(\gamma(t) = x(t) + iy(t)\), \(0 \leq t \leq 1\), be a piecewise smooth path in \(\mathbb{C}\) from 0 to \(r\).
+Then \(alpha(t) = \Re(\gamma(t)) = x(t)\) defines a path in \(\mathbb{D}\) from 0 to \(r\) along the real axis, and
+\[\int_\alpha \frac{|dz|}{1-|z|^2}=\int_0^1\frac{|dx(t)|}{1-(x(t))^2}\leq \int_0^1\frac{|dx(t)|}{1-(\gamma(t))^2}\leq \int_\gamma \frac{|dz|}{1-|z|^2}\]
+
+If \(y(t) \neq 0\) for some \(t\), then \(|\gamma(t)| > |x(t)|\), and the first inequality above is strict. In this case, the path \(a(t)\) on the real axis is strictly shorter than the path \(\gamma(t)\). Further, if \(a(t)\) is decreasing on some interval, we could reduce the integral by deleting a parameter interval over which \(a(t)\) starts and ends at the same value. We conclude that the integral is a minimum exactly when \(\gamma(t)\) is real and nondecreasing, in which case the path is the straight line segment from 0 to \(r\).
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -47,3 +121,15 @@ $h(z)$ be an analytic branch of $\sqrt{z - a}$ in $D$. Then $h(z)$ is univalent 
 Done it earler.
 ```
 
+
+
+###  Adlof Proof
+
+```{theorem,name='Riemann Mapping Theorem'}
+Given any simply connected region \(\Omega\) which is not the whole plane, and a point \(z_0\) in \(\Omega\), there exists a unique analytic function \(f(z)\) in \(\Omega\), normalized by the conditions \(f(z_0) = 0\), \(f'(z_0) > 0\), such that \(f(z)\) defines a one-to-one mapping of \(\Omega\) onto the disk \(|w| < 1\).
+```
+
+```{proof}
+- **Uniqueness**: 
+  
+```

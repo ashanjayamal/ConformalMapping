@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Conformal Mappings | Conformal Mapping</title>
+  <title>Chapter 6 Test heading | Conformal Mapping</title>
   <meta name="description" content="This is personal files for studing complex Confromal mapping" />
   <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Conformal Mappings | Conformal Mapping" />
+  <meta property="og:title" content="Chapter 6 Test heading | Conformal Mapping" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is personal files for studing complex Confromal mapping" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Conformal Mappings | Conformal Mapping" />
+  <meta name="twitter:title" content="Chapter 6 Test heading | Conformal Mapping" />
   
   <meta name="twitter:description" content="This is personal files for studing complex Confromal mapping" />
   
@@ -23,15 +23,15 @@
 <meta name="author" content="Ashan J" />
 
 
-<meta name="date" content="2024-05-25" />
+<meta name="date" content="2024-05-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="univalent-mapping-of-multiply-connected-domains.html"/>
-<link rel="next" href="uniformization-by-square-domains.html"/>
+<link rel="prev" href="riemann-mapping-theorem.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -92,9 +92,12 @@
 <li class="chapter" data-level="5" data-path="riemann-mapping-theorem.html"><a href="riemann-mapping-theorem.html"><i class="fa fa-check"></i><b>5</b> Riemann Mapping Theorem</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="riemann-mapping-theorem.html"><a href="riemann-mapping-theorem.html#hyperbolic-geomeery"><i class="fa fa-check"></i><b>5.1</b> Hyperbolic Geomeery</a></li>
-<li class="chapter" data-level="5.2" data-path="riemann-mapping-theorem.html"><a href="riemann-mapping-theorem.html#proof-of-riemann-mapping-theorem"><i class="fa fa-check"></i><b>5.2</b> Proof of Riemann Mapping Theorem</a>
+</ul></li>
+<li class="chapter" data-level="6" data-path="test-heading.html"><a href="test-heading.html"><i class="fa fa-check"></i><b>6</b> Test heading</a>
 <ul>
-<li class="chapter" data-level="5.2.1" data-path="riemann-mapping-theorem.html"><a href="riemann-mapping-theorem.html#adlof-proof"><i class="fa fa-check"></i><b>5.2.1</b> Adlof Proof</a></li>
+<li class="chapter" data-level="6.1" data-path="test-heading.html"><a href="test-heading.html#proof-of-riemann-mapping-theorem"><i class="fa fa-check"></i><b>6.1</b> Proof of Riemann Mapping Theorem</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="test-heading.html"><a href="test-heading.html#solution"><i class="fa fa-check"></i><b>6.1.1</b> Solution</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -117,45 +120,50 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="conformal-mappings" class="section level1 hasAnchor" number="3">
-<h1><span class="header-section-number">Chapter 3</span> Conformal Mappings<a href="conformal-mappings.html#conformal-mappings" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div class="definition">
-<p><span id="def:unnamed-chunk-13" class="definition"><strong>Definition 3.1  (Tanagent Vector) </strong></span>Let <span class="math inline">\(\gamma(t) = x(t) + iy(t), 0\leq  t \leq  1\)</span>, be a smooth parameterized curve terminating at <span class="math inline">\(z_0 = \gamma(0)\)</span>. We refer to
-<span class="math display">\[\gamma&#39;(0) = \lim_{t \to 0} \frac{\gamma(t)-\gamma(0)}{t} = x&#39;(0) + iy&#39;(0)\]</span>
-as the tangent vector to the curve ’Y at ZOo</p>
-</div>
-<div class="definition">
-<p><span id="def:unnamed-chunk-14" class="definition"><strong>Definition 3.2  (Angle between two curves ) </strong></span>We define the angle between two curves
-at <span class="math inline">\(z_0\)</span> to be the angle between their tangent vectors at <span class="math inline">\(z_O\)</span>.</p>
-</div>
-<p><img src="figures/Confromal_mapping/fig1.png" /><!-- --></p>
+<div id="test-heading" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Test heading<a href="test-heading.html#test-heading" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="proof-of-riemann-mapping-theorem" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Proof of Riemann Mapping Theorem<a href="test-heading.html#proof-of-riemann-mapping-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Recall the following theorem.</p>
 <div class="theorem">
-<p><span id="thm:unnamed-chunk-16" class="theorem"><strong>Theorem 3.1  </strong></span>If <span class="math inline">\(\gamma(t)\)</span>, <span class="math inline">\(0 \leq t \leq 1\)</span>, is a smooth parameterized curve terminating at <span class="math inline">\(z_0 = \gamma(0)\)</span>, and <span class="math inline">\(f(z)\)</span> is analytic at <span class="math inline">\(z_0\)</span>, then the tangent to the curve <span class="math inline">\(f(\gamma(t))\)</span> terminating at <span class="math inline">\(f(z_0)\)</span> is given by:
-<span class="math display">\[\begin{equation}
-(f \circ \gamma)&#39;(0) = f&#39;(z_0)\gamma&#39;(0)
-\end{equation}\]</span></p>
+<p><span id="thm:thm1" class="theorem"><strong>Theorem 6.1  </strong></span>The following properties are equivalent, for a domain <span class="math inline">\(D\)</span> in the complex plane:</p>
+<ol style="list-style-type: lower-roman">
+<li><span class="math inline">\(D\)</span> is simply connected,</li>
+<li>every closed differential on <span class="math inline">\(D\)</span> is exact,</li>
+<li>for each <span class="math inline">\(z_0 \in \mathbb{C} \setminus D\)</span>, there is an analytic branch of <span class="math inline">\(\log(z - z_0)\)</span> defined
+on <span class="math inline">\(D\)</span>,</li>
+<li>each closed curve <span class="math inline">\(\gamma\)</span> in <span class="math inline">\(D\)</span> has winding number <span class="math inline">\(W(\gamma, z_0) = 0\)</span> about all points <span class="math inline">\(z_0 \in \mathbb{C} \setminus D\)</span>,</li>
+</ol>
+<ol start="22" style="list-style-type: lower-alpha">
+<li>the complement of <span class="math inline">\(D\)</span> in the extended complex plane <span class="math inline">\(\hat{\mathbb{C}}\)</span> is connected.</li>
+</ol>
 </div>
-<p><img src="figures/Confromal_mapping/fig2.png" /><!-- --></p>
+<p>Suppose that <span class="math inline">\(D\)</span> is simply connected and that <span class="math inline">\(D \neq \mathbb{C}\)</span>. Choose <span class="math inline">\(a \in \mathbb{C} \setminus D\)</span>. By the characterization of simple connectivity,
+By theorem <a href="test-heading.html#thm:thm1">6.1</a>, there is an analytic branch <span class="math inline">\(g(z)\)</span> of <span class="math inline">\(\log(z - a)\)</span> in <span class="math inline">\(D\)</span>.
+Then,
+<span class="math display">\[h(z) = e^{g(z)/2}=e^{\left(\frac{log(z-a)}{2}\right)}=(z-a)^{\frac{1}{2}}=\sqrt{z-a}\]</span>
+So, <span class="math inline">\(h(z) = e^{g(z)/2}\)</span> is an analytic branch of <span class="math inline">\(\sqrt{z - a}\)</span> in <span class="math inline">\(D\)</span>, and <span class="math inline">\((h(z))^2 = z - a \neq 0\)</span> (Since <span class="math inline">\(a\not\in D\)</span>) in <span class="math inline">\(D\)</span>. If <span class="math inline">\(h(z_1) = h(z_2)\)</span>, then <span class="math display">\[z_1 = (h(z_1))^2 + a = (h(z_2))^2 + a = z_2\]</span>.
+Thus <span class="math inline">\(h(z)\)</span> is univalent, and <span class="math inline">\(h(z)\)</span> maps <span class="math inline">\(D\)</span> conformally onto <span class="math inline">\(h(D)\)</span>. Finally, note that if <span class="math inline">\(w_0 \in h(D)\)</span>, then <span class="math inline">\(-w_0 \notin h(D)\)</span>. Indeed, if <span class="math inline">\(w_0 = h(z_0)\)</span> and <span class="math inline">\(-w_0 = h(z_1)\)</span> for <span class="math inline">\(z_0, z_1 \in D\)</span>, then <span class="math inline">\(z_0 = h(z_0)^2 + a = w_0^2 + a = h(z_1)^2 + a = z_1\)</span>, which is impossible. We summarize.</p>
+<div class="lemma">
+<p><span id="lem:unnamed-chunk-10" class="lemma"><strong>Lemma 6.1  </strong></span>Let <span class="math inline">\(D\)</span> be a simply connected domain. Suppose <span class="math inline">\(a \notin D\)</span>, and let
+<span class="math inline">\(h(z)\)</span> be an analytic branch of <span class="math inline">\(\sqrt{z - a}\)</span> in <span class="math inline">\(D\)</span>. Then <span class="math inline">\(h(z)\)</span> is univalent on <span class="math inline">\(D\)</span>, and further, <span class="math inline">\(h(D)\)</span> is disjoint from <span class="math inline">\(-h(D)\)</span>.</p>
+</div>
 <div class="proof">
-<p><span id="unlabeled-div-4" class="proof"><em>Proof</em>. </span></p>
-<ul>
-<li>If <span class="math inline">\(\gamma&#39;(0) \neq 0\)</span>, then <span class="math inline">\(\gamma(t) \neq \gamma(0)\)</span> for <span class="math inline">\(t\)</span> near <span class="math inline">\(0\)</span>, <span class="math inline">\(t \neq 0\)</span>, so we may write
-<span class="math display">\[\begin{equation}
-\frac{f(\gamma(t)) - f(\gamma(0))}{t} = \frac{f(\gamma(t)) - f(\gamma(0))}{\gamma(t) - \gamma(0)} \cdot \frac{\gamma(t) - \gamma(0)}{t}
-\end{equation}\]</span>
-and pass to the limit, to obtain the formula (6.1).</li>
-<li>If <span class="math inline">\(\gamma&#39;(0) = 0\)</span>, then proceeding as in Section 2, we obtain <span class="math inline">\((f \circ \gamma)&#39;(0) = 0\)</span>, and again the formula holds.</li>
-</ul>
+<p><span id="unlabeled-div-2" class="proof"><em>Proof</em>. </span>Done it earler.</p>
 </div>
+<div id="solution" class="section level3 hasAnchor" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> Solution<a href="test-heading.html#solution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="univalent-mapping-of-multiply-connected-domains.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="uniformization-by-square-domains.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="riemann-mapping-theorem.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -186,7 +194,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-Conformal_Mappings.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/04-Riemann_Therom.Rmd",
 "text": "Edit"
 },
 "history": {

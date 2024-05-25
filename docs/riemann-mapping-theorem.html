@@ -23,7 +23,7 @@
 <meta name="author" content="Ashan J" />
 
 
-<meta name="date" content="2024-05-18" />
+<meta name="date" content="2024-05-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -92,6 +92,10 @@
 <li class="chapter" data-level="5" data-path="riemann-mapping-theorem.html"><a href="riemann-mapping-theorem.html"><i class="fa fa-check"></i><b>5</b> Riemann Mapping Theorem</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="riemann-mapping-theorem.html"><a href="riemann-mapping-theorem.html#hyperbolic-geomeery"><i class="fa fa-check"></i><b>5.1</b> Hyperbolic Geomeery</a></li>
+<li class="chapter" data-level="5.2" data-path="riemann-mapping-theorem.html"><a href="riemann-mapping-theorem.html#proof-of-riemann-mapping-theorem"><i class="fa fa-check"></i><b>5.2</b> Proof of Riemann Mapping Theorem</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="riemann-mapping-theorem.html"><a href="riemann-mapping-theorem.html#adlof-proof"><i class="fa fa-check"></i><b>5.2.1</b> Adlof Proof</a></li>
+</ul></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -126,13 +130,48 @@ In differential form this becomes
 <span class="math display">\[\frac{|dw|}{1-|w|^2} = \frac{|dz|}{1-|z|^2},\]</span>
 which means that if <span class="math inline">\(\gamma\)</span> is any smooth curve in <span class="math inline">\(\mathbb{D}\)</span>, and <span class="math inline">\(\omega=f(z)\)</span> is a conformal self-map of <span class="math inline">\(\mathbb{D}\)</span>, then
 <span class="math display">\[\int_{f\circ \gamma}\frac{|dw|}{1-|w|^2} =\int_{\gamma} \frac{|dz|}{1-|z|^2}.\]</span>
-Thus to obtain a length function that is invariant under conformal self-maps of <span class="math inline">\(\mathbb{D}\)</span>,we are led to make the following definition. We define the
-length of <span class="math inline">\(\gamma\)</span> in the hyperbolic metric by
-<span class="math display">\[\text{hyperbolic length of } \gamma = =\int_{\gamma} \frac{|dz|}{1-|z|^2}\]</span>
-## Proof of Riemann Mapping Theorem
-Recall the following theorem.</p>
+Thus to obtain a length function that is invariant under conformal self-maps of <span class="math inline">\(\mathbb{D}\)</span>,we are led to make the following definition.</p>
+<div class="definition">
+<p><span id="def:unnamed-chunk-29" class="definition"><strong>Definition 5.1  </strong></span>We define the length of <span class="math inline">\(\gamma\)</span> in the hyperbolic metric by
+<span class="math display">\[\text{hyperbolic length of } \gamma =2\int_{\gamma} \frac{|dz|}{1-|z|^2}\]</span></p>
+</div>
+<p>The factor 2 is a harmless factor, which is often omitted. (It adjusts the
+metric so that its curvature is -1.)</p>
+<div class="definition">
+<p><span id="def:unnamed-chunk-30" class="definition"><strong>Definition 5.2  </strong></span>The hyperbolic distance <span class="math inline">\(\rho(z_0, z_1)\)</span> from <span class="math inline">\(z_0\)</span> to <span class="math inline">\(z_1\)</span> is defined as the infimum (greatest lower bound) of the hyperbolic lengths of all piecewise smooth curves in <span class="math inline">\(\mathbb{D}\)</span> from <span class="math inline">\(z_0\)</span> to <span class="math inline">\(z_1\)</span>.
+<span class="math display">\[\rho(z_0, z_1)
+  =\inf_\gamma\left\{\text{hyperbolic length of } \gamma \right\}
+  =\inf_\gamma\left\{2\int_{\gamma} \frac{|dz|}{1-|z|^2}\right\}\]</span></p>
+</div>
+<p><img src="figures/Riemann_Mapping_Therom/fig1.png" /><!-- --></p>
+<p>Since conformal self-maps of <span class="math inline">\(\mathbb{D}\)</span> preserve the hyperbolic lengths of curves, they also preserve hyperbolic distances. That is, for any conformal self-map <span class="math inline">\(w = J(z)\)</span> of <span class="math inline">\(\mathbb{D}\)</span>,
+<span class="math display">\[ \rho(f(z_0), f(z_1)) = \rho(z_0, z_1), \quad \text{where } z_0, z_1 \in \mathbb{D}. \]</span></p>
+<p><img src="figures/Riemann_Mapping_Therom/fig2.png" /><!-- --></p>
 <div class="theorem">
-<p><span id="thm:thm1" class="theorem"><strong>Theorem 5.2  </strong></span>The following properties are equivalent, for a domain <span class="math inline">\(D\)</span> in the complex plane:</p>
+<p><span id="thm:unnamed-chunk-33" class="theorem"><strong>Theorem 5.2  </strong></span>For any two distinct points <span class="math inline">\(z_0, z_1\)</span> in the open unit disk <span class="math inline">\(\mathbb{D}\)</span>, there exists a unique shortest curve in <span class="math inline">\(\mathbb{D}\)</span> from <span class="math inline">\(z_0\)</span> to <span class="math inline">\(z_1\)</span> in the hyperbolic metric. Specifically, this curve corresponds to the arc of the circle passing through <span class="math inline">\(z_0\)</span> and <span class="math inline">\(z_1\)</span> that is orthogonal to the unit circle.</p>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-34" class="definition"><strong>Definition 5.3  </strong></span>The paths of shortest hyperbolic length between points are called <strong>hyperbolic geodesics</strong>.</p>
+</div>
+<ul>
+<li>These hyperbolic geodesics play a role similar to that of straight lines in Euclidean geometry. They satisfy all the axioms of Euclidean geometry except for the parallel axiom (which states that through each point not on a given line, there passes a unique straight line through the point and parallel to the given line).</li>
+</ul>
+<p><img src="figures/Riemann_Mapping_Therom/fig3.png" /><!-- --></p>
+<div class="proof">
+<p><span id="unlabeled-div-6" class="proof"><em>Proof</em>. </span>(proof of theorem), Let <span class="math inline">\(w = f(z)\)</span> be a conformal self-map of <span class="math inline">\(\mathcal{D}\)</span>
+such that <span class="math inline">\(f(z_o) = 0\)</span>.
+By multiplying by a unimodular constant, we can arrange that <span class="math inline">\(f(z_l) = r &gt; 0\)</span>. Since <span class="math inline">\(f(z)\)</span> preserves hyperbolic lengths, and since <span class="math inline">\(fx(z)\)</span> maps circles orthogonal to the unit circle onto circles orthogonal to the unit circle, it suffices to show that the straight line segment from 0 to <span class="math inline">\(r\)</span> is a unique path of shortest hyperbolic length from 0 to <span class="math inline">\(r\)</span>.
+For this, let <span class="math inline">\(\gamma(t) = x(t) + iy(t)\)</span>, <span class="math inline">\(0 \leq t \leq 1\)</span>, be a piecewise smooth path in <span class="math inline">\(\mathbb{C}\)</span> from 0 to <span class="math inline">\(r\)</span>.
+Then <span class="math inline">\(alpha(t) = \Re(\gamma(t)) = x(t)\)</span> defines a path in <span class="math inline">\(\mathbb{D}\)</span> from 0 to <span class="math inline">\(r\)</span> along the real axis, and
+<span class="math display">\[\int_\alpha \frac{|dz|}{1-|z|^2}=\int_0^1\frac{|dx(t)|}{1-(x(t))^2}\leq \int_0^1\frac{|dx(t)|}{1-(\gamma(t))^2}\leq \int_\gamma \frac{|dz|}{1-|z|^2}\]</span></p>
+<p>If <span class="math inline">\(y(t) \neq 0\)</span> for some <span class="math inline">\(t\)</span>, then <span class="math inline">\(|\gamma(t)| &gt; |x(t)|\)</span>, and the first inequality above is strict. In this case, the path <span class="math inline">\(a(t)\)</span> on the real axis is strictly shorter than the path <span class="math inline">\(\gamma(t)\)</span>. Further, if <span class="math inline">\(a(t)\)</span> is decreasing on some interval, we could reduce the integral by deleting a parameter interval over which <span class="math inline">\(a(t)\)</span> starts and ends at the same value. We conclude that the integral is a minimum exactly when <span class="math inline">\(\gamma(t)\)</span> is real and nondecreasing, in which case the path is the straight line segment from 0 to <span class="math inline">\(r\)</span>.</p>
+</div>
+</div>
+<div id="proof-of-riemann-mapping-theorem" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Proof of Riemann Mapping Theorem<a href="riemann-mapping-theorem.html#proof-of-riemann-mapping-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Recall the following theorem.</p>
+<div class="theorem">
+<p><span id="thm:thm1" class="theorem"><strong>Theorem 5.3  </strong></span>The following properties are equivalent, for a domain <span class="math inline">\(D\)</span> in the complex plane:</p>
 <ol style="list-style-type: lower-roman">
 <li><span class="math inline">\(D\)</span> is simply connected,</li>
 <li>every closed differential on <span class="math inline">\(D\)</span> is exact,</li>
@@ -145,16 +184,31 @@ on <span class="math inline">\(D\)</span>,</li>
 </ol>
 </div>
 <p>Suppose that <span class="math inline">\(D\)</span> is simply connected and that <span class="math inline">\(D \neq \mathbb{C}\)</span>. Choose <span class="math inline">\(a \in \mathbb{C} \setminus D\)</span>. By the characterization of simple connectivity,
-By theorem <a href="riemann-mapping-theorem.html#thm:thm1">5.2</a>, there is an analytic branch <span class="math inline">\(g(z)\)</span> of <span class="math inline">\(\log(z - a)\)</span> in <span class="math inline">\(D\)</span>.
+By theorem <a href="riemann-mapping-theorem.html#thm:thm1">5.3</a>, there is an analytic branch <span class="math inline">\(g(z)\)</span> of <span class="math inline">\(\log(z - a)\)</span> in <span class="math inline">\(D\)</span>.
 Then,
 <span class="math display">\[h(z) = e^{g(z)/2}=e^{\left(\frac{log(z-a)}{2}\right)}=(z-a)^{\frac{1}{2}}=\sqrt{z-a}\]</span>
 So, <span class="math inline">\(h(z) = e^{g(z)/2}\)</span> is an analytic branch of <span class="math inline">\(\sqrt{z - a}\)</span> in <span class="math inline">\(D\)</span>, and <span class="math inline">\((h(z))^2 = z - a \neq 0\)</span> (Since <span class="math inline">\(a\not\in D\)</span>) in <span class="math inline">\(D\)</span>. If <span class="math inline">\(h(z_1) = h(z_2)\)</span>, then <span class="math display">\[z_1 = (h(z_1))^2 + a = (h(z_2))^2 + a = z_2\]</span>.
 Thus <span class="math inline">\(h(z)\)</span> is univalent, and <span class="math inline">\(h(z)\)</span> maps <span class="math inline">\(D\)</span> conformally onto <span class="math inline">\(h(D)\)</span>. Finally, note that if <span class="math inline">\(w_0 \in h(D)\)</span>, then <span class="math inline">\(-w_0 \notin h(D)\)</span>. Indeed, if <span class="math inline">\(w_0 = h(z_0)\)</span> and <span class="math inline">\(-w_0 = h(z_1)\)</span> for <span class="math inline">\(z_0, z_1 \in D\)</span>, then <span class="math inline">\(z_0 = h(z_0)^2 + a = w_0^2 + a = h(z_1)^2 + a = z_1\)</span>, which is impossible. We summarize.</p>
 <div class="lemma">
-<p><span id="lem:unnamed-chunk-29" class="lemma"><strong>Lemma 5.1  </strong></span>Let <span class="math inline">\(D\)</span> be a simply connected domain. Suppose <span class="math inline">\(a \notin D\)</span>, and let
+<p><span id="lem:unnamed-chunk-37" class="lemma"><strong>Lemma 5.1  </strong></span>Let <span class="math inline">\(D\)</span> be a simply connected domain. Suppose <span class="math inline">\(a \notin D\)</span>, and let
 <span class="math inline">\(h(z)\)</span> be an analytic branch of <span class="math inline">\(\sqrt{z - a}\)</span> in <span class="math inline">\(D\)</span>. Then <span class="math inline">\(h(z)\)</span> is univalent on <span class="math inline">\(D\)</span>, and further, <span class="math inline">\(h(D)\)</span> is disjoint from <span class="math inline">\(-h(D)\)</span>.</p>
 </div>
+<div class="proof">
+<p><span id="unlabeled-div-7" class="proof"><em>Proof</em>. </span>Done it earler.</p>
+</div>
+<div id="adlof-proof" class="section level3 hasAnchor" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Adlof Proof<a href="riemann-mapping-theorem.html#adlof-proof" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-39" class="theorem"><strong>Theorem 5.4  (Riemann Mapping Theorem) </strong></span>Given any simply connected region <span class="math inline">\(\Omega\)</span> which is not the whole plane, and a point <span class="math inline">\(z_0\)</span> in <span class="math inline">\(\Omega\)</span>, there exists a unique analytic function <span class="math inline">\(f(z)\)</span> in <span class="math inline">\(\Omega\)</span>, normalized by the conditions <span class="math inline">\(f(z_0) = 0\)</span>, <span class="math inline">\(f&#39;(z_0) &gt; 0\)</span>, such that <span class="math inline">\(f(z)\)</span> defines a one-to-one mapping of <span class="math inline">\(\Omega\)</span> onto the disk <span class="math inline">\(|w| &lt; 1\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-8" class="proof"><em>Proof</em>. </span></p>
+<ul>
+<li><strong>Uniqueness</strong>:</li>
+</ul>
+</div>
 
+</div>
 </div>
 </div>
             </section>
