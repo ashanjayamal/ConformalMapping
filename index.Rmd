@@ -9,6 +9,7 @@ url: https://ashanjayamal.github.io/ConformalMapping/
 description: |
   This is personal files for studing complex Confromal mapping
 link-citations: yes
+favicon: favicon.ico
 github-repo: rstudio/bookdown-demo
 includes:
     in_header: header.html
