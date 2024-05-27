@@ -44,4 +44,6 @@ nb_points = 30
 xmin, xmax, ymin, ymax = -1, 1, -1, 1
 
 plot_conformal_map(func, xmin, xmax, ymin, ymax, nb_grid, nb_points)
+
 ```
+
