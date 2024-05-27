@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Uniformization by square domains | Conformal Mapping</title>
+  <title>Chapter 6 python code | Conformal Mapping</title>
   <meta name="description" content="This is personal files for studing complex Confromal mapping" />
   <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Uniformization by square domains | Conformal Mapping" />
+  <meta property="og:title" content="Chapter 6 python code | Conformal Mapping" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is personal files for studing complex Confromal mapping" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Uniformization by square domains | Conformal Mapping" />
+  <meta name="twitter:title" content="Chapter 6 python code | Conformal Mapping" />
   
   <meta name="twitter:description" content="This is personal files for studing complex Confromal mapping" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-<link rel="prev" href="conformal-mappings.html"/>
-<link rel="next" href="riemann-mapping-theorem.html"/>
+<link rel="prev" href="riemann-mapping-theorem.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -184,89 +184,50 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="uniformization-by-square-domains" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">Chapter 4</span> Uniformization by square domains<a href="uniformization-by-square-domains.html#uniformization-by-square-domains" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div class="definition">
-<p><span id="def:unnamed-chunk-23" class="definition"><strong>Definition 4.1  (Domain) </strong></span>A subset <span class="math inline">\(D\)</span> of the complex plane is a domain if <span class="math inline">\(D\)</span> is open and if any two points of <span class="math inline">\(D\)</span> can be connected by a broken line segment in <span class="math inline">\(D\)</span>.</p>
-</div>
-<p><img src="figures/Mario_Bonk/fig1.png" width="453" /></p>
-<div class="example">
-<p><span id="exm:unnamed-chunk-25" class="example"><strong>Example 4.1  </strong></span></p>
-<ul>
-<li><strong>Examples</strong>:
-<ul>
-<li>Open half planes</li>
-<li>Open disks</li>
-<li>Open sectors</li>
-<li>Open annuli,</li>
-<li>Open punctured disks.</li>
-</ul></li>
-<li><strong>Non Examples</strong>:
-<ul>
-<li>Union of the open upper and lower half-planes <span class="math inline">\(=U = \mathbb{C}\setminus\mathbb{R}\)</span>.<br />
-(It is impossible to connect a point in the upper half-plane to a point in the lower half-plane by a broken line segment that does not cross the real line. )</li>
-</ul></li>
-</ul>
-</div>
-<div class="definition">
-<p><span id="def:unnamed-chunk-26" class="definition"><strong>Definition 4.2  (Riemann Sphere) </strong></span>The Riemann sphere, also called the extended complex plane consist of the complex numbers <span class="math inline">\(\mathbb{C}\)</span> together with <span class="math inline">\(\infty\)</span>. The set of extended complex numbers may be written as <span class="math inline">\(\mathbb{C} \cup \{\infty\}\)</span>.</p>
-</div>
-<p><strong>Notation</strong>: <span class="math inline">\(\hat{\mathbb{C}}=\mathbb{C} \cup \{\infty\}\)</span></p>
-<p><img src="figures/Mario_Bonk/fig2.png" width="240" height="50%" style="display: block; margin: auto;" /></p>
-<div class="definition">
-<p><span id="def:unnamed-chunk-28" class="definition"><strong>Definition 4.3  </strong></span>A domain in the plane is “simply connected” if it has no “holes.”</p>
-</div>
-<div class="example">
-<p><span id="exm:unnamed-chunk-29" class="example"><strong>Example 4.2  </strong></span></p>
-<ul>
-<li><strong>Example</strong>
-<ul>
-<li>Disks</li>
-<li>Rectangles</li>
-</ul></li>
-<li>*<strong>Non Example</strong>
-<ul>
-<li>Annuli</li>
-<li>Punctured disks</li>
-<li>Punctured plane<br />
-(Becasue they have “holes”)</li>
-</ul></li>
-</ul>
-</div>
-<p>Later we discuss this more precise</p>
-<div class="definition">
-<p><span id="def:unnamed-chunk-30" class="definition"><strong>Definition 4.4  (Meromophic) </strong></span>A function <span class="math inline">\(f(z)\)</span> is meromorphic on a domain <span class="math inline">\(D\)</span> if <span class="math inline">\(f(z)\)</span> is analytic on <span class="math inline">\(D\)</span> except possibly at isolated singularities, each of which is a pole.</p>
-</div>
-<div class="proof">
-<p><span id="unlabeled-div-6" class="proof"><em>Proof</em>. </span>(Proof of Therom 1.1 in th paper)<br />
-Let <span class="math inline">\(\Omega\)</span> be a finitely connected domain in <span class="math inline">\(\hat{\mathbb{C}}\)</span> with <span class="math inline">\(\infty\in \Omega\)</span> It is a known fact that there exists a conformal map <span class="math inline">\(g\)</span> of <span class="math inline">\(\Omega\)</span> onto a square domain <span class="math inline">\(\tilde{\Omega}\)</span> with the normalization
-<span class="math display">\[g(z) = z + \frac{b_1}{z} + \ldots\]</span>
-near <span class="math inline">\(\infty\)</span>.</p>
-<p>The map <span class="math inline">\(f \in \mathcal{F} \mapsto \tilde{f} := f \circ g^{-1}\)</span> is a bijection between <span class="math inline">\(\mathcal{F}\)</span> and <span class="math inline">\(\tilde{\mathcal{F}}\)</span>. Moreover, if
-<span class="math display">\[f(z) = z + \frac{a_1}{z} + \ldots ~\text{ and } \tilde{f}(z) = z + \frac{\tilde{a_1}}{z} + \ldots\]</span> near <span class="math inline">\(\infty\)</span>, then <span class="math inline">\(\tilde{a}_1 = a_1 - b_1\)</span>.</p>
-</div>
-<p>Let <span class="math inline">\(f\)</span> be as in the statement. We consider the rectangle <span class="math inline">\(R = [-l,l] \times [-r,r] \subset \mathbb{C}\)</span> for large <span class="math inline">\(r &gt; 0\)</span>. Here we chose <span class="math inline">\(l= = r^{2/3}\)</span> so that
-<span class="math display">\[ \frac{l}{r} \to  0 \quad \text{and} \quad \frac{r}{l^2} \to 0\]</span>
-as <span class="math inline">\(r \to \infty\)</span>.</p>
-<p>In the following, we assume that <span class="math inline">\(r\)</span> is so large that <span class="math inline">\(\widetilde{C}\setminus \Omega\)</span> is contained in the interior of <span class="math inline">\(R\)</span>. Then <span class="math inline">\(\partial R \subset \widetilde{C}\setminus \Omega\)</span> and <span class="math inline">\(j=f(R)\)</span> is a Jordan curve in <span class="math inline">\(\mathbb{C}\)</span>. We want to</p>
-<p><span class="math display">\[\begin{eqnarray}
-A &amp;=&amp; \frac{1}{2i} \int_J \bar{w} dw\\
-&amp;=&amp; \frac{1}{2i} \int_{\partial R} \bar{f(z)}f&#39;(z) dz\\
-&amp;=&amp; \frac{1}{2i} \int_{\partial R} \overline{\left(z + \frac{a_1}{z} + \ldots \right)} \left(1 - \frac{a_1}{z^2} + \ldots \right) dz\\
-&amp;=&amp; \frac{1}{2i} \int_{\partial R} \left(\bar{z} + \frac{\bar{a}_1}{\overline{z}}-\frac{\bar{a}_1\bar{z}}{z^2} + O\left(\frac{1}{|z|^2}\right)\right) dz\\
-&amp;=&amp; 4rl + \int_{\partial R} \text{Im} \left(\frac{\bar{a}_1 z}{\bar{z}}\right) \frac{dz}{z} + o(1).
-\end{eqnarray}\]</span></p>
-<p>Sure, I can provide a proof for the proposition. Here it goes:</p>
-<p><strong>Proposition</strong>: If a set <span class="math inline">\(A\)</span> is a subset of the interior of another set <span class="math inline">\(B\)</span> (denoted as <span class="math inline">\(A \subseteq Int(B)\)</span>), then the complement of <span class="math inline">\(A\)</span> (denoted as <span class="math inline">\(A^c\)</span>) is a subset of the boundary of <span class="math inline">\(B\)</span> (denoted as <span class="math inline">\(bd(B)\)</span>).</p>
-<p><strong>Proof</strong>:</p>
-<p>Let’s denote the interior of <span class="math inline">\(B\)</span> as <span class="math inline">\(Int(B)\)</span> and the boundary of <span class="math inline">\(B\)</span> as <span class="math inline">\(bd(B)\)</span>. By definition, we have:</p>
-<ol style="list-style-type: decimal">
-<li><span class="math inline">\(Int(B) = B - bd(B)\)</span></li>
-<li><span class="math inline">\(A^c = U - A\)</span> where <span class="math inline">\(U\)</span> is the universal set.</li>
-</ol>
-<p>Given that <span class="math inline">\(A \subseteq Int(B)\)</span>, we can say that <span class="math inline">\(A\)</span> does not contain any points from <span class="math inline">\(bd(B)\)</span>. Therefore, all points in <span class="math inline">\(bd(B)\)</span> must be in <span class="math inline">\(A^c\)</span>.</p>
-<p>Hence, <span class="math inline">\(A^c \subseteq bd(B)\)</span>.</p>
-<p>This completes the proof. Please note that this is a general proof and the specifics might vary depending on the exact definitions and properties of the sets and the topological space they are in. If you have a specific example or further questions, feel free to ask!</p>
+<div id="python-code" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> python code<a href="python-code.html#python-code" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="python-code.html#cb1-1" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-2"><a href="python-code.html#cb1-2" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="python-code.html#cb1-3" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="python-code.html#cb1-4" tabindex="-1"></a><span class="kw">def</span> func(z):</span>
+<span id="cb1-5"><a href="python-code.html#cb1-5" tabindex="-1"></a>    <span class="cf">return</span> z<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb1-6"><a href="python-code.html#cb1-6" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="python-code.html#cb1-7" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="python-code.html#cb1-8" tabindex="-1"></a><span class="kw">def</span> plot_conformal_map(f, xmin, xmax, ymin, ymax, nb_grid, nb_points):</span>
+<span id="cb1-9"><a href="python-code.html#cb1-9" tabindex="-1"></a>    xv, yv <span class="op">=</span> np.meshgrid(np.linspace(xmin, xmax, nb_grid), np.linspace(ymin, ymax, nb_points))</span>
+<span id="cb1-10"><a href="python-code.html#cb1-10" tabindex="-1"></a>    xv <span class="op">=</span> np.transpose(xv)</span>
+<span id="cb1-11"><a href="python-code.html#cb1-11" tabindex="-1"></a>    yv <span class="op">=</span> np.transpose(yv)</span>
+<span id="cb1-12"><a href="python-code.html#cb1-12" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="python-code.html#cb1-13" tabindex="-1"></a>    zv <span class="op">=</span> func(xv <span class="op">+</span> <span class="ot">1j</span><span class="op">*</span>yv)</span>
+<span id="cb1-14"><a href="python-code.html#cb1-14" tabindex="-1"></a>    uv <span class="op">=</span> np.real(zv)</span>
+<span id="cb1-15"><a href="python-code.html#cb1-15" tabindex="-1"></a>    vv <span class="op">=</span> np.imag(zv)</span>
+<span id="cb1-16"><a href="python-code.html#cb1-16" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="python-code.html#cb1-17" tabindex="-1"></a>    xh, yh <span class="op">=</span> np.meshgrid(np.linspace(xmin, xmax, nb_points), np.linspace(ymin, ymax, nb_grid))</span>
+<span id="cb1-18"><a href="python-code.html#cb1-18" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="python-code.html#cb1-19" tabindex="-1"></a>    zh <span class="op">=</span> func(xh <span class="op">+</span> <span class="ot">1j</span><span class="op">*</span>yh)</span>
+<span id="cb1-20"><a href="python-code.html#cb1-20" tabindex="-1"></a>    uh <span class="op">=</span> np.real(zh)</span>
+<span id="cb1-21"><a href="python-code.html#cb1-21" tabindex="-1"></a>    vh <span class="op">=</span> np.imag(zh)</span>
+<span id="cb1-22"><a href="python-code.html#cb1-22" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="python-code.html#cb1-23" tabindex="-1"></a>    ax <span class="op">=</span> plt.subplot(<span class="dv">121</span>)</span>
+<span id="cb1-24"><a href="python-code.html#cb1-24" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(yv)):</span>
+<span id="cb1-25"><a href="python-code.html#cb1-25" tabindex="-1"></a>        ax.plot(xv[i], yv[i], <span class="st">&#39;b-&#39;</span>, lw<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb1-26"><a href="python-code.html#cb1-26" tabindex="-1"></a>        ax.plot(xh[i], yh[i], <span class="st">&#39;r-&#39;</span>, lw<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb1-27"><a href="python-code.html#cb1-27" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="python-code.html#cb1-28" tabindex="-1"></a>    ax2 <span class="op">=</span> plt.subplot(<span class="dv">122</span>)</span>
+<span id="cb1-29"><a href="python-code.html#cb1-29" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(vv)):</span>
+<span id="cb1-30"><a href="python-code.html#cb1-30" tabindex="-1"></a>        ax2.plot(uv[i], vv[i], <span class="st">&#39;b-&#39;</span>, lw<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb1-31"><a href="python-code.html#cb1-31" tabindex="-1"></a>        ax2.plot(uh[i], vh[i], <span class="st">&#39;r-&#39;</span>, lw<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb1-32"><a href="python-code.html#cb1-32" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="python-code.html#cb1-33" tabindex="-1"></a>    plt.show()</span>
+<span id="cb1-34"><a href="python-code.html#cb1-34" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="python-code.html#cb1-35" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="python-code.html#cb1-36" tabindex="-1"></a>nb_grid <span class="op">=</span> <span class="dv">9</span></span>
+<span id="cb1-37"><a href="python-code.html#cb1-37" tabindex="-1"></a>nb_points <span class="op">=</span> <span class="dv">30</span></span>
+<span id="cb1-38"><a href="python-code.html#cb1-38" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="python-code.html#cb1-39" tabindex="-1"></a>xmin, xmax, ymin, ymax <span class="op">=</span> <span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span></span>
+<span id="cb1-40"><a href="python-code.html#cb1-40" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="python-code.html#cb1-41" tabindex="-1"></a>plot_conformal_map(func, xmin, xmax, ymin, ymax, nb_grid, nb_points)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-45-1.png" width="672" /></p>
 
 </div>
             </section>
@@ -274,8 +235,8 @@ A &amp;=&amp; \frac{1}{2i} \int_J \bar{w} dw\\
           </div>
         </div>
       </div>
-<a href="conformal-mappings.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="riemann-mapping-theorem.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="riemann-mapping-theorem.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -306,7 +267,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/03-Mario_Bonk.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/05-Codes_for_Graphs.Rmd",
 "text": "Edit"
 },
 "history": {

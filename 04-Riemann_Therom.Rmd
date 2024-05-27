@@ -133,3 +133,40 @@ Given any simply connected region \(\Omega\) which is not the whole plane, and a
 - **Uniqueness**: 
   
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## LaTeX
+
+Given any simply connected region \(Q\) which is not the whole plane, and a point \(z_0\) in \(Q\), there exists a unique analytic function \(f(z)\) in \(Q\), normalized by the conditions \(f(z_0) = 0\), \(f'(z_0) > 0\), such that \(f(z)\) defines a one-to-one mapping of \(Q\) onto the disk \(|w| < 1\). The uniqueness is easily proved: if \(h\) and \(f_2\) are two such functions, then \(f_2 \circ h(w)\) defines a one-to-one mapping of \(|w| < 1\) onto itself. We know that such a mapping is given by a linear transformation \(S\) (Chapter 4, Section 3.4, Example 5). The conditions \(S(0) = 0\), \(S'(0) > 0\) imply \(S(w) = w\); hence, \(f = h \circ S\).
+
+An analytic function \(g(z)\) in \(Q\) is said to be univalent if \(g(z_1) = g(z_2)\) only for \(z_1 = z_2\), in other words, if the mapping by \(g\) is one-to-one (the German word "schlicht," which lacks an adequate translation, is also in common use). For the existence proof, we consider the family \(\mathcal{F}\) formed by all functions \(g\) with the following properties:
+1. \(g\) is analytic and univalent in \(Q\).
+2. \(|g(z)| \leq 1\) in \(Q\).
+3. \(g(z_0) = 0\) and \(g'(z_0) > 0\).
+
+We contend that \(f\) is the function in \(\mathcal{F}\) for which the derivative \(f'(z_0)\) is a maximum. The proof consists of three parts:
+1. It is shown that the family \(\mathcal{F}\) is not empty.
+2. There exists an \(f\) with maximal derivative.
+3. This \(f\) has the desired properties.
+
+To prove that \(\mathcal{F}\) is not empty, we note that there exists, by assumption, a point \(a \notin Q\). Since \(Q\) is simply connected, it is possible to define a single-valued branch of \(\sqrt{z - a}\) in \(Q\); denote it by \(h(z)\). This function does not take the same value twice, nor does it take opposite values. The image of \(Q\) under the mapping \(h\) covers a disk \(|w - h(z_0)| < p\), and therefore it does not meet the disk \(|w + h(z_0)| < p\). In other words, \(|h(z)| + |h(z_0)| \leq p\) for \(z \in Q\), and in particular, \(2|h(z_0)| \leq p\). It can now be verified that the function
+\[ g_0(z) = \frac{1}{4|h(z_0)|^2} \left(h(z) - h(z_0)\right) \left(h'(z_0) h(z) + h(z_0)\right) \]
+belongs to the family \(\mathcal{F}\). Indeed, because it is obtained from the univalent function \(h\) by means of a linear fractional transformation, it satisfies the desired properties.
+
+: Note that the proof details are omitted here for brevity. If you need further clarification or additional steps, feel free to ask!

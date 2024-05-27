@@ -36,6 +36,46 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -80,7 +120,7 @@
 
 \title{Conformal Mapping}
 \author{Ashan J}
-\date{2024-05-25}
+\date{2024-05-27}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -203,29 +243,76 @@ Let us now map whichever of the simply connected domains complementary to \(K\) 
 
 The composite of these two mappings constitutes a univalent mapping of the domain \(B\) onto the domain \(B''\). Furthermore, on the basis of \(\S 3\) of Chapter II, we conclude that this mapping sets up a one-to-one correspondence between the prime ends of the domain \(B\) and the boundary points of the domain \(B''\). Here, just as in \(\S 3\) of Chapter II, by the prime end of the domain \(B\) that corresponds to the point \(z\) on the boundary of the domain \(B''\), we mean the set of all cluster points of all sequences of points of the domain \(B\) that approach the boundary point \(z\).
 
+\section{Univalent mapping of a multiply connected domain onto a plane with parallel rectilinear cuts.}\label{univalent-mapping-of-a-multiply-connected-domain-onto-a-plane-with-parallel-rectilinear-cuts.}
+
+\textbf{210}
+
+Let us now investigate univalent conformal mapping of arbitrary multiply connected domains onto canonical domains of various kinds. The simplest such domain is a plane with parallel rectilinear cuts. In this case, our investigation will be based on the solution of certain extremal problems.
+
+\begin{lemma}
+\protect\hypertarget{lem:unnamed-chunk-13}{}\label{lem:unnamed-chunk-13}Among all functions
+\[F(z) = z + \frac{a_1}{z}+\frac{a_2}{z^2} \cdots\]
+that are univalent in \(|z| > R\), the quantity \(\Re(e^{-2i\theta}a_1)\), where \(\theta\in \mathbb{R}\) is maximized by a function that maps the domain \(|z| > R\) onto the plane with a rectilinear cut making an angle \(\theta\) with the real axis. Furthermore, this maximum is achieved only by that specific function. For this function, we have \(\Re(e^{-2i\theta}) = R^2\).
+\end{lemma}
+
+Recall the Area theorem,
+
+\begin{theorem}[The Area Theorem]
+\protect\hypertarget{thm:unnamed-chunk-14}{}\label{thm:unnamed-chunk-14}Suppose that the function
+\[F(\xi) = \xi+\frac{b_1}{\xi}+\cdots=\xi + \sum_{k=1}^{\infty} \frac{b_k}{ \xi^k}\]
+is regular in the finite plane (Complex Plane \(\mathbb{C}\)), has a pole at \(\xi = \infty\), and is univalent in the domain \(|\xi| > 1\). Then,
+\[ \sum_{n=1}^{\infty}n|b_n|^2\leq 1\]
+\end{theorem}
+
+\begin{proof}
+We use area therom for the following functions,
+\[G(\xi)=\frac{1}{R}F(R\xi)=\xi+\frac{a_1}{R^2\xi}+\cdots\]
+that for all \(|a_1|\leq R^2\),\\
+equality holds only when \(F(z) = z + \frac{R^2 e^{i\theta}}{z}\).
+
+Note that \(G(\xi)\) is univalent in \(|\xi|>1\) beacuse \(F(z)\) is univalent in \(|z|>R\).
+\[\frac{\Re(a_1)}{R^2}=\frac{\Re(a_1)}{\Re(R^2)}=\Re\left(\frac{a_1}{R^2}\right)=\Re(b_1)\leq \cdot |b_1|\leq |b_1|^2 \leq \sum_{n=1}^\infty n|b_n|\leq 1\]
+Thus,
+\[{\Re(a_1)}\leq {R^2}\tag{*}\]
+Note that,
+\[\Re(e^{-2i\theta})=\cos(2\theta)\leq 1,\quad \forall \theta \in \mathbb{R}\]
+\begin{eqnarray*}
+\Re(e^{-2i\theta}a_1)=\Re(e^{-2i\theta})\Re(a_1)\leq \Re(a_1)
+\end{eqnarray*}
+By inequity in (*),
+\[ \Re(e^{-2i\theta} a_1) \leq \Re(a_1)\leq R^2 \]
+Therfore,
+\[\Re(e^{-2i\theta} a_1) \leq R^2\]
+with equality holding only for the function \(F(z) = z + \frac{R^2 e^{2i\theta}}{ z}\), which maps the domain \(|z| > R\) onto the plane with a cut at an angle \(\theta\) to the real axis.
+\end{proof}
+
+\begin{lemma}
+\protect\hypertarget{lem:unnamed-chunk-16}{}\label{lem:unnamed-chunk-16}If the function \(F(z) = z + a_0 + \sum_{n=1}^{\infty} a_n z^n\) is univalent in \(|z| > R\), then \(|F(z) - a_0| < 2|z|\) in the domain \(|z| > R\), and the entire boundary of the image of the domain \(|z| > R\) under the mapping \(F(z)\) is contained in the disk \(|a_0| + 2R\).
+\end{lemma}
+
 \chapter{Conformal Mappings}\label{conformal-mappings}
 
 \begin{definition}[Tanagent Vector]
-\protect\hypertarget{def:unnamed-chunk-13}{}\label{def:unnamed-chunk-13}Let \(\gamma(t) = x(t) + iy(t), 0\leq  t \leq  1\), be a smooth parameterized curve terminating at \(z_0 = \gamma(0)\). We refer to
+\protect\hypertarget{def:unnamed-chunk-17}{}\label{def:unnamed-chunk-17}Let \(\gamma(t) = x(t) + iy(t), 0\leq  t \leq  1\), be a smooth parameterized curve terminating at \(z_0 = \gamma(0)\). We refer to
 \[\gamma'(0) = \lim_{t \to 0} \frac{\gamma(t)-\gamma(0)}{t} = x'(0) + iy'(0)\]
 as the tangent vector to the curve 'Y at ZOo
 \end{definition}
 
 \begin{definition}[Angle between two curves ]
-\protect\hypertarget{def:unnamed-chunk-14}{}\label{def:unnamed-chunk-14}We define the angle between two curves
+\protect\hypertarget{def:unnamed-chunk-18}{}\label{def:unnamed-chunk-18}We define the angle between two curves
 at \(z_0\) to be the angle between their tangent vectors at \(z_O\).
 \end{definition}
 
-\includegraphics{figures/Confromal_mapping/fig1.png}
+\includegraphics[width=19.6in]{figures/Confromal_mapping/fig1}
 
 \begin{theorem}
-\protect\hypertarget{thm:unnamed-chunk-16}{}\label{thm:unnamed-chunk-16}If \(\gamma(t)\), \(0 \leq t \leq 1\), is a smooth parameterized curve terminating at \(z_0 = \gamma(0)\), and \(f(z)\) is analytic at \(z_0\), then the tangent to the curve \(f(\gamma(t))\) terminating at \(f(z_0)\) is given by:
+\protect\hypertarget{thm:unnamed-chunk-20}{}\label{thm:unnamed-chunk-20}If \(\gamma(t)\), \(0 \leq t \leq 1\), is a smooth parameterized curve terminating at \(z_0 = \gamma(0)\), and \(f(z)\) is analytic at \(z_0\), then the tangent to the curve \(f(\gamma(t))\) terminating at \(f(z_0)\) is given by:
 \begin{equation}
 (f \circ \gamma)'(0) = f'(z_0)\gamma'(0)
 \end{equation}
 \end{theorem}
 
-\includegraphics{figures/Confromal_mapping/fig2.png}
+\includegraphics[width=13in]{figures/Confromal_mapping/fig2}
 
 \begin{proof}
 \leavevmode
@@ -247,13 +334,13 @@ at \(z_0\) to be the angle between their tangent vectors at \(z_O\).
 \chapter{Uniformization by square domains}\label{uniformization-by-square-domains}
 
 \begin{definition}[Domain]
-\protect\hypertarget{def:unnamed-chunk-19}{}\label{def:unnamed-chunk-19}A subset \(D\) of the complex plane is a domain if \(D\) is open and if any two points of \(D\) can be connected by a broken line segment in \(D\).
+\protect\hypertarget{def:unnamed-chunk-23}{}\label{def:unnamed-chunk-23}A subset \(D\) of the complex plane is a domain if \(D\) is open and if any two points of \(D\) can be connected by a broken line segment in \(D\).
 \end{definition}
 
-\includegraphics{figures/Mario_Bonk/fig1.png}
+\includegraphics[width=12.58in]{figures/Mario_Bonk/fig1}
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-21}{}\label{exm:unnamed-chunk-21}\leavevmode
+\protect\hypertarget{exm:unnamed-chunk-25}{}\label{exm:unnamed-chunk-25}\leavevmode
 
 \begin{itemize}
 \tightlist
@@ -287,19 +374,19 @@ at \(z_0\) to be the angle between their tangent vectors at \(z_O\).
 \end{example}
 
 \begin{definition}[Riemann Sphere]
-\protect\hypertarget{def:unnamed-chunk-22}{}\label{def:unnamed-chunk-22}The Riemann sphere, also called the extended complex plane consist of the complex numbers \(\mathbb{C}\) together with \(\infty\). The set of extended complex numbers may be written as \(\mathbb{C} \cup \{\infty\}\).
+\protect\hypertarget{def:unnamed-chunk-26}{}\label{def:unnamed-chunk-26}The Riemann sphere, also called the extended complex plane consist of the complex numbers \(\mathbb{C}\) together with \(\infty\). The set of extended complex numbers may be written as \(\mathbb{C} \cup \{\infty\}\).
 \end{definition}
 
 \textbf{Notation}: \(\hat{\mathbb{C}}=\mathbb{C} \cup \{\infty\}\)
 
-\begin{center}\includegraphics[height=0.5\textheight]{figures/Mario_Bonk/fig2} \end{center}
+\begin{center}\includegraphics[width=6.67in,height=0.5\textheight]{figures/Mario_Bonk/fig2} \end{center}
 
 \begin{definition}
-\protect\hypertarget{def:unnamed-chunk-24}{}\label{def:unnamed-chunk-24}A domain in the plane is ``simply connected'' if it has no ``holes.''
+\protect\hypertarget{def:unnamed-chunk-28}{}\label{def:unnamed-chunk-28}A domain in the plane is ``simply connected'' if it has no ``holes.''
 \end{definition}
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-25}{}\label{exm:unnamed-chunk-25}\leavevmode
+\protect\hypertarget{exm:unnamed-chunk-29}{}\label{exm:unnamed-chunk-29}\leavevmode
 
 \begin{itemize}
 \tightlist
@@ -333,7 +420,7 @@ at \(z_0\) to be the angle between their tangent vectors at \(z_O\).
 Later we discuss this more precise
 
 \begin{definition}[Meromophic]
-\protect\hypertarget{def:unnamed-chunk-26}{}\label{def:unnamed-chunk-26}A function \(f(z)\) is meromorphic on a domain \(D\) if \(f(z)\) is analytic on \(D\) except possibly at isolated singularities, each of which is a pole.
+\protect\hypertarget{def:unnamed-chunk-30}{}\label{def:unnamed-chunk-30}A function \(f(z)\) is meromorphic on a domain \(D\) if \(f(z)\) is analytic on \(D\) except possibly at isolated singularities, each of which is a pole.
 \end{definition}
 
 \begin{proof}
@@ -386,7 +473,7 @@ This completes the proof. Please note that this is a general proof and the speci
 \chapter{Riemann Mapping Theorem}\label{riemann-mapping-theorem}
 
 \begin{theorem}[Riemann Mapping Theorem]
-\protect\hypertarget{thm:unnamed-chunk-28}{}\label{thm:unnamed-chunk-28}If \(D\) is a simply connected domain in the complex plane, and \(D\) is not the entire complex plane, then there is a conformal map of \(D\) onto the open unit disk \(\mathbb{D}\).
+\protect\hypertarget{thm:unnamed-chunk-32}{}\label{thm:unnamed-chunk-32}If \(D\) is a simply connected domain in the complex plane, and \(D\) is not the entire complex plane, then there is a conformal map of \(D\) onto the open unit disk \(\mathbb{D}\).
 \end{theorem}
 
 \section{Hyperbolic Geomeery}\label{hyperbolic-geomeery}
@@ -400,7 +487,7 @@ which means that if \(\gamma\) is any smooth curve in \(\mathbb{D}\), and \(\ome
 Thus to obtain a length function that is invariant under conformal self-maps of \(\mathbb{D}\),we are led to make the following definition.
 
 \begin{definition}
-\protect\hypertarget{def:unnamed-chunk-29}{}\label{def:unnamed-chunk-29}We define the length of \(\gamma\) in the hyperbolic metric by
+\protect\hypertarget{def:unnamed-chunk-33}{}\label{def:unnamed-chunk-33}We define the length of \(\gamma\) in the hyperbolic metric by
 \[\text{hyperbolic length of } \gamma =2\int_{\gamma} \frac{|dz|}{1-|z|^2}\]
 \end{definition}
 
@@ -408,25 +495,25 @@ The factor 2 is a harmless factor, which is often omitted. (It adjusts the
 metric so that its curvature is -1.)
 
 \begin{definition}
-\protect\hypertarget{def:unnamed-chunk-30}{}\label{def:unnamed-chunk-30}The hyperbolic distance \(\rho(z_0, z_1)\) from \(z_0\) to \(z_1\) is defined as the infimum (greatest lower bound) of the hyperbolic lengths of all piecewise smooth curves in \(\mathbb{D}\) from \(z_0\) to \(z_1\).
+\protect\hypertarget{def:unnamed-chunk-34}{}\label{def:unnamed-chunk-34}The hyperbolic distance \(\rho(z_0, z_1)\) from \(z_0\) to \(z_1\) is defined as the infimum (greatest lower bound) of the hyperbolic lengths of all piecewise smooth curves in \(\mathbb{D}\) from \(z_0\) to \(z_1\).
 \[\rho(z_0, z_1)
   =\inf_\gamma\left\{\text{hyperbolic length of } \gamma \right\}
   =\inf_\gamma\left\{2\int_{\gamma} \frac{|dz|}{1-|z|^2}\right\}\]
 \end{definition}
 
-\includegraphics{figures/Riemann_Mapping_Therom/fig1.png}
+\includegraphics[width=14.76in]{figures/Riemann_Mapping_Therom/fig1}
 
 Since conformal self-maps of \(\mathbb{D}\) preserve the hyperbolic lengths of curves, they also preserve hyperbolic distances. That is, for any conformal self-map \(w = J(z)\) of \(\mathbb{D}\),
 \[ \rho(f(z_0), f(z_1)) = \rho(z_0, z_1), \quad \text{where } z_0, z_1 \in \mathbb{D}. \]
 
-\includegraphics{figures/Riemann_Mapping_Therom/fig2.png}
+\includegraphics[width=23.78in]{figures/Riemann_Mapping_Therom/fig2}
 
 \begin{theorem}
-\protect\hypertarget{thm:unnamed-chunk-33}{}\label{thm:unnamed-chunk-33}For any two distinct points \(z_0, z_1\) in the open unit disk \(\mathbb{D}\), there exists a unique shortest curve in \(\mathbb{D}\) from \(z_0\) to \(z_1\) in the hyperbolic metric. Specifically, this curve corresponds to the arc of the circle passing through \(z_0\) and \(z_1\) that is orthogonal to the unit circle.
+\protect\hypertarget{thm:unnamed-chunk-37}{}\label{thm:unnamed-chunk-37}For any two distinct points \(z_0, z_1\) in the open unit disk \(\mathbb{D}\), there exists a unique shortest curve in \(\mathbb{D}\) from \(z_0\) to \(z_1\) in the hyperbolic metric. Specifically, this curve corresponds to the arc of the circle passing through \(z_0\) and \(z_1\) that is orthogonal to the unit circle.
 \end{theorem}
 
 \begin{definition}
-\protect\hypertarget{def:unnamed-chunk-34}{}\label{def:unnamed-chunk-34}The paths of shortest hyperbolic length between points are called \textbf{hyperbolic geodesics}.
+\protect\hypertarget{def:unnamed-chunk-38}{}\label{def:unnamed-chunk-38}The paths of shortest hyperbolic length between points are called \textbf{hyperbolic geodesics}.
 \end{definition}
 
 \begin{itemize}
@@ -435,7 +522,7 @@ Since conformal self-maps of \(\mathbb{D}\) preserve the hyperbolic lengths of c
   These hyperbolic geodesics play a role similar to that of straight lines in Euclidean geometry. They satisfy all the axioms of Euclidean geometry except for the parallel axiom (which states that through each point not on a given line, there passes a unique straight line through the point and parallel to the given line).
 \end{itemize}
 
-\includegraphics{figures/Riemann_Mapping_Therom/fig3.png}
+\includegraphics[width=11.5in]{figures/Riemann_Mapping_Therom/fig3}
 
 \begin{proof}
 (proof of theorem), Let \(w = f(z)\) be a conformal self-map of \(\mathcal{D}\)
@@ -489,7 +576,7 @@ So, \(h(z) = e^{g(z)/2}\) is an analytic branch of \(\sqrt{z - a}\) in \(D\), an
 Thus \(h(z)\) is univalent, and \(h(z)\) maps \(D\) conformally onto \(h(D)\). Finally, note that if \(w_0 \in h(D)\), then \(-w_0 \notin h(D)\). Indeed, if \(w_0 = h(z_0)\) and \(-w_0 = h(z_1)\) for \(z_0, z_1 \in D\), then \(z_0 = h(z_0)^2 + a = w_0^2 + a = h(z_1)^2 + a = z_1\), which is impossible. We summarize.
 
 \begin{lemma}
-\protect\hypertarget{lem:unnamed-chunk-37}{}\label{lem:unnamed-chunk-37}Let \(D\) be a simply connected domain. Suppose \(a \notin D\), and let
+\protect\hypertarget{lem:unnamed-chunk-41}{}\label{lem:unnamed-chunk-41}Let \(D\) be a simply connected domain. Suppose \(a \notin D\), and let
 \(h(z)\) be an analytic branch of \(\sqrt{z - a}\) in \(D\). Then \(h(z)\) is univalent on \(D\), and further, \(h(D)\) is disjoint from \(-h(D)\).
 \end{lemma}
 
@@ -500,7 +587,7 @@ Done it earler.
 \subsection{Adlof Proof}\label{adlof-proof}
 
 \begin{theorem}[Riemann Mapping Theorem]
-\protect\hypertarget{thm:unnamed-chunk-39}{}\label{thm:unnamed-chunk-39}Given any simply connected region \(\Omega\) which is not the whole plane, and a point \(z_0\) in \(\Omega\), there exists a unique analytic function \(f(z)\) in \(\Omega\), normalized by the conditions \(f(z_0) = 0\), \(f'(z_0) > 0\), such that \(f(z)\) defines a one-to-one mapping of \(\Omega\) onto the disk \(|w| < 1\).
+\protect\hypertarget{thm:unnamed-chunk-43}{}\label{thm:unnamed-chunk-43}Given any simply connected region \(\Omega\) which is not the whole plane, and a point \(z_0\) in \(\Omega\), there exists a unique analytic function \(f(z)\) in \(\Omega\), normalized by the conditions \(f(z_0) = 0\), \(f'(z_0) > 0\), such that \(f(z)\) defines a one-to-one mapping of \(\Omega\) onto the disk \(|w| < 1\).
 \end{theorem}
 
 \begin{proof}
@@ -513,6 +600,76 @@ Done it earler.
 \end{itemize}
 
 \end{proof}
+
+\section{LaTeX}\label{latex}
+
+Given any simply connected region \(Q\) which is not the whole plane, and a point \(z_0\) in \(Q\), there exists a unique analytic function \(f(z)\) in \(Q\), normalized by the conditions \(f(z_0) = 0\), \(f'(z_0) > 0\), such that \(f(z)\) defines a one-to-one mapping of \(Q\) onto the disk \(|w| < 1\). The uniqueness is easily proved: if \(h\) and \(f_2\) are two such functions, then \(f_2 \circ h(w)\) defines a one-to-one mapping of \(|w| < 1\) onto itself. We know that such a mapping is given by a linear transformation \(S\) (Chapter 4, Section 3.4, Example 5). The conditions \(S(0) = 0\), \(S'(0) > 0\) imply \(S(w) = w\); hence, \(f = h \circ S\).
+
+An analytic function \(g(z)\) in \(Q\) is said to be univalent if \(g(z_1) = g(z_2)\) only for \(z_1 = z_2\), in other words, if the mapping by \(g\) is one-to-one (the German word ``schlicht,'' which lacks an adequate translation, is also in common use). For the existence proof, we consider the family \(\mathcal{F}\) formed by all functions \(g\) with the following properties:
+1. \(g\) is analytic and univalent in \(Q\).
+2. \(|g(z)| \leq 1\) in \(Q\).
+3. \(g(z_0) = 0\) and \(g'(z_0) > 0\).
+
+We contend that \(f\) is the function in \(\mathcal{F}\) for which the derivative \(f'(z_0)\) is a maximum. The proof consists of three parts:
+1. It is shown that the family \(\mathcal{F}\) is not empty.
+2. There exists an \(f\) with maximal derivative.
+3. This \(f\) has the desired properties.
+
+To prove that \(\mathcal{F}\) is not empty, we note that there exists, by assumption, a point \(a \notin Q\). Since \(Q\) is simply connected, it is possible to define a single-valued branch of \(\sqrt{z - a}\) in \(Q\); denote it by \(h(z)\). This function does not take the same value twice, nor does it take opposite values. The image of \(Q\) under the mapping \(h\) covers a disk \(|w - h(z_0)| < p\), and therefore it does not meet the disk \(|w + h(z_0)| < p\). In other words, \(|h(z)| + |h(z_0)| \leq p\) for \(z \in Q\), and in particular, \(2|h(z_0)| \leq p\). It can now be verified that the function
+\[ g_0(z) = \frac{1}{4|h(z_0)|^2} \left(h(z) - h(z_0)\right) \left(h'(z_0) h(z) + h(z_0)\right) \]
+belongs to the family \(\mathcal{F}\). Indeed, because it is obtained from the univalent function \(h\) by means of a linear fractional transformation, it satisfies the desired properties.
+
+: Note that the proof details are omitted here for brevity. If you need further clarification or additional steps, feel free to ask!
+
+\chapter{python code}\label{python-code}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ matplotlib.pyplot }\ImportTok{as}\NormalTok{ plt}
+\ImportTok{import}\NormalTok{ numpy }\ImportTok{as}\NormalTok{ np}
+
+\KeywordTok{def}\NormalTok{ func(z):}
+    \ControlFlowTok{return}\NormalTok{ z}\OperatorTok{**}\DecValTok{2}
+
+
+\KeywordTok{def}\NormalTok{ plot\_conformal\_map(f, xmin, xmax, ymin, ymax, nb\_grid, nb\_points):}
+\NormalTok{    xv, yv }\OperatorTok{=}\NormalTok{ np.meshgrid(np.linspace(xmin, xmax, nb\_grid), np.linspace(ymin, ymax, nb\_points))}
+\NormalTok{    xv }\OperatorTok{=}\NormalTok{ np.transpose(xv)}
+\NormalTok{    yv }\OperatorTok{=}\NormalTok{ np.transpose(yv)}
+
+\NormalTok{    zv }\OperatorTok{=}\NormalTok{ func(xv }\OperatorTok{+} \OtherTok{1j}\OperatorTok{*}\NormalTok{yv)}
+\NormalTok{    uv }\OperatorTok{=}\NormalTok{ np.real(zv)}
+\NormalTok{    vv }\OperatorTok{=}\NormalTok{ np.imag(zv)}
+
+\NormalTok{    xh, yh }\OperatorTok{=}\NormalTok{ np.meshgrid(np.linspace(xmin, xmax, nb\_points), np.linspace(ymin, ymax, nb\_grid))}
+
+\NormalTok{    zh }\OperatorTok{=}\NormalTok{ func(xh }\OperatorTok{+} \OtherTok{1j}\OperatorTok{*}\NormalTok{yh)}
+\NormalTok{    uh }\OperatorTok{=}\NormalTok{ np.real(zh)}
+\NormalTok{    vh }\OperatorTok{=}\NormalTok{ np.imag(zh)}
+
+\NormalTok{    ax }\OperatorTok{=}\NormalTok{ plt.subplot(}\DecValTok{121}\NormalTok{)}
+    \ControlFlowTok{for}\NormalTok{ i }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\BuiltInTok{len}\NormalTok{(yv)):}
+\NormalTok{        ax.plot(xv[i], yv[i], }\StringTok{\textquotesingle{}b{-}\textquotesingle{}}\NormalTok{, lw}\OperatorTok{=}\DecValTok{1}\NormalTok{)}
+\NormalTok{        ax.plot(xh[i], yh[i], }\StringTok{\textquotesingle{}r{-}\textquotesingle{}}\NormalTok{, lw}\OperatorTok{=}\DecValTok{1}\NormalTok{)}
+
+\NormalTok{    ax2 }\OperatorTok{=}\NormalTok{ plt.subplot(}\DecValTok{122}\NormalTok{)}
+    \ControlFlowTok{for}\NormalTok{ i }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\BuiltInTok{len}\NormalTok{(vv)):}
+\NormalTok{        ax2.plot(uv[i], vv[i], }\StringTok{\textquotesingle{}b{-}\textquotesingle{}}\NormalTok{, lw}\OperatorTok{=}\DecValTok{1}\NormalTok{)}
+\NormalTok{        ax2.plot(uh[i], vh[i], }\StringTok{\textquotesingle{}r{-}\textquotesingle{}}\NormalTok{, lw}\OperatorTok{=}\DecValTok{1}\NormalTok{)}
+
+\NormalTok{    plt.show()}
+
+
+\NormalTok{nb\_grid }\OperatorTok{=} \DecValTok{9}
+\NormalTok{nb\_points }\OperatorTok{=} \DecValTok{30}
+
+\NormalTok{xmin, xmax, ymin, ymax }\OperatorTok{=} \OperatorTok{{-}}\DecValTok{1}\NormalTok{, }\DecValTok{1}\NormalTok{, }\OperatorTok{{-}}\DecValTok{1}\NormalTok{, }\DecValTok{1}
+
+\NormalTok{plot\_conformal\_map(func, xmin, xmax, ymin, ymax, nb\_grid, nb\_points)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-45-1.pdf}
 
   \bibliography{book.bib,packages.bib}
 

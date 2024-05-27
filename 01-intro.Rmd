@@ -18,3 +18,48 @@ Let us now map whichever of the simply connected domains complementary to $K$ co
 
 The composite of these two mappings constitutes a univalent mapping of the domain $B$ onto the domain $B''$. Furthermore, on the basis of $\S 3$ of Chapter II, we conclude that this mapping sets up a one-to-one correspondence between the prime ends of the domain $B$ and the boundary points of the domain $B''$. Here, just as in $\S 3$ of Chapter II, by the prime end of the domain $B$ that corresponds to the point $z$ on the boundary of the domain $B''$, we mean the set of all cluster points of all sequences of points of the domain $B$ that approach the boundary point $z$.
 
+
+## Univalent mapping of a multiply connected domain onto a plane with parallel rectilinear cuts.
+**210**
+
+Let us now investigate univalent conformal mapping of arbitrary multiply connected domains onto canonical domains of various kinds. The simplest such domain is a plane with parallel rectilinear cuts. In this case, our investigation  will be based on the solution of certain extremal problems. 
+
+```{lemma}
+Among all functions
+\[F(z) = z + \frac{a_1}{z}+\frac{a_2}{z^2} \cdots\] 
+that are univalent in \(|z| > R\), the quantity \(\Re(e^{-2i\theta}a_1)\), where \(\theta\in \mathbb{R}\)  is maximized by a function that maps the domain \(|z| > R\) onto the plane with a rectilinear cut making an angle \(\theta\) with the real axis. Furthermore, this maximum is achieved only by that specific function. For this function, we have \(\Re(e^{-2i\theta}) = R^2\).
+```
+Recall the Area theorem,
+
+```{theorem,name='The Area Theorem'}
+Suppose that the function 
+\[F(\xi) = \xi+\frac{b_1}{\xi}+\cdots=\xi + \sum_{k=1}^{\infty} \frac{b_k}{ \xi^k}\] 
+is regular in the finite plane (Complex Plane $\mathbb{C}$), has a pole at \(\xi = \infty\), and is univalent in the domain \(|\xi| > 1\). Then,
+\[ \sum_{n=1}^{\infty}n|b_n|^2\leq 1\]
+```
+
+```{proof}
+We use area therom for the following functions,
+\[G(\xi)=\frac{1}{R}F(R\xi)=\xi+\frac{a_1}{R^2\xi}+\cdots\]
+that for all \( |a_1|\leq R^2 \), \
+equality holds only when \( F(z) = z + \frac{R^2 e^{i\theta}}{z} \).
+
+Note that $G(\xi)$ is univalent in $|\xi|>1$ beacuse $F(z)$ is univalent in $|z|>R$. 
+\[\frac{\Re(a_1)}{R^2}=\frac{\Re(a_1)}{\Re(R^2)}=\Re\left(\frac{a_1}{R^2}\right)=\Re(b_1)\leq \cdot |b_1|\leq |b_1|^2 \leq \sum_{n=1}^\infty n|b_n|\leq 1\]
+Thus,
+\[{\Re(a_1)}\leq {R^2}\tag{*}\]
+Note that,
+\[\Re(e^{-2i\theta})=\cos(2\theta)\leq 1,\quad \forall \theta \in \mathbb{R}\]
+\begin{eqnarray*}
+\Re(e^{-2i\theta}a_1)=\Re(e^{-2i\theta})\Re(a_1)\leq \Re(a_1)
+\end{eqnarray*}
+By inequity in (*),
+\[ \Re(e^{-2i\theta} a_1) \leq \Re(a_1)\leq R^2 \] 
+Therfore,
+\[\Re(e^{-2i\theta} a_1) \leq R^2\]
+with equality holding only for the function \( F(z) = z + \frac{R^2 e^{2i\theta}}{ z} \), which maps the domain \( |z| > R \) onto the plane with a cut at an angle \( \theta \) to the real axis.
+```
+
+```{lemma}
+If the function \(F(z) = z + a_0 + \sum_{n=1}^{\infty} a_n z^n\) is univalent in \(|z| > R\), then \(|F(z) - a_0| < 2|z|\) in the domain \(|z| > R\), and the entire boundary of the image of the domain \(|z| > R\) under the mapping \(F(z)\) is contained in the disk \(|a_0| + 2R\).
+```
