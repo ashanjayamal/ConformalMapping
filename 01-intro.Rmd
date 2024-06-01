@@ -61,5 +61,44 @@ with equality holding only for the function \( F(z) = z + \frac{R^2 e^{2i\theta}
 ```
 
 ```{lemma}
-If the function \(F(z) = z + a_0 + \sum_{n=1}^{\infty} a_n z^n\) is univalent in \(|z| > R\), then \(|F(z) - a_0| < 2|z|\) in the domain \(|z| > R\), and the entire boundary of the image of the domain \(|z| > R\) under the mapping \(F(z)\) is contained in the disk \(|a_0| + 2R\).
+If the function 
+\(\xi=F(z) := z + a_0 + \sum_{n=1}^{\infty} a_n z^n\) 
+is univalent in \(|z| > R\), then \(|F(z) - a_0| < 2|z|\) in the domain \(|z| > R\), and the entire boundary of the image of the domain \(|z| > R\) under the mapping \(F(z)\) is contained in the disk \(|\xi-a_0| \leq 2R\).
 ```
+
+```{proof}
+If \(|z_0|>R\) then the function,
+\[\xi=F_1(z):=\frac{1}{z_0}F(z_0z)-\frac{a_0}{z_0}=\frac{1}{z_0}\left( z_0z+ a_0+ \frac{a_1}{z_0z}+\cdots\right)-\frac{a_0}{z_0}=z+\frac{a_1}{z_0^2z}+\cdot\]
+is univalent in $|z|>1$. (One to one propetry is obvious,)
+
+Recall the follwing therom. (This appears on the Goluzin page 50)\
+**Theorem**: If the function 
+\[w=F(\xi)=\xi+a_o+ \frac{a_1}{\xi} +\cdot\]
+maps the domain \(\xi > 1\) univalently, then the 
+entire boundary of its image is contained in the disk \(|w - a_o |\leq 2\). 
+
+By this therom,the entire boundary of the image of the domain \(|z| > 1\) under this function is contained in the disk \(\{|F_1(z)-0|\leq 2\}=\{|F_1(z)|\leq 2\}\).  In particular,\(|F_1(1)|\leq 2\).
+\begin{eqnarray*}
+|F_1(1) |&\leq & 2\\
+|\frac{F(z_0(1))-a_0}{z_0}| &\leq & 2\\
+|F(z_0(1))-a_0| &\leq & 2|z_0|
+\end{eqnarray*}
+,where $|z_0|>R$.
+
+That is,$|F(z)-a_0|\leq 2|z|$ for $|z|>R$
+```
+
+```{theorem}
+Every domain \(B\subseteq \mathbb{C}\) can be mapped univalently onto a domain \(B'\subseteq \hat{\mathbb{C}}\) such that an arbitrary continuum in the complement of the domain \(B'\) with respect to the plane is a straight line segment of given inclination \(\theta\) to the real axis. Furthermore, this mapping is such that a given point \(a\) of the domain \(B\) is mapped into \(\infty\), and the expansion of the mapping function about \(z = a\) is of the form:
+
+\[ \frac{1}{z - a} + a_1(z- a) +\ldots ~\text{ or }~ z+\frac{a_1}{z}+\ldots\]
+
+where \(z\) is finite or infinite.
+
+```
+
+
+
+
+
+

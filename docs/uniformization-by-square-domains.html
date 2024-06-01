@@ -23,7 +23,7 @@
 <meta name="author" content="Ashan J" />
 
 
-<meta name="date" content="2024-05-27" />
+<meta name="date" content="2024-06-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -164,6 +164,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.3" data-path="riemann-mapping-theorem.html"><a href="riemann-mapping-theorem.html#latex"><i class="fa fa-check"></i><b>5.3</b> LaTeX</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="python-code.html"><a href="python-code.html"><i class="fa fa-check"></i><b>6</b> python code</a></li>
+<li class="chapter" data-level="7" data-path="helical-domain.html"><a href="helical-domain.html"><i class="fa fa-check"></i><b>7</b> Helical Domain</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -187,11 +188,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="uniformization-by-square-domains" class="section level1 hasAnchor" number="4">
 <h1><span class="header-section-number">Chapter 4</span> Uniformization by square domains<a href="uniformization-by-square-domains.html#uniformization-by-square-domains" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div class="definition">
-<p><span id="def:unnamed-chunk-23" class="definition"><strong>Definition 4.1  (Domain) </strong></span>A subset <span class="math inline">\(D\)</span> of the complex plane is a domain if <span class="math inline">\(D\)</span> is open and if any two points of <span class="math inline">\(D\)</span> can be connected by a broken line segment in <span class="math inline">\(D\)</span>.</p>
+<p><span id="def:unnamed-chunk-25" class="definition"><strong>Definition 4.1  (Domain) </strong></span>A subset <span class="math inline">\(D\)</span> of the complex plane is a domain if <span class="math inline">\(D\)</span> is open and if any two points of <span class="math inline">\(D\)</span> can be connected by a broken line segment in <span class="math inline">\(D\)</span>.</p>
 </div>
 <p><img src="figures/Mario_Bonk/fig1.png" width="453" /></p>
 <div class="example">
-<p><span id="exm:unnamed-chunk-25" class="example"><strong>Example 4.1  </strong></span></p>
+<p><span id="exm:unnamed-chunk-27" class="example"><strong>Example 4.1  </strong></span></p>
 <ul>
 <li><strong>Examples</strong>:
 <ul>
@@ -209,15 +210,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 </div>
 <div class="definition">
-<p><span id="def:unnamed-chunk-26" class="definition"><strong>Definition 4.2  (Riemann Sphere) </strong></span>The Riemann sphere, also called the extended complex plane consist of the complex numbers <span class="math inline">\(\mathbb{C}\)</span> together with <span class="math inline">\(\infty\)</span>. The set of extended complex numbers may be written as <span class="math inline">\(\mathbb{C} \cup \{\infty\}\)</span>.</p>
+<p><span id="def:unnamed-chunk-28" class="definition"><strong>Definition 4.2  (Riemann Sphere) </strong></span>The Riemann sphere, also called the extended complex plane consist of the complex numbers <span class="math inline">\(\mathbb{C}\)</span> together with <span class="math inline">\(\infty\)</span>. The set of extended complex numbers may be written as <span class="math inline">\(\mathbb{C} \cup \{\infty\}\)</span>.</p>
 </div>
 <p><strong>Notation</strong>: <span class="math inline">\(\hat{\mathbb{C}}=\mathbb{C} \cup \{\infty\}\)</span></p>
 <p><img src="figures/Mario_Bonk/fig2.png" width="240" height="50%" style="display: block; margin: auto;" /></p>
 <div class="definition">
-<p><span id="def:unnamed-chunk-28" class="definition"><strong>Definition 4.3  </strong></span>A domain in the plane is “simply connected” if it has no “holes.”</p>
+<p><span id="def:unnamed-chunk-30" class="definition"><strong>Definition 4.3  </strong></span>A domain in the plane is “simply connected” if it has no “holes.”</p>
 </div>
 <div class="example">
-<p><span id="exm:unnamed-chunk-29" class="example"><strong>Example 4.2  </strong></span></p>
+<p><span id="exm:unnamed-chunk-31" class="example"><strong>Example 4.2  </strong></span></p>
 <ul>
 <li><strong>Example</strong>
 <ul>
@@ -235,10 +236,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <p>Later we discuss this more precise</p>
 <div class="definition">
-<p><span id="def:unnamed-chunk-30" class="definition"><strong>Definition 4.4  (Meromophic) </strong></span>A function <span class="math inline">\(f(z)\)</span> is meromorphic on a domain <span class="math inline">\(D\)</span> if <span class="math inline">\(f(z)\)</span> is analytic on <span class="math inline">\(D\)</span> except possibly at isolated singularities, each of which is a pole.</p>
+<p><span id="def:unnamed-chunk-32" class="definition"><strong>Definition 4.4  (Meromophic) </strong></span>A function <span class="math inline">\(f(z)\)</span> is meromorphic on a domain <span class="math inline">\(D\)</span> if <span class="math inline">\(f(z)\)</span> is analytic on <span class="math inline">\(D\)</span> except possibly at isolated singularities, each of which is a pole.</p>
 </div>
 <div class="proof">
-<p><span id="unlabeled-div-6" class="proof"><em>Proof</em>. </span>(Proof of Therom 1.1 in th paper)<br />
+<p><span id="unlabeled-div-7" class="proof"><em>Proof</em>. </span>(Proof of Therom 1.1 in th paper)<br />
 Let <span class="math inline">\(\Omega\)</span> be a finitely connected domain in <span class="math inline">\(\hat{\mathbb{C}}\)</span> with <span class="math inline">\(\infty\in \Omega\)</span> It is a known fact that there exists a conformal map <span class="math inline">\(g\)</span> of <span class="math inline">\(\Omega\)</span> onto a square domain <span class="math inline">\(\tilde{\Omega}\)</span> with the normalization
 <span class="math display">\[g(z) = z + \frac{b_1}{z} + \ldots\]</span>
 near <span class="math inline">\(\infty\)</span>.</p>
@@ -317,7 +318,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["_main.pdf", "_main.epub"],
+"download": ["ConformalMapping.pdf", "ConformalMapping.epub"],
 "search": {
 "engine": "fuse",
 "options": null

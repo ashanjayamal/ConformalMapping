@@ -35,3 +35,5 @@ and pass to the limit, to obtain the formula (6.1).
 - If $\gamma'(0) = 0$, then proceeding as in Section 2, we obtain $(f \circ \gamma)'(0) = 0$, and again the formula holds.
 
 ```
+
+

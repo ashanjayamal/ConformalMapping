@@ -23,7 +23,7 @@
 <meta name="author" content="Ashan J" />
 
 
-<meta name="date" content="2024-05-27" />
+<meta name="date" content="2024-06-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -164,6 +164,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.3" data-path="riemann-mapping-theorem.html"><a href="riemann-mapping-theorem.html#latex"><i class="fa fa-check"></i><b>5.3</b> LaTeX</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="python-code.html"><a href="python-code.html"><i class="fa fa-check"></i><b>6</b> python code</a></li>
+<li class="chapter" data-level="7" data-path="helical-domain.html"><a href="helical-domain.html"><i class="fa fa-check"></i><b>7</b> Helical Domain</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -238,7 +239,32 @@ Therfore,
 with equality holding only for the function <span class="math inline">\(F(z) = z + \frac{R^2 e^{2i\theta}}{ z}\)</span>, which maps the domain <span class="math inline">\(|z| &gt; R\)</span> onto the plane with a cut at an angle <span class="math inline">\(\theta\)</span> to the real axis.</p>
 </div>
 <div class="lemma">
-<p><span id="lem:unnamed-chunk-16" class="lemma"><strong>Lemma 2.2  </strong></span>If the function <span class="math inline">\(F(z) = z + a_0 + \sum_{n=1}^{\infty} a_n z^n\)</span> is univalent in <span class="math inline">\(|z| &gt; R\)</span>, then <span class="math inline">\(|F(z) - a_0| &lt; 2|z|\)</span> in the domain <span class="math inline">\(|z| &gt; R\)</span>, and the entire boundary of the image of the domain <span class="math inline">\(|z| &gt; R\)</span> under the mapping <span class="math inline">\(F(z)\)</span> is contained in the disk <span class="math inline">\(|a_0| + 2R\)</span>.</p>
+<p><span id="lem:unnamed-chunk-16" class="lemma"><strong>Lemma 2.2  </strong></span>If the function
+<span class="math inline">\(\xi=F(z) := z + a_0 + \sum_{n=1}^{\infty} a_n z^n\)</span>
+is univalent in <span class="math inline">\(|z| &gt; R\)</span>, then <span class="math inline">\(|F(z) - a_0| &lt; 2|z|\)</span> in the domain <span class="math inline">\(|z| &gt; R\)</span>, and the entire boundary of the image of the domain <span class="math inline">\(|z| &gt; R\)</span> under the mapping <span class="math inline">\(F(z)\)</span> is contained in the disk <span class="math inline">\(|\xi-a_0| \leq 2R\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-5" class="proof"><em>Proof</em>. </span>If <span class="math inline">\(|z_0|&gt;R\)</span> then the function,
+<span class="math display">\[\xi=F_1(z):=\frac{1}{z_0}F(z_0z)-\frac{a_0}{z_0}=\frac{1}{z_0}\left( z_0z+ a_0+ \frac{a_1}{z_0z}+\cdots\right)-\frac{a_0}{z_0}=z+\frac{a_1}{z_0^2z}+\cdot\]</span>
+is univalent in <span class="math inline">\(|z|&gt;1\)</span>. (One to one propetry is obvious,)</p>
+<p>Recall the follwing therom. (This appears on the Goluzin page 50)<br />
+<strong>Theorem</strong>: If the function
+<span class="math display">\[w=F(\xi)=\xi+a_o+ \frac{a_1}{\xi} +\cdot\]</span>
+maps the domain <span class="math inline">\(\xi &gt; 1\)</span> univalently, then the
+entire boundary of its image is contained in the disk <span class="math inline">\(|w - a_o |\leq 2\)</span>.</p>
+<p>By this therom,the entire boundary of the image of the domain <span class="math inline">\(|z| &gt; 1\)</span> under this function is contained in the disk <span class="math inline">\(\{|F_1(z)-0|\leq 2\}=\{|F_1(z)|\leq 2\}\)</span>. In particular,<span class="math inline">\(|F_1(1)|\leq 2\)</span>.
+<span class="math display">\[\begin{eqnarray*}
+|F_1(1) |&amp;\leq &amp; 2\\
+|\frac{F(z_0(1))-a_0}{z_0}| &amp;\leq &amp; 2\\
+|F(z_0(1))-a_0| &amp;\leq &amp; 2|z_0|
+\end{eqnarray*}\]</span>
+,where <span class="math inline">\(|z_0|&gt;R\)</span>.</p>
+<p>That is,<span class="math inline">\(|F(z)-a_0|\leq 2|z|\)</span> for <span class="math inline">\(|z|&gt;R\)</span></p>
+</div>
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-18" class="theorem"><strong>Theorem 2.2  </strong></span>Every domain <span class="math inline">\(B\subseteq \mathbb{C}\)</span> can be mapped univalently onto a domain <span class="math inline">\(B&#39;\subseteq \hat{\mathbb{C}}\)</span> such that an arbitrary continuum in the complement of the domain <span class="math inline">\(B&#39;\)</span> with respect to the plane is a straight line segment of given inclination <span class="math inline">\(\theta\)</span> to the real axis. Furthermore, this mapping is such that a given point <span class="math inline">\(a\)</span> of the domain <span class="math inline">\(B\)</span> is mapped into <span class="math inline">\(\infty\)</span>, and the expansion of the mapping function about <span class="math inline">\(z = a\)</span> is of the form:</p>
+<p><span class="math display">\[ \frac{1}{z - a} + a_1(z- a) +\ldots ~\text{ or }~ z+\frac{a_1}{z}+\ldots\]</span></p>
+<p>where <span class="math inline">\(z\)</span> is finite or infinite.</p>
 </div>
 
 </div>

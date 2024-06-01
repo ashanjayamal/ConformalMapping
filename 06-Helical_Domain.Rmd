@@ -1,0 +1,19 @@
+# Helical Domain
+
+In an analogous manner, we shall find the answer to the question of univalent mapping of multiply connected domains onto a plane with cuts along arcs of logarithmic spirals and, as limiting cases, onto the plane with radial cuts and with cuts along circular arcs of concentric circles. 
+
+
+For constant $\theta$ and $c$, the equation  $\Im(e^{-i\theta}\log(\xi))=c$ defines a logarithmic  spiral in the $\xi$-plane with asymptotic point at the origin.This spiral has the property that it is intersected by an arbitrary ray issuing from the origin at an angle $\theta$. This follows, for example, from the fact that if we shift to the plane $t = \log(\xi)$, this logarithmic spiral is mapped into the straight line $e^{-i\theta t} = c$ with inclination $\theta$ to the real axis, and the ray referred to is mapped into a straight line parallel to the real axis. 
+
+```{r echo=FALSE,fig.align='center'}
+  knitr::include_graphics('figures/Helical_Domain/fig1.png')
+```
+
+- For $\theta = 0$, the logarithmic spiral degenerates into a ray issuing from the origin. 
+```{r echo=FALSE,fig.align='center'}
+  knitr::include_graphics('figures/Helical_Domain/fig2.png')
+```
+- For $\theta = \frac{\pi}{2}$, it degenerates to a circle with center at the origin. 
+```{r echo=FALSE,fig.align='center'}
+  knitr::include_graphics('figures/Helical_Domain/fig3.png')
+```

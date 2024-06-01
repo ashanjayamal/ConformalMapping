@@ -23,7 +23,7 @@
 <meta name="author" content="Ashan J" />
 
 
-<meta name="date" content="2024-05-27" />
+<meta name="date" content="2024-06-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -164,6 +164,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.3" data-path="riemann-mapping-theorem.html"><a href="riemann-mapping-theorem.html#latex"><i class="fa fa-check"></i><b>5.3</b> LaTeX</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="python-code.html"><a href="python-code.html"><i class="fa fa-check"></i><b>6</b> python code</a></li>
+<li class="chapter" data-level="7" data-path="helical-domain.html"><a href="helical-domain.html"><i class="fa fa-check"></i><b>7</b> Helical Domain</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -187,24 +188,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="conformal-mappings" class="section level1 hasAnchor" number="3">
 <h1><span class="header-section-number">Chapter 3</span> Conformal Mappings<a href="conformal-mappings.html#conformal-mappings" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div class="definition">
-<p><span id="def:unnamed-chunk-17" class="definition"><strong>Definition 3.1  (Tanagent Vector) </strong></span>Let <span class="math inline">\(\gamma(t) = x(t) + iy(t), 0\leq  t \leq  1\)</span>, be a smooth parameterized curve terminating at <span class="math inline">\(z_0 = \gamma(0)\)</span>. We refer to
+<p><span id="def:unnamed-chunk-19" class="definition"><strong>Definition 3.1  (Tanagent Vector) </strong></span>Let <span class="math inline">\(\gamma(t) = x(t) + iy(t), 0\leq  t \leq  1\)</span>, be a smooth parameterized curve terminating at <span class="math inline">\(z_0 = \gamma(0)\)</span>. We refer to
 <span class="math display">\[\gamma&#39;(0) = \lim_{t \to 0} \frac{\gamma(t)-\gamma(0)}{t} = x&#39;(0) + iy&#39;(0)\]</span>
 as the tangent vector to the curve ’Y at ZOo</p>
 </div>
 <div class="definition">
-<p><span id="def:unnamed-chunk-18" class="definition"><strong>Definition 3.2  (Angle between two curves ) </strong></span>We define the angle between two curves
+<p><span id="def:unnamed-chunk-20" class="definition"><strong>Definition 3.2  (Angle between two curves ) </strong></span>We define the angle between two curves
 at <span class="math inline">\(z_0\)</span> to be the angle between their tangent vectors at <span class="math inline">\(z_O\)</span>.</p>
 </div>
 <p><img src="figures/Confromal_mapping/fig1.png" width="706" /></p>
 <div class="theorem">
-<p><span id="thm:unnamed-chunk-20" class="theorem"><strong>Theorem 3.1  </strong></span>If <span class="math inline">\(\gamma(t)\)</span>, <span class="math inline">\(0 \leq t \leq 1\)</span>, is a smooth parameterized curve terminating at <span class="math inline">\(z_0 = \gamma(0)\)</span>, and <span class="math inline">\(f(z)\)</span> is analytic at <span class="math inline">\(z_0\)</span>, then the tangent to the curve <span class="math inline">\(f(\gamma(t))\)</span> terminating at <span class="math inline">\(f(z_0)\)</span> is given by:
+<p><span id="thm:unnamed-chunk-22" class="theorem"><strong>Theorem 3.1  </strong></span>If <span class="math inline">\(\gamma(t)\)</span>, <span class="math inline">\(0 \leq t \leq 1\)</span>, is a smooth parameterized curve terminating at <span class="math inline">\(z_0 = \gamma(0)\)</span>, and <span class="math inline">\(f(z)\)</span> is analytic at <span class="math inline">\(z_0\)</span>, then the tangent to the curve <span class="math inline">\(f(\gamma(t))\)</span> terminating at <span class="math inline">\(f(z_0)\)</span> is given by:
 <span class="math display">\[\begin{equation}
 (f \circ \gamma)&#39;(0) = f&#39;(z_0)\gamma&#39;(0)
 \end{equation}\]</span></p>
 </div>
 <p><img src="figures/Confromal_mapping/fig2.png" width="468" /></p>
 <div class="proof">
-<p><span id="unlabeled-div-5" class="proof"><em>Proof</em>. </span></p>
+<p><span id="unlabeled-div-6" class="proof"><em>Proof</em>. </span></p>
 <ul>
 <li>If <span class="math inline">\(\gamma&#39;(0) \neq 0\)</span>, then <span class="math inline">\(\gamma(t) \neq \gamma(0)\)</span> for <span class="math inline">\(t\)</span> near <span class="math inline">\(0\)</span>, <span class="math inline">\(t \neq 0\)</span>, so we may write
 <span class="math display">\[\begin{equation}
