@@ -27,7 +27,7 @@ The hyperbolic distance \(\rho(z_0, z_1)\) from \(z_0\) to \(z_1\) is defined as
   =\inf_\gamma\left\{2\int_{\gamma} \frac{|dz|}{1-|z|^2}\right\}\]
 ```
 
-```{r echo=FALSE}
+```{r ,echo=FALSE,fig.align='center'}
   knitr::include_graphics('figures/Riemann_Mapping_Therom/fig1.png')
 ```
 
@@ -35,7 +35,7 @@ Since conformal self-maps of $\mathbb{D}$ preserve the hyperbolic lengths of cur
 \[ \rho(f(z_0), f(z_1)) = \rho(z_0, z_1), \quad \text{where } z_0, z_1 \in \mathbb{D}. \]
 
 
-```{r echo=FALSE}
+```{r ,echo=FALSE,fig.align='center'}
   knitr::include_graphics('figures/Riemann_Mapping_Therom/fig2.png')
 ```
 
@@ -50,7 +50,7 @@ The paths of shortest hyperbolic length between points are called **hyperbolic g
 
 
 
-```{r echo=FALSE}
+```{r ,echo=FALSE,fig.align='center'}
   knitr::include_graphics('figures/Riemann_Mapping_Therom/fig3.png')
 ```
 
@@ -66,7 +66,9 @@ If \(y(t) \neq 0\) for some \(t\), then \(|\gamma(t)| > |x(t)|\), and the first 
 ```
 
 
-
+```{r ,echo=FALSE,fig.align='center'}
+  knitr::include_graphics('figures/Riemann_Mapping_Therom/fig5.png')
+```
 
 
 
@@ -129,11 +131,11 @@ Done it earler.
 Given any simply connected region \(\Omega\) which is not the whole plane, and a point \(z_0\) in \(\Omega\), there exists a unique analytic function \(f(z)\) in \(\Omega\), normalized by the conditions \(f(z_0) = 0\), \(f'(z_0) > 0\), such that \(f(z)\) defines a one-to-one mapping of \(\Omega\) onto the unit disk \(\mathbb{D}=\{|w| < 1\}\).
 ```
 
-```{r echo=FALSE}
+```{r ,echo=FALSE,fig.align='center'}
   knitr::include_graphics('figures/Riemann_Mapping_Therom/fig4.png')
 ```
 
-```{proof}
+*Proof.*
 First fix $z_0$. Let $\mathcal{F}$ be the family of univalent functions on $D$ such that $|f(z)|\leq 1$ on $D$ and $f(z_0)=0$ for all $f \in \mathcal{F}$. We proceed with the proof here in four parts
 
 i. $\mathcal{F}$ is non-empty.
@@ -141,15 +143,32 @@ ii. $|f'(z_0)|$ is bounded above for all $f\in \mathcal{F}$.
 iii. There exist $g\in \mathcal{F}$ such that $|g'(z)|$ is maximal
 iv. The function $g$ is a biholomorphic map from $D$ to $\mathbb{D}$
 
-
-
+```{r ,echo=FALSE,fig.align='center'}
+  knitr::include_graphics('figures/Riemann_Mapping_Therom/fig5.png')
 ```
 
+```{r ,echo=FALSE,fig.align='center'}
+  knitr::include_graphics('figures/Riemann_Mapping_Therom/fig6.png')
+```
+```{r ,echo=FALSE,fig.align='center'}
+  knitr::include_graphics('figures/Riemann_Mapping_Therom/fig7.png')
+```
 
+```{r ,echo=FALSE,fig.align='center'}
+  knitr::include_graphics('figures/Riemann_Mapping_Therom/fig8.png')
+```
 
+```{r ,echo=FALSE,fig.align='center'}
+  knitr::include_graphics('figures/Riemann_Mapping_Therom/fig9.png')
+```
 
+```{r ,echo=FALSE,fig.align='center'}
+  knitr::include_graphics('figures/Riemann_Mapping_Therom/fig10.png')
+```
 
-
+```{r ,echo=FALSE,fig.align='center'}
+ knitr::include_graphics('figures/Riemann_Mapping_Therom/fig11.png')
+```
 
 
 

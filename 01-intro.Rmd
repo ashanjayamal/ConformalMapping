@@ -47,7 +47,7 @@ equality holds only when \( F(z) = z + \frac{R^2 e^{i\theta}}{z} \).
 Note that $G(\xi)$ is univalent in $|\xi|>1$ beacuse $F(z)$ is univalent in $|z|>R$. 
 \[\frac{\Re(a_1)}{R^2}=\frac{\Re(a_1)}{\Re(R^2)}=\Re\left(\frac{a_1}{R^2}\right)=\Re(b_1)\leq \cdot |b_1|\leq |b_1|^2 \leq \sum_{n=1}^\infty n|b_n|\leq 1\]
 Thus,
-\[{\Re(a_1)}\leq {R^2}\tag{*}\]
+\[{\Re(a_1)}\leq {R^2}\]
 Note that,
 \[\Re(e^{-2i\theta})=\cos(2\theta)\leq 1,\quad \forall \theta \in \mathbb{R}\]
 \begin{eqnarray*}

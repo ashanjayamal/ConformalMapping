@@ -23,14 +23,14 @@
 <meta name="author" content="Ashan J" />
 
 
-<meta name="date" content="2024-06-01" />
+<meta name="date" content="2024-06-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-<link rel="prev" href="python-code.html"/>
+<link rel="prev" href="codes.html"/>
 
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -163,7 +163,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="5.3" data-path="riemann-mapping-theorem.html"><a href="riemann-mapping-theorem.html#latex"><i class="fa fa-check"></i><b>5.3</b> LaTeX</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="python-code.html"><a href="python-code.html"><i class="fa fa-check"></i><b>6</b> python code</a></li>
+<li class="chapter" data-level="6" data-path="codes.html"><a href="codes.html"><i class="fa fa-check"></i><b>6</b> Codes</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="codes.html"><a href="codes.html#python-code"><i class="fa fa-check"></i><b>6.1</b> Python Code</a></li>
+</ul></li>
 <li class="chapter" data-level="7" data-path="helical-domain.html"><a href="helical-domain.html"><i class="fa fa-check"></i><b>7</b> Helical Domain</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -189,13 +192,49 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Chapter 7</span> Helical Domain<a href="helical-domain.html#helical-domain" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>In an analogous manner, we shall find the answer to the question of univalent mapping of multiply connected domains onto a plane with cuts along arcs of logarithmic spirals and, as limiting cases, onto the plane with radial cuts and with cuts along circular arcs of concentric circles.</p>
 <p>For constant <span class="math inline">\(\theta\)</span> and <span class="math inline">\(c\)</span>, the equation <span class="math inline">\(\Im(e^{-i\theta}\log(\xi))=c\)</span> defines a logarithmic spiral in the <span class="math inline">\(\xi\)</span>-plane with asymptotic point at the origin.This spiral has the property that it is intersected by an arbitrary ray issuing from the origin at an angle <span class="math inline">\(\theta\)</span>. This follows, for example, from the fact that if we shift to the plane <span class="math inline">\(t = \log(\xi)\)</span>, this logarithmic spiral is mapped into the straight line <span class="math inline">\(e^{-i\theta t} = c\)</span> with inclination <span class="math inline">\(\theta\)</span> to the real axis, and the ray referred to is mapped into a straight line parallel to the real axis.</p>
-<p><img src="figures/Helical_Domain/fig1.png" width="364" style="display: block; margin: auto;" /></p>
+<p><img src="figures/Helical_Domain/fig1.png" width="364" /></p>
 <ul>
 <li>For <span class="math inline">\(\theta = 0\)</span>, the logarithmic spiral degenerates into a ray issuing from the origin.
-<img src="figures/Helical_Domain/fig2.png" width="382" style="display: block; margin: auto;" /></li>
-<li>For <span class="math inline">\(\theta = \frac{\pi}{2}\)</span>, it degenerates to a circle with center at the origin.
-<img src="figures/Helical_Domain/fig3.png" width="756" style="display: block; margin: auto;" /></li>
+<img src="figures/Helical_Domain/fig2.png" width="382" /></li>
+<li>For <span class="math inline">\(\theta = \frac{\pi}{2}\)</span>, it degenerates to a circle with center at the origin.</li>
 </ul>
+<p><img src="figures/Helical_Domain/fig3.png" width="756" /></p>
+<p>When we hold <span class="math inline">\(c\)</span> constant and vary <span class="math inline">\(\theta\)</span>, we obtain various curves constituting the family of logarithmic spirals of inclination <span class="math inline">\(\theta\)</span>. For all that follows, when we speak of logarithmic spirals of inclination <span class="math inline">\(\theta\)</span>, these are what we mean.</p>
+<p>Let us show that, for any simply connected domain <span class="math inline">\(B\)</span> that has boundary points, it is possible to map <span class="math inline">\(B\)</span> onto the complex plane <span class="math inline">\(\mathbb{C}\)</span> with a cut along an arc of a logarithmic spiral of inclination <span class="math inline">\(\theta\)</span> in such a way that given points <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> of the domain <span class="math inline">\(B\)</span> are mapped into <span class="math inline">\(0\)</span> and <span class="math inline">\(\infty\)</span>, respectively. The expansion of the mapping function about <span class="math inline">\(z = b\)</span> has the form:</p>
+<p><span class="math display">\[ \frac{1}{z - b} +a_0+a_1{(z - b)} +\cdots\text{ or }  z+a_0+\frac{a_1}{z} +  + \cdots, \]</span></p>
+<p>according as <span class="math inline">\(b\)</span> is finite or infinite.</p>
+<ul>
+<li><p>If domain <span class="math inline">\(B\)</span> has <strong>a single boundary point</strong>,<br />
+this is obvious, and then the arc of the logarithmic spiral referred to degenerates to a point.</p></li>
+<li><p>If the boundary of the domain <span class="math inline">\(B\)</span> is <strong>a continuum</strong>,<br />
+let us first map <span class="math inline">\(B\)</span> conformally onto the domain <span class="math inline">\(\{z&#39; : |z&#39;| &gt; 1\}\)</span> in such a way that the point <span class="math inline">\(z = b\)</span> is mapped into <span class="math inline">\(z&#39; = \infty\)</span>.</p></li>
+</ul>
+<p>Let <span class="math inline">\(z&#39;\)</span> be the mapping function <span class="math inline">\(cP(z)\)</span> in a neighborhood of <span class="math inline">\(z = b\)</span>. The expansion can be expressed as:</p>
+<p><span class="math display">\[
+z&#39; = cP(z) = \frac{1}{b} + \frac{1}{1} (z - b) + \frac{1}{1!} (z - b)^2 + \frac{1}{0!} (z - b)^3 + \ldots
+\]</span></p>
+<p>or</p>
+<p><span class="math display">\[
+z&#39; = cP(z) = \frac{1}{b} + \frac{1}{1}z + \frac{1}{1!}z^2 + \frac{1}{0!}z^3 + \ldots
+\]</span></p>
+<p>depending on whether <span class="math inline">\(b\)</span> is finite or infinite. This expansion is possible due to Riemann’s theorem.</p>
+<p>Suppose that the point <span class="math inline">\(z = a\)</span> is mapped into a point <span class="math inline">\(z&#39; = a&#39;\)</span>. Now, we need to establish the possibility of mapping the domain <span class="math inline">\(\lvert z&#39; \rvert &gt; 1\)</span> onto the complex plane with a cut along a logarithmic spiral of inclination <span class="math inline">\(\epsilon\)</span>. This possibility follows from solving the problem related to the minimum of the quantity:</p>
+<p><span class="math display">\[
+\(\Re(e^{-2i\theta} \log (F&#39;(a))\)
+\]</span></p>
+<p>in the class I. This problem was studied in Section 3 of Chapter IV (the first application of Theorem 1 with <span class="math inline">\(a = \frac{17}{2} - \epsilon\)</span>). It was shown that this problem has a solution, and the extremal function (normalized by the condition <span class="math inline">\(F(a&#39;) = 0\)</span>) provides the required mapping.</p>
+<div class="lemma">
+<p><span id="lem:unnamed-chunk-53" class="lemma"><strong>Lemma 7.1  </strong></span>Of all functions
+<span class="math display">\[
+\xi=F(z) := z + \frac{a}{z} + a_0 + \ldots
+\]</span>
+that map the domain <span class="math inline">\(|z| &gt; R\)</span> univalently in such a way that a given finite point <span class="math inline">\(a\)</span> and the point <span class="math inline">\(\infty\)</span> are
+mapped into the poi nts <span class="math inline">\(0\)</span> and <span class="math inline">\(\infty\)</span> respectively, the quantity <span class="math inline">\(\Re(e^{-2i\theta} \log (F&#39;(a))\)</span>
+is minimized by the function <span class="math inline">\(F_0(z)\)</span> that maps the disk <span class="math inline">\(|z| &gt; R\)</span> onto the <span class="math inline">\(\xi\)</span>-plane with cut along an arc of a logarithmic spiral of inclination <span class="math inline">\(\theta\)</span>. Here <span class="math inline">\(\log F &#39;(z)\)</span> means the brooch that approaches <span class="math inline">\(0\)</span> as <span class="math inline">\(z \to \infty\)</span>.</p>
+</div>
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-54" class="theorem"><strong>Theorem 7.1  </strong></span>Every domain <span class="math inline">\(B\)</span> in the <span class="math inline">\(z\)</span>-plane can be mapped univalently onto a domain <span class="math inline">\(B&#39;\)</span> in the <span class="math inline">\(\omega\)</span>-plane that includes the points 0 and <span class="math inline">\(\infty\)</span>, such that an arbitrary continuum of the complement of the domain <span class="math inline">\(B&#39;\)</span> with respect to the <span class="math inline">\(\omega\)</span>-plane is an arc of a logarithmic spiral of given inclination <span class="math inline">\(\epsilon\)</span>. This mapping maps given points <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> of the domain <span class="math inline">\(B\)</span> into 0 and <span class="math inline">\(\infty\)</span>, respectively, and the expansion of the mapping function about <span class="math inline">\(z = b\)</span> has the form <span class="math inline">\((z - b)^{r_1} + a_0 + a_1 (z - b) + \ldots\)</span> or <span class="math inline">\(z + a_0 + a_1 z^{-1} + \ldots\)</span>, according as <span class="math inline">\(b\)</span> is finite or infinite.</p>
+</div>
 
 </div>
             </section>
@@ -203,7 +242,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="python-code.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="codes.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>

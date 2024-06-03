@@ -120,7 +120,7 @@
 
 \title{Conformal Mapping}
 \author{Ashan J}
-\date{2024-06-01}
+\date{2024-06-03}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -273,7 +273,7 @@ equality holds only when \(F(z) = z + \frac{R^2 e^{i\theta}}{z}\).
 Note that \(G(\xi)\) is univalent in \(|\xi|>1\) beacuse \(F(z)\) is univalent in \(|z|>R\).
 \[\frac{\Re(a_1)}{R^2}=\frac{\Re(a_1)}{\Re(R^2)}=\Re\left(\frac{a_1}{R^2}\right)=\Re(b_1)\leq \cdot |b_1|\leq |b_1|^2 \leq \sum_{n=1}^\infty n|b_n|\leq 1\]
 Thus,
-\[{\Re(a_1)}\leq {R^2}\tag{*}\]
+\[{\Re(a_1)}\leq {R^2}\]
 Note that,
 \[\Re(e^{-2i\theta})=\cos(2\theta)\leq 1,\quad \forall \theta \in \mathbb{R}\]
 \begin{eqnarray*}
@@ -533,12 +533,12 @@ metric so that its curvature is -1.)
   =\inf_\gamma\left\{2\int_{\gamma} \frac{|dz|}{1-|z|^2}\right\}\]
 \end{definition}
 
-\includegraphics[width=14.76in]{figures/Riemann_Mapping_Therom/fig1}
+\begin{center}\includegraphics[width=14.76in]{figures/Riemann_Mapping_Therom/fig1} \end{center}
 
 Since conformal self-maps of \(\mathbb{D}\) preserve the hyperbolic lengths of curves, they also preserve hyperbolic distances. That is, for any conformal self-map \(w = J(z)\) of \(\mathbb{D}\),
 \[ \rho(f(z_0), f(z_1)) = \rho(z_0, z_1), \quad \text{where } z_0, z_1 \in \mathbb{D}. \]
 
-\includegraphics[width=23.78in]{figures/Riemann_Mapping_Therom/fig2}
+\begin{center}\includegraphics[width=23.78in]{figures/Riemann_Mapping_Therom/fig2} \end{center}
 
 \begin{theorem}
 \protect\hypertarget{thm:unnamed-chunk-39}{}\label{thm:unnamed-chunk-39}For any two distinct points \(z_0, z_1\) in the open unit disk \(\mathbb{D}\), there exists a unique shortest curve in \(\mathbb{D}\) from \(z_0\) to \(z_1\) in the hyperbolic metric. Specifically, this curve corresponds to the arc of the circle passing through \(z_0\) and \(z_1\) that is orthogonal to the unit circle.
@@ -554,7 +554,7 @@ Since conformal self-maps of \(\mathbb{D}\) preserve the hyperbolic lengths of c
   These hyperbolic geodesics play a role similar to that of straight lines in Euclidean geometry. They satisfy all the axioms of Euclidean geometry except for the parallel axiom (which states that through each point not on a given line, there passes a unique straight line through the point and parallel to the given line).
 \end{itemize}
 
-\includegraphics[width=11.5in]{figures/Riemann_Mapping_Therom/fig3}
+\begin{center}\includegraphics[width=11.5in]{figures/Riemann_Mapping_Therom/fig3} \end{center}
 
 \begin{proof}
 (proof of theorem), Let \(w = f(z)\) be a conformal self-map of \(\mathcal{D}\)
@@ -566,6 +566,8 @@ Then \(alpha(t) = \Re(\gamma(t)) = x(t)\) defines a path in \(\mathbb{D}\) from 
 
 If \(y(t) \neq 0\) for some \(t\), then \(|\gamma(t)| > |x(t)|\), and the first inequality above is strict. In this case, the path \(a(t)\) on the real axis is strictly shorter than the path \(\gamma(t)\). Further, if \(a(t)\) is decreasing on some interval, we could reduce the integral by deleting a parameter interval over which \(a(t)\) starts and ends at the same value. We conclude that the integral is a minimum exactly when \(\gamma(t)\) is real and nondecreasing, in which case the path is the straight line segment from 0 to \(r\).
 \end{proof}
+
+\begin{center}\includegraphics[width=9.6in]{figures/Riemann_Mapping_Therom/fig5} \end{center}
 
 \section{Proof of Riemann Mapping Theorem}\label{proof-of-riemann-mapping-theorem}
 
@@ -608,7 +610,7 @@ So, \(h(z) = e^{g(z)/2}\) is an analytic branch of \(\sqrt{z - a}\) in \(D\), an
 Thus \(h(z)\) is univalent, and \(h(z)\) maps \(D\) conformally onto \(h(D)\). Finally, note that if \(w_0 \in h(D)\), then \(-w_0 \notin h(D)\). Indeed, if \(w_0 = h(z_0)\) and \(-w_0 = h(z_1)\) for \(z_0, z_1 \in D\), then \(z_0 = h(z_0)^2 + a = w_0^2 + a = h(z_1)^2 + a = z_1\), which is impossible. We summarize.
 
 \begin{lemma}
-\protect\hypertarget{lem:unnamed-chunk-43}{}\label{lem:unnamed-chunk-43}Let \(D\) be a simply connected domain. Suppose \(a \notin D\), and let
+\protect\hypertarget{lem:unnamed-chunk-44}{}\label{lem:unnamed-chunk-44}Let \(D\) be a simply connected domain. Suppose \(a \notin D\), and let
 \(h(z)\) be an analytic branch of \(\sqrt{z - a}\) in \(D\). Then \(h(z)\) is univalent on \(D\), and further, \(h(D)\) is disjoint from \(-h(D)\).
 \end{lemma}
 
@@ -619,13 +621,12 @@ Done it earler.
 \subsection{Adlof Proof}\label{adlof-proof}
 
 \begin{theorem}[Riemann Mapping Theorem]
-\protect\hypertarget{thm:unnamed-chunk-45}{}\label{thm:unnamed-chunk-45}Given any simply connected region \(\Omega\) which is not the whole plane, and a point \(z_0\) in \(\Omega\), there exists a unique analytic function \(f(z)\) in \(\Omega\), normalized by the conditions \(f(z_0) = 0\), \(f'(z_0) > 0\), such that \(f(z)\) defines a one-to-one mapping of \(\Omega\) onto the unit disk \(\mathbb{D}=\{|w| < 1\}\).
+\protect\hypertarget{thm:unnamed-chunk-46}{}\label{thm:unnamed-chunk-46}Given any simply connected region \(\Omega\) which is not the whole plane, and a point \(z_0\) in \(\Omega\), there exists a unique analytic function \(f(z)\) in \(\Omega\), normalized by the conditions \(f(z_0) = 0\), \(f'(z_0) > 0\), such that \(f(z)\) defines a one-to-one mapping of \(\Omega\) onto the unit disk \(\mathbb{D}=\{|w| < 1\}\).
 \end{theorem}
 
-\includegraphics[width=19.97in]{figures/Riemann_Mapping_Therom/fig4}
+\begin{center}\includegraphics[width=19.97in]{figures/Riemann_Mapping_Therom/fig4} \end{center}
 
-\begin{proof}
-
+\emph{Proof.}
 First fix \(z_0\). Let \(\mathcal{F}\) be the family of univalent functions on \(D\) such that \(|f(z)|\leq 1\) on \(D\) and \(f(z_0)=0\) for all \(f \in \mathcal{F}\). We proceed with the proof here in four parts
 
 \begin{enumerate}
@@ -641,7 +642,19 @@ First fix \(z_0\). Let \(\mathcal{F}\) be the family of univalent functions on \
   The function \(g\) is a biholomorphic map from \(D\) to \(\mathbb{D}\)
 \end{enumerate}
 
-\end{proof}
+\begin{center}\includegraphics[width=9.6in]{figures/Riemann_Mapping_Therom/fig5} \end{center}
+
+\begin{center}\includegraphics[width=11.62in]{figures/Riemann_Mapping_Therom/fig6} \end{center}
+
+\begin{center}\includegraphics[width=8.97in]{figures/Riemann_Mapping_Therom/fig7} \end{center}
+
+\begin{center}\includegraphics[width=8.85in]{figures/Riemann_Mapping_Therom/fig8} \end{center}
+
+\begin{center}\includegraphics[width=8.79in]{figures/Riemann_Mapping_Therom/fig9} \end{center}
+
+\begin{center}\includegraphics[width=9.1in]{figures/Riemann_Mapping_Therom/fig10} \end{center}
+
+\begin{center}\includegraphics[width=8.76in]{figures/Riemann_Mapping_Therom/fig11} \end{center}
 
 \section{LaTeX}\label{latex}
 
@@ -661,7 +674,9 @@ To prove that \(\mathcal{F}\) is not empty, we note that there exists, by assump
 \[ g_0(z) = \frac{1}{4|h(z_0)|^2} \left(h(z) - h(z_0)\right) \left(h'(z_0) h(z) + h(z_0)\right) \]
 belongs to the family \(\mathcal{F}\). Indeed, because it is obtained from the univalent function \(h\) by means of a linear fractional transformation, it satisfies the desired properties.
 
-\chapter{python code}\label{python-code}
+\chapter{Codes}\label{codes}
+
+\section{Python Code}\label{python-code}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -709,15 +724,49 @@ belongs to the family \(\mathcal{F}\). Indeed, because it is obtained from the u
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{ConformalMapping_files/figure-latex/unnamed-chunk-48-1.pdf}
+\includegraphics{ConformalMapping_files/figure-latex/unnamed-chunk-55-1.pdf}
 
-\chapter{Helical Domain}\label{helical-domain}
+\section{Helical Domain}\label{helical-domain}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# The Logrithm Arc depend on the Constant theta and c}
+\NormalTok{theta}\OtherTok{\textless{}{-}}\DecValTok{1}
+\NormalTok{c}\OtherTok{\textless{}{-}}\DecValTok{2}
+
+
+\NormalTok{x}\OtherTok{\textless{}{-}}\FunctionTok{seq}\NormalTok{(}\SpecialCharTok{{-}}\DecValTok{10}\NormalTok{,}\DecValTok{10}\NormalTok{,}\AttributeTok{length.out=}\DecValTok{1000}\NormalTok{)}
+\NormalTok{y}\OtherTok{\textless{}{-}}\FunctionTok{seq}\NormalTok{(}\SpecialCharTok{{-}}\DecValTok{10}\NormalTok{,}\DecValTok{10}\NormalTok{,}\AttributeTok{length.out=}\DecValTok{1000}\NormalTok{)}
+\NormalTok{z}\OtherTok{\textless{}{-}}\FunctionTok{outer}\NormalTok{(x,y,}\ControlFlowTok{function}\NormalTok{(x,y) }\FunctionTok{log}\NormalTok{(x}\SpecialCharTok{\^{}}\DecValTok{2} \SpecialCharTok{+}\NormalTok{ y}\SpecialCharTok{\^{}}\DecValTok{2}\NormalTok{)}\SpecialCharTok{*}\FunctionTok{sin}\NormalTok{(theta) }\SpecialCharTok{+} \FunctionTok{atan}\NormalTok{(y}\SpecialCharTok{/}\NormalTok{x)}\SpecialCharTok{*}\FunctionTok{cos}\NormalTok{(theta) }\SpecialCharTok{{-}}\NormalTok{c)}
+\FunctionTok{contour}\NormalTok{(x,y,z,}\AttributeTok{nlevels=}\DecValTok{0}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ConformalMapping_files/figure-latex/unnamed-chunk-56-3.pdf}
+
+\chapter{Helical Domain}\label{helical-domain-1}
 
 In an analogous manner, we shall find the answer to the question of univalent mapping of multiply connected domains onto a plane with cuts along arcs of logarithmic spirals and, as limiting cases, onto the plane with radial cuts and with cuts along circular arcs of concentric circles.
 
 For constant \(\theta\) and \(c\), the equation \(\Im(e^{-i\theta}\log(\xi))=c\) defines a logarithmic spiral in the \(\xi\)-plane with asymptotic point at the origin.This spiral has the property that it is intersected by an arbitrary ray issuing from the origin at an angle \(\theta\). This follows, for example, from the fact that if we shift to the plane \(t = \log(\xi)\), this logarithmic spiral is mapped into the straight line \(e^{-i\theta t} = c\) with inclination \(\theta\) to the real axis, and the ray referred to is mapped into a straight line parallel to the real axis.
 
-\begin{center}\includegraphics[width=10.1in]{figures/Helical_Domain/fig1} \end{center}
+\includegraphics[width=10.1in]{figures/Helical_Domain/fig1}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# The Logrithm Arc depend on the Constant theta and c}
+\NormalTok{theta}\OtherTok{\textless{}{-}}\NormalTok{pi}\SpecialCharTok{/}\DecValTok{2}
+\NormalTok{c}\OtherTok{\textless{}{-}}\DecValTok{1}
+
+
+\NormalTok{x}\OtherTok{\textless{}{-}}\FunctionTok{seq}\NormalTok{(}\SpecialCharTok{{-}}\DecValTok{10}\NormalTok{,}\DecValTok{10}\NormalTok{,}\AttributeTok{length.out=}\DecValTok{1000}\NormalTok{)}
+\NormalTok{y}\OtherTok{\textless{}{-}}\FunctionTok{seq}\NormalTok{(}\SpecialCharTok{{-}}\DecValTok{10}\NormalTok{,}\DecValTok{10}\NormalTok{,}\AttributeTok{length.out=}\DecValTok{1000}\NormalTok{)}
+\NormalTok{z}\OtherTok{\textless{}{-}}\FunctionTok{outer}\NormalTok{(x,y,}\ControlFlowTok{function}\NormalTok{(x,y) }\FunctionTok{log}\NormalTok{(x}\SpecialCharTok{\^{}}\DecValTok{2} \SpecialCharTok{+}\NormalTok{ y}\SpecialCharTok{\^{}}\DecValTok{2}\NormalTok{)}\SpecialCharTok{*}\FunctionTok{sin}\NormalTok{(theta) }\SpecialCharTok{+} \FunctionTok{atan}\NormalTok{(y}\SpecialCharTok{/}\NormalTok{x)}\SpecialCharTok{*}\FunctionTok{cos}\NormalTok{(theta)}\SpecialCharTok{{-}}\NormalTok{c)}
+\FunctionTok{contour}\NormalTok{(x,y,z,}\AttributeTok{nlevels=}\DecValTok{0}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ConformalMapping_files/figure-latex/unnamed-chunk-58-1.pdf}
 
 \begin{itemize}
 \tightlist
@@ -725,15 +774,78 @@ For constant \(\theta\) and \(c\), the equation \(\Im(e^{-i\theta}\log(\xi))=c\)
   For \(\theta = 0\), the logarithmic spiral degenerates into a ray issuing from the origin.
 \end{itemize}
 
-\begin{center}\includegraphics[width=10.6in]{figures/Helical_Domain/fig2} \end{center}
+\includegraphics[width=10.6in]{figures/Helical_Domain/fig2}
+- For \(\theta = \frac{\pi}{2}\), it degenerates to a circle with center at the origin.
+
+\includegraphics[width=20.99in]{figures/Helical_Domain/fig3}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# The Logrithm Arc depend on the Constant theta and c}
+\NormalTok{theta}\OtherTok{\textless{}{-}}\NormalTok{pi}\SpecialCharTok{/}\DecValTok{2}
+\NormalTok{c}\OtherTok{\textless{}{-}}\DecValTok{2}
+
+
+\NormalTok{x}\OtherTok{\textless{}{-}}\FunctionTok{seq}\NormalTok{(}\SpecialCharTok{{-}}\DecValTok{10}\NormalTok{,}\DecValTok{10}\NormalTok{,}\AttributeTok{length.out=}\DecValTok{1000}\NormalTok{)}
+\NormalTok{y}\OtherTok{\textless{}{-}}\FunctionTok{seq}\NormalTok{(}\SpecialCharTok{{-}}\DecValTok{10}\NormalTok{,}\DecValTok{10}\NormalTok{,}\AttributeTok{length.out=}\DecValTok{1000}\NormalTok{)}
+\NormalTok{z}\OtherTok{\textless{}{-}}\FunctionTok{outer}\NormalTok{(x,y,}\ControlFlowTok{function}\NormalTok{(x,y) }\FunctionTok{log}\NormalTok{(x}\SpecialCharTok{\^{}}\DecValTok{2} \SpecialCharTok{+}\NormalTok{ y}\SpecialCharTok{\^{}}\DecValTok{2}\NormalTok{)}\SpecialCharTok{*}\FunctionTok{sin}\NormalTok{(theta) }\SpecialCharTok{+} \FunctionTok{atan}\NormalTok{(y}\SpecialCharTok{/}\NormalTok{x)}\SpecialCharTok{*}\FunctionTok{cos}\NormalTok{(theta) }\SpecialCharTok{{-}}\NormalTok{c)}
+\FunctionTok{contour}\NormalTok{(x,y,z,}\AttributeTok{nlevels=}\DecValTok{0}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ConformalMapping_files/figure-latex/unnamed-chunk-61-1.pdf}
+When we hold \(c\) constant and vary \(\theta\), we obtain various curves constituting the family of logarithmic spirals of inclination \(\theta\). For all that follows, when we speak of logarithmic spirals of inclination \(\theta\), these are what we mean.
+
+Let us show that, for any simply connected domain \(B\) that has boundary points, it is possible to map \(B\) onto the complex plane \(\mathbb{C}\) with a cut along an arc of a logarithmic spiral of inclination \(\theta\) in such a way that given points \(a\) and \(b\) of the domain \(B\) are mapped into \(0\) and \(\infty\), respectively. The expansion of the mapping function about \(z = b\) has the form:
+
+\[ \frac{1}{z - b} +a_0+a_1{(z - b)} +\cdots\text{ or }  z+a_0+\frac{a_1}{z} +  + \cdots, \]
+
+according as \(b\) is finite or infinite.
 
 \begin{itemize}
-\tightlist
 \item
-  For \(\theta = \frac{\pi}{2}\), it degenerates to a circle with center at the origin.
+  If domain \(B\) has \textbf{a single boundary point},\\
+  this is obvious, and then the arc of the logarithmic spiral referred to degenerates to a point.
+\item
+  If the boundary of the domain \(B\) is \textbf{a continuum},\\
+  let us first map \(B\) conformally onto the domain \(\{z' : |z'| > 1\}\) in such a way that the point \(z = b\) is mapped into \(z' = \infty\).
 \end{itemize}
 
-\begin{center}\includegraphics[width=20.99in]{figures/Helical_Domain/fig3} \end{center}
+Let \(z'\) be the mapping function \(cP(z)\) in a neighborhood of \(z = b\). The expansion can be expressed as:
+
+\[
+z' = cP(z) = \frac{1}{b} + \frac{1}{1} (z - b) + \frac{1}{1!} (z - b)^2 + \frac{1}{0!} (z - b)^3 + \ldots
+\]
+
+or
+
+\[
+z' = cP(z) = \frac{1}{b} + \frac{1}{1}z + \frac{1}{1!}z^2 + \frac{1}{0!}z^3 + \ldots
+\]
+
+depending on whether \(b\) is finite or infinite. This expansion is possible due to Riemann's theorem.
+
+Suppose that the point \(z = a\) is mapped into a point \(z' = a'\). Now, we need to establish the possibility of mapping the domain \(\lvert z' \rvert > 1\) onto the complex plane with a cut along a logarithmic spiral of inclination \(\epsilon\). This possibility follows from solving the problem related to the minimum of the quantity:
+
+\[
+ \Re(e^{-2i\theta} \log (F'(a))
+\]
+
+in the class I. This problem was studied in Section 3 of Chapter IV (the first application of Theorem 1 with \(a = \frac{17}{2} - \epsilon\)). It was shown that this problem has a solution, and the extremal function (normalized by the condition \(F(a') = 0\)) provides the required mapping.
+
+\begin{lemma}
+\protect\hypertarget{lem:unnamed-chunk-62}{}\label{lem:unnamed-chunk-62}Of all functions
+\[
+\xi=F(z) := z + \frac{a}{z} + a_0 + \ldots
+\]
+that map the domain \(|z| > R\) univalently in such a way that a given finite point \(a\) and the point \(\infty\) are
+mapped into the poi nts \(0\) and \(\infty\) respectively, the quantity \(\Re(e^{-2i\theta} \log (F'(a))\)
+is minimized by the function \(F_0(z)\) that maps the disk \(|z| > R\) onto the \(\xi\)-plane with cut along an arc of a logarithmic spiral of inclination \(\theta\). Here \(\log F '(z)\) means the brooch that approaches \(0\) as \(z \to \infty\).
+\end{lemma}
+
+\begin{theorem}
+\protect\hypertarget{thm:unnamed-chunk-63}{}\label{thm:unnamed-chunk-63}Every domain \(B\) in the \(z\)-plane can be mapped univalently onto a domain \(B'\) in the \(\omega\)-plane that includes the points 0 and \(\infty\), such that an arbitrary continuum of the complement of the domain \(B'\) with respect to the \(\omega\)-plane is an arc of a logarithmic spiral of given inclination \(\epsilon\). This mapping maps given points \(a\) and \(b\) of the domain \(B\) into 0 and \(\infty\), respectively, and the expansion of the mapping function about \(z = b\) has the form \((z - b)^{r_1} + a_0 + a_1 (z - b) + \ldots\) or \(z + a_0 + a_1 z^{-1} + \ldots\), according as \(b\) is finite or infinite.
+\end{theorem}
 
   \bibliography{book.bib,packages.bib}
 

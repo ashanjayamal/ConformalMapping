@@ -1,4 +1,6 @@
-# python code
+# Codes
+
+## Python Code
 ```{python}
 import matplotlib.pyplot as plt
 import numpy as np
@@ -45,5 +47,20 @@ xmin, xmax, ymin, ymax = -1, 1, -1, 1
 
 plot_conformal_map(func, xmin, xmax, ymin, ymax, nb_grid, nb_points)
 
+```
+
+## Helical Domain
+
+```{r,}
+
+# The Logrithm Arc depend on the Constant theta and c
+theta<-1
+c<-2
+
+
+x<-seq(-10,10,length.out=1000)
+y<-seq(-10,10,length.out=1000)
+z<-outer(x,y,function(x,y) log(x^2 + y^2)*sin(theta) + atan(y/x)*cos(theta) -c)
+contour(x,y,z,nlevels=0)
 ```
 

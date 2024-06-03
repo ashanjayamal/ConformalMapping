@@ -26,8 +26,10 @@ def:unnamed-chunk-36
 thm:unnamed-chunk-39
 def:unnamed-chunk-40
 thm:thm1
-lem:unnamed-chunk-43
-thm:unnamed-chunk-45
+lem:unnamed-chunk-44
+thm:unnamed-chunk-46
+lem:unnamed-chunk-62
+thm:unnamed-chunk-63
 the-convergence-of-sequences-of-analytic-and-harmonic-functions
 the-convergence-of-sequences-of-analytic-functions
 univalent-mapping-of-multiply-connected-domains
@@ -41,5 +43,7 @@ hyperbolic-geomeery
 proof-of-riemann-mapping-theorem
 adlof-proof
 latex
+codes
 python-code
 helical-domain
+helical-domain-1

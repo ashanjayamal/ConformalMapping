@@ -23,7 +23,7 @@
 <meta name="author" content="Ashan J" />
 
 
-<meta name="date" content="2024-06-01" />
+<meta name="date" content="2024-06-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <link rel="prev" href="uniformization-by-square-domains.html"/>
-<link rel="next" href="python-code.html"/>
+<link rel="next" href="codes.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -163,8 +163,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="5.3" data-path="riemann-mapping-theorem.html"><a href="riemann-mapping-theorem.html#latex"><i class="fa fa-check"></i><b>5.3</b> LaTeX</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="python-code.html"><a href="python-code.html"><i class="fa fa-check"></i><b>6</b> python code</a></li>
-<li class="chapter" data-level="7" data-path="helical-domain.html"><a href="helical-domain.html"><i class="fa fa-check"></i><b>7</b> Helical Domain</a></li>
+<li class="chapter" data-level="6" data-path="codes.html"><a href="codes.html"><i class="fa fa-check"></i><b>6</b> Codes</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="codes.html"><a href="codes.html#python-code"><i class="fa fa-check"></i><b>6.1</b> Python Code</a></li>
+<li class="chapter" data-level="6.2" data-path="codes.html"><a href="codes.html#helical-domain"><i class="fa fa-check"></i><b>6.2</b> Helical Domain</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="helical-domain-1.html"><a href="helical-domain-1.html"><i class="fa fa-check"></i><b>7</b> Helical Domain</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -211,10 +215,10 @@ metric so that its curvature is -1.)</p>
   =\inf_\gamma\left\{\text{hyperbolic length of } \gamma \right\}
   =\inf_\gamma\left\{2\int_{\gamma} \frac{|dz|}{1-|z|^2}\right\}\]</span></p>
 </div>
-<p><img src="figures/Riemann_Mapping_Therom/fig1.png" width="532" /></p>
+<p><img src="figures/Riemann_Mapping_Therom/fig1.png" width="532" style="display: block; margin: auto;" /></p>
 <p>Since conformal self-maps of <span class="math inline">\(\mathbb{D}\)</span> preserve the hyperbolic lengths of curves, they also preserve hyperbolic distances. That is, for any conformal self-map <span class="math inline">\(w = J(z)\)</span> of <span class="math inline">\(\mathbb{D}\)</span>,
 <span class="math display">\[ \rho(f(z_0), f(z_1)) = \rho(z_0, z_1), \quad \text{where } z_0, z_1 \in \mathbb{D}. \]</span></p>
-<p><img src="figures/Riemann_Mapping_Therom/fig2.png" width="856" /></p>
+<p><img src="figures/Riemann_Mapping_Therom/fig2.png" width="856" style="display: block; margin: auto;" /></p>
 <div class="theorem">
 <p><span id="thm:unnamed-chunk-39" class="theorem"><strong>Theorem 5.2  </strong></span>For any two distinct points <span class="math inline">\(z_0, z_1\)</span> in the open unit disk <span class="math inline">\(\mathbb{D}\)</span>, there exists a unique shortest curve in <span class="math inline">\(\mathbb{D}\)</span> from <span class="math inline">\(z_0\)</span> to <span class="math inline">\(z_1\)</span> in the hyperbolic metric. Specifically, this curve corresponds to the arc of the circle passing through <span class="math inline">\(z_0\)</span> and <span class="math inline">\(z_1\)</span> that is orthogonal to the unit circle.</p>
 </div>
@@ -224,7 +228,7 @@ metric so that its curvature is -1.)</p>
 <ul>
 <li>These hyperbolic geodesics play a role similar to that of straight lines in Euclidean geometry. They satisfy all the axioms of Euclidean geometry except for the parallel axiom (which states that through each point not on a given line, there passes a unique straight line through the point and parallel to the given line).</li>
 </ul>
-<p><img src="figures/Riemann_Mapping_Therom/fig3.png" width="414" /></p>
+<p><img src="figures/Riemann_Mapping_Therom/fig3.png" width="414" style="display: block; margin: auto;" /></p>
 <div class="proof">
 <p><span id="unlabeled-div-8" class="proof"><em>Proof</em>. </span>(proof of theorem), Let <span class="math inline">\(w = f(z)\)</span> be a conformal self-map of <span class="math inline">\(\mathcal{D}\)</span>
 such that <span class="math inline">\(f(z_o) = 0\)</span>.
@@ -234,6 +238,7 @@ Then <span class="math inline">\(alpha(t) = \Re(\gamma(t)) = x(t)\)</span> defin
 <span class="math display">\[\int_\alpha \frac{|dz|}{1-|z|^2}=\int_0^1\frac{|dx(t)|}{1-(x(t))^2}\leq \int_0^1\frac{|dx(t)|}{1-(\gamma(t))^2}\leq \int_\gamma \frac{|dz|}{1-|z|^2}\]</span></p>
 <p>If <span class="math inline">\(y(t) \neq 0\)</span> for some <span class="math inline">\(t\)</span>, then <span class="math inline">\(|\gamma(t)| &gt; |x(t)|\)</span>, and the first inequality above is strict. In this case, the path <span class="math inline">\(a(t)\)</span> on the real axis is strictly shorter than the path <span class="math inline">\(\gamma(t)\)</span>. Further, if <span class="math inline">\(a(t)\)</span> is decreasing on some interval, we could reduce the integral by deleting a parameter interval over which <span class="math inline">\(a(t)\)</span> starts and ends at the same value. We conclude that the integral is a minimum exactly when <span class="math inline">\(\gamma(t)\)</span> is real and nondecreasing, in which case the path is the straight line segment from 0 to <span class="math inline">\(r\)</span>.</p>
 </div>
+<p><img src="figures/Riemann_Mapping_Therom/fig5.png" width="346" style="display: block; margin: auto;" /></p>
 </div>
 <div id="proof-of-riemann-mapping-theorem" class="section level2 hasAnchor" number="5.2">
 <h2><span class="header-section-number">5.2</span> Proof of Riemann Mapping Theorem<a href="riemann-mapping-theorem.html#proof-of-riemann-mapping-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -258,7 +263,7 @@ Then,
 So, <span class="math inline">\(h(z) = e^{g(z)/2}\)</span> is an analytic branch of <span class="math inline">\(\sqrt{z - a}\)</span> in <span class="math inline">\(D\)</span>, and <span class="math inline">\((h(z))^2 = z - a \neq 0\)</span> (Since <span class="math inline">\(a\not\in D\)</span>) in <span class="math inline">\(D\)</span>. If <span class="math inline">\(h(z_1) = h(z_2)\)</span>, then <span class="math display">\[z_1 = (h(z_1))^2 + a = (h(z_2))^2 + a = z_2\]</span>.
 Thus <span class="math inline">\(h(z)\)</span> is univalent, and <span class="math inline">\(h(z)\)</span> maps <span class="math inline">\(D\)</span> conformally onto <span class="math inline">\(h(D)\)</span>. Finally, note that if <span class="math inline">\(w_0 \in h(D)\)</span>, then <span class="math inline">\(-w_0 \notin h(D)\)</span>. Indeed, if <span class="math inline">\(w_0 = h(z_0)\)</span> and <span class="math inline">\(-w_0 = h(z_1)\)</span> for <span class="math inline">\(z_0, z_1 \in D\)</span>, then <span class="math inline">\(z_0 = h(z_0)^2 + a = w_0^2 + a = h(z_1)^2 + a = z_1\)</span>, which is impossible. We summarize.</p>
 <div class="lemma">
-<p><span id="lem:unnamed-chunk-43" class="lemma"><strong>Lemma 5.1  </strong></span>Let <span class="math inline">\(D\)</span> be a simply connected domain. Suppose <span class="math inline">\(a \notin D\)</span>, and let
+<p><span id="lem:unnamed-chunk-44" class="lemma"><strong>Lemma 5.1  </strong></span>Let <span class="math inline">\(D\)</span> be a simply connected domain. Suppose <span class="math inline">\(a \notin D\)</span>, and let
 <span class="math inline">\(h(z)\)</span> be an analytic branch of <span class="math inline">\(\sqrt{z - a}\)</span> in <span class="math inline">\(D\)</span>. Then <span class="math inline">\(h(z)\)</span> is univalent on <span class="math inline">\(D\)</span>, and further, <span class="math inline">\(h(D)\)</span> is disjoint from <span class="math inline">\(-h(D)\)</span>.</p>
 </div>
 <div class="proof">
@@ -267,18 +272,24 @@ Thus <span class="math inline">\(h(z)\)</span> is univalent, and <span class="ma
 <div id="adlof-proof" class="section level3 hasAnchor" number="5.2.1">
 <h3><span class="header-section-number">5.2.1</span> Adlof Proof<a href="riemann-mapping-theorem.html#adlof-proof" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="theorem">
-<p><span id="thm:unnamed-chunk-45" class="theorem"><strong>Theorem 5.4  (Riemann Mapping Theorem) </strong></span>Given any simply connected region <span class="math inline">\(\Omega\)</span> which is not the whole plane, and a point <span class="math inline">\(z_0\)</span> in <span class="math inline">\(\Omega\)</span>, there exists a unique analytic function <span class="math inline">\(f(z)\)</span> in <span class="math inline">\(\Omega\)</span>, normalized by the conditions <span class="math inline">\(f(z_0) = 0\)</span>, <span class="math inline">\(f&#39;(z_0) &gt; 0\)</span>, such that <span class="math inline">\(f(z)\)</span> defines a one-to-one mapping of <span class="math inline">\(\Omega\)</span> onto the unit disk <span class="math inline">\(\mathbb{D}=\{|w| &lt; 1\}\)</span>.</p>
+<p><span id="thm:unnamed-chunk-46" class="theorem"><strong>Theorem 5.4  (Riemann Mapping Theorem) </strong></span>Given any simply connected region <span class="math inline">\(\Omega\)</span> which is not the whole plane, and a point <span class="math inline">\(z_0\)</span> in <span class="math inline">\(\Omega\)</span>, there exists a unique analytic function <span class="math inline">\(f(z)\)</span> in <span class="math inline">\(\Omega\)</span>, normalized by the conditions <span class="math inline">\(f(z_0) = 0\)</span>, <span class="math inline">\(f&#39;(z_0) &gt; 0\)</span>, such that <span class="math inline">\(f(z)\)</span> defines a one-to-one mapping of <span class="math inline">\(\Omega\)</span> onto the unit disk <span class="math inline">\(\mathbb{D}=\{|w| &lt; 1\}\)</span>.</p>
 </div>
-<p><img src="figures/Riemann_Mapping_Therom/fig4.png" width="719" /></p>
-<div class="proof">
-<p><span id="unlabeled-div-10" class="proof"><em>Proof</em>. </span>First fix <span class="math inline">\(z_0\)</span>. Let <span class="math inline">\(\mathcal{F}\)</span> be the family of univalent functions on <span class="math inline">\(D\)</span> such that <span class="math inline">\(|f(z)|\leq 1\)</span> on <span class="math inline">\(D\)</span> and <span class="math inline">\(f(z_0)=0\)</span> for all <span class="math inline">\(f \in \mathcal{F}\)</span>. We proceed with the proof here in four parts</p>
+<p><img src="figures/Riemann_Mapping_Therom/fig4.png" width="719" style="display: block; margin: auto;" /></p>
+<p><em>Proof.</em>
+First fix <span class="math inline">\(z_0\)</span>. Let <span class="math inline">\(\mathcal{F}\)</span> be the family of univalent functions on <span class="math inline">\(D\)</span> such that <span class="math inline">\(|f(z)|\leq 1\)</span> on <span class="math inline">\(D\)</span> and <span class="math inline">\(f(z_0)=0\)</span> for all <span class="math inline">\(f \in \mathcal{F}\)</span>. We proceed with the proof here in four parts</p>
 <ol style="list-style-type: lower-roman">
 <li><span class="math inline">\(\mathcal{F}\)</span> is non-empty.</li>
 <li><span class="math inline">\(|f&#39;(z_0)|\)</span> is bounded above for all <span class="math inline">\(f\in \mathcal{F}\)</span>.</li>
 <li>There exist <span class="math inline">\(g\in \mathcal{F}\)</span> such that <span class="math inline">\(|g&#39;(z)|\)</span> is maximal</li>
 <li>The function <span class="math inline">\(g\)</span> is a biholomorphic map from <span class="math inline">\(D\)</span> to <span class="math inline">\(\mathbb{D}\)</span></li>
 </ol>
-</div>
+<p><img src="figures/Riemann_Mapping_Therom/fig5.png" width="346" style="display: block; margin: auto;" /></p>
+<p><img src="figures/Riemann_Mapping_Therom/fig6.png" width="418" style="display: block; margin: auto;" />
+<img src="figures/Riemann_Mapping_Therom/fig7.png" width="323" style="display: block; margin: auto;" /></p>
+<p><img src="figures/Riemann_Mapping_Therom/fig8.png" width="318" style="display: block; margin: auto;" /></p>
+<p><img src="figures/Riemann_Mapping_Therom/fig9.png" width="316" style="display: block; margin: auto;" /></p>
+<p><img src="figures/Riemann_Mapping_Therom/fig10.png" width="328" style="display: block; margin: auto;" /></p>
+<p><img src="figures/Riemann_Mapping_Therom/fig11.png" width="316" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 <div id="latex" class="section level2 hasAnchor" number="5.3">
@@ -304,7 +315,7 @@ belongs to the family <span class="math inline">\(\mathcal{F}\)</span>. Indeed, 
         </div>
       </div>
 <a href="uniformization-by-square-domains.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="python-code.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="codes.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
