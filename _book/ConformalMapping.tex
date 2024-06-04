@@ -120,7 +120,7 @@
 
 \title{Conformal Mapping}
 \author{Ashan J}
-\date{2024-06-03}
+\date{2024-06-04}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -567,7 +567,7 @@ Then \(alpha(t) = \Re(\gamma(t)) = x(t)\) defines a path in \(\mathbb{D}\) from 
 If \(y(t) \neq 0\) for some \(t\), then \(|\gamma(t)| > |x(t)|\), and the first inequality above is strict. In this case, the path \(a(t)\) on the real axis is strictly shorter than the path \(\gamma(t)\). Further, if \(a(t)\) is decreasing on some interval, we could reduce the integral by deleting a parameter interval over which \(a(t)\) starts and ends at the same value. We conclude that the integral is a minimum exactly when \(\gamma(t)\) is real and nondecreasing, in which case the path is the straight line segment from 0 to \(r\).
 \end{proof}
 
-\begin{center}\includegraphics[width=9.6in]{figures/Riemann_Mapping_Therom/fig5} \end{center}
+\begin{center}\includegraphics[width=8.96in]{figures/Riemann_Mapping_Therom/fig5} \end{center}
 
 \section{Proof of Riemann Mapping Theorem}\label{proof-of-riemann-mapping-theorem}
 
@@ -642,7 +642,7 @@ First fix \(z_0\). Let \(\mathcal{F}\) be the family of univalent functions on \
   The function \(g\) is a biholomorphic map from \(D\) to \(\mathbb{D}\)
 \end{enumerate}
 
-\begin{center}\includegraphics[width=9.6in]{figures/Riemann_Mapping_Therom/fig5} \end{center}
+\begin{center}\includegraphics[width=8.96in]{figures/Riemann_Mapping_Therom/fig5} \end{center}
 
 \begin{center}\includegraphics[width=11.62in]{figures/Riemann_Mapping_Therom/fig6} \end{center}
 
@@ -655,6 +655,14 @@ First fix \(z_0\). Let \(\mathcal{F}\) be the family of univalent functions on \
 \begin{center}\includegraphics[width=9.1in]{figures/Riemann_Mapping_Therom/fig10} \end{center}
 
 \begin{center}\includegraphics[width=8.76in]{figures/Riemann_Mapping_Therom/fig11} \end{center}
+
+\begin{center}\includegraphics[width=13.85in]{figures/Riemann_Mapping_Therom/fig12} \end{center}
+
+\begin{theorem}[Montel Theorem]
+\protect\hypertarget{thm:unnamed-chunk-56}{}\label{thm:unnamed-chunk-56}Suppose \(F\) is a family of analytic functions on a domain \(D\) such that \(F\) is uniformly bounded on each compact subset of \(D\). Then every sequence in \(F\) has a subsequence that converges normally on \(D\), that is, uniformly on each compact subset of \(D\).
+\end{theorem}
+
+\begin{center}\includegraphics[width=14in]{figures/Riemann_Mapping_Therom/fig13} \end{center}
 
 \section{LaTeX}\label{latex}
 
@@ -724,7 +732,7 @@ belongs to the family \(\mathcal{F}\). Indeed, because it is obtained from the u
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{ConformalMapping_files/figure-latex/unnamed-chunk-55-1.pdf}
+\includegraphics{ConformalMapping_files/figure-latex/unnamed-chunk-58-1.pdf}
 
 \section{Helical Domain}\label{helical-domain}
 
@@ -742,7 +750,25 @@ belongs to the family \(\mathcal{F}\). Indeed, because it is obtained from the u
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{ConformalMapping_files/figure-latex/unnamed-chunk-56-3.pdf}
+\includegraphics{ConformalMapping_files/figure-latex/unnamed-chunk-59-3.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{from}\NormalTok{ sympy }\ImportTok{import} \OperatorTok{*}
+\NormalTok{theta}\OperatorTok{=}\DecValTok{1}
+\NormalTok{c}\OperatorTok{=}\DecValTok{2}
+\NormalTok{x, y }\OperatorTok{=}\NormalTok{ symbols(}\StringTok{\textquotesingle{}x y\textquotesingle{}}\NormalTok{)}
+\CommentTok{\#plot\_implicit(x**3 + x**2 {-} y**2, (x, {-}2, 2), (y, {-}2, 2))}
+\NormalTok{plot\_implicit(log(x}\OperatorTok{**}\DecValTok{2} \OperatorTok{+}\NormalTok{ y}\OperatorTok{**}\DecValTok{2}\NormalTok{)}\OperatorTok{*}\NormalTok{sin(theta) }\OperatorTok{+}\NormalTok{ atan(y}\OperatorTok{/}\NormalTok{x)}\OperatorTok{*}\NormalTok{cos(theta) }\OperatorTok{{-}}\NormalTok{c,}
+\NormalTok{(x, }\OperatorTok{{-}}\DecValTok{10}\NormalTok{, }\DecValTok{10}\NormalTok{), (y, }\OperatorTok{{-}}\DecValTok{10}\NormalTok{, }\DecValTok{10}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## <sympy.plotting.plot.Plot object at 0x000001D77F5D7B20>
+\end{verbatim}
+
+\includegraphics{ConformalMapping_files/figure-latex/unnamed-chunk-60-1.pdf}
 
 \chapter{Helical Domain}\label{helical-domain-1}
 
@@ -752,22 +778,6 @@ For constant \(\theta\) and \(c\), the equation \(\Im(e^{-i\theta}\log(\xi))=c\)
 
 \includegraphics[width=10.1in]{figures/Helical_Domain/fig1}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# The Logrithm Arc depend on the Constant theta and c}
-\NormalTok{theta}\OtherTok{\textless{}{-}}\NormalTok{pi}\SpecialCharTok{/}\DecValTok{2}
-\NormalTok{c}\OtherTok{\textless{}{-}}\DecValTok{1}
-
-
-\NormalTok{x}\OtherTok{\textless{}{-}}\FunctionTok{seq}\NormalTok{(}\SpecialCharTok{{-}}\DecValTok{10}\NormalTok{,}\DecValTok{10}\NormalTok{,}\AttributeTok{length.out=}\DecValTok{1000}\NormalTok{)}
-\NormalTok{y}\OtherTok{\textless{}{-}}\FunctionTok{seq}\NormalTok{(}\SpecialCharTok{{-}}\DecValTok{10}\NormalTok{,}\DecValTok{10}\NormalTok{,}\AttributeTok{length.out=}\DecValTok{1000}\NormalTok{)}
-\NormalTok{z}\OtherTok{\textless{}{-}}\FunctionTok{outer}\NormalTok{(x,y,}\ControlFlowTok{function}\NormalTok{(x,y) }\FunctionTok{log}\NormalTok{(x}\SpecialCharTok{\^{}}\DecValTok{2} \SpecialCharTok{+}\NormalTok{ y}\SpecialCharTok{\^{}}\DecValTok{2}\NormalTok{)}\SpecialCharTok{*}\FunctionTok{sin}\NormalTok{(theta) }\SpecialCharTok{+} \FunctionTok{atan}\NormalTok{(y}\SpecialCharTok{/}\NormalTok{x)}\SpecialCharTok{*}\FunctionTok{cos}\NormalTok{(theta)}\SpecialCharTok{{-}}\NormalTok{c)}
-\FunctionTok{contour}\NormalTok{(x,y,z,}\AttributeTok{nlevels=}\DecValTok{0}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics{ConformalMapping_files/figure-latex/unnamed-chunk-58-1.pdf}
-
 \begin{itemize}
 \tightlist
 \item
@@ -775,25 +785,57 @@ For constant \(\theta\) and \(c\), the equation \(\Im(e^{-i\theta}\log(\xi))=c\)
 \end{itemize}
 
 \includegraphics[width=10.6in]{figures/Helical_Domain/fig2}
-- For \(\theta = \frac{\pi}{2}\), it degenerates to a circle with center at the origin.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{from}\NormalTok{ sympy }\ImportTok{import} \OperatorTok{*}
+
+\CommentTok{\# The Logrithm Arc depend on the Constant theta and c}
+\NormalTok{theta}\OperatorTok{=}\DecValTok{0}
+\NormalTok{c}\OperatorTok{=}\DecValTok{1}
+
+\NormalTok{x, y }\OperatorTok{=}\NormalTok{ symbols(}\StringTok{\textquotesingle{}x y\textquotesingle{}}\NormalTok{)}
+
+\NormalTok{plot\_implicit(log(x}\OperatorTok{**}\DecValTok{2} \OperatorTok{+}\NormalTok{ y}\OperatorTok{**}\DecValTok{2}\NormalTok{)}\OperatorTok{*}\NormalTok{sin(theta) }\OperatorTok{+}\NormalTok{ atan(y}\OperatorTok{/}\NormalTok{x)}\OperatorTok{*}\NormalTok{cos(theta) }\OperatorTok{{-}}\NormalTok{c,}
+\NormalTok{(x, }\OperatorTok{{-}}\DecValTok{10}\NormalTok{, }\DecValTok{10}\NormalTok{), (y, }\OperatorTok{{-}}\DecValTok{10}\NormalTok{, }\DecValTok{10}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## <sympy.plotting.plot.Plot object at 0x000001D77F6B2230>
+\end{verbatim}
+
+\includegraphics{ConformalMapping_files/figure-latex/unnamed-chunk-63-1.pdf}
+
+\begin{itemize}
+\tightlist
+\item
+  For \(\theta = \frac{\pi}{2}\), it degenerates to a circle with center at the origin.
+\end{itemize}
 
 \includegraphics[width=20.99in]{figures/Helical_Domain/fig3}
 
 \begin{Shaded}
 \begin{Highlighting}[]
+\ImportTok{from}\NormalTok{ sympy }\ImportTok{import} \OperatorTok{*}
+
 \CommentTok{\# The Logrithm Arc depend on the Constant theta and c}
-\NormalTok{theta}\OtherTok{\textless{}{-}}\NormalTok{pi}\SpecialCharTok{/}\DecValTok{2}
-\NormalTok{c}\OtherTok{\textless{}{-}}\DecValTok{2}
+\NormalTok{theta}\OperatorTok{=}\NormalTok{pi}\OperatorTok{/}\DecValTok{2}
+\NormalTok{c}\OperatorTok{=}\DecValTok{2}
 
+\NormalTok{x, y }\OperatorTok{=}\NormalTok{ symbols(}\StringTok{\textquotesingle{}x y\textquotesingle{}}\NormalTok{)}
 
-\NormalTok{x}\OtherTok{\textless{}{-}}\FunctionTok{seq}\NormalTok{(}\SpecialCharTok{{-}}\DecValTok{10}\NormalTok{,}\DecValTok{10}\NormalTok{,}\AttributeTok{length.out=}\DecValTok{1000}\NormalTok{)}
-\NormalTok{y}\OtherTok{\textless{}{-}}\FunctionTok{seq}\NormalTok{(}\SpecialCharTok{{-}}\DecValTok{10}\NormalTok{,}\DecValTok{10}\NormalTok{,}\AttributeTok{length.out=}\DecValTok{1000}\NormalTok{)}
-\NormalTok{z}\OtherTok{\textless{}{-}}\FunctionTok{outer}\NormalTok{(x,y,}\ControlFlowTok{function}\NormalTok{(x,y) }\FunctionTok{log}\NormalTok{(x}\SpecialCharTok{\^{}}\DecValTok{2} \SpecialCharTok{+}\NormalTok{ y}\SpecialCharTok{\^{}}\DecValTok{2}\NormalTok{)}\SpecialCharTok{*}\FunctionTok{sin}\NormalTok{(theta) }\SpecialCharTok{+} \FunctionTok{atan}\NormalTok{(y}\SpecialCharTok{/}\NormalTok{x)}\SpecialCharTok{*}\FunctionTok{cos}\NormalTok{(theta) }\SpecialCharTok{{-}}\NormalTok{c)}
-\FunctionTok{contour}\NormalTok{(x,y,z,}\AttributeTok{nlevels=}\DecValTok{0}\NormalTok{)}
+\NormalTok{plot\_implicit(log(x}\OperatorTok{**}\DecValTok{2} \OperatorTok{+}\NormalTok{ y}\OperatorTok{**}\DecValTok{2}\NormalTok{)}\OperatorTok{*}\NormalTok{sin(theta) }\OperatorTok{+}\NormalTok{ atan(y}\OperatorTok{/}\NormalTok{x)}\OperatorTok{*}\NormalTok{cos(theta) }\OperatorTok{{-}}\NormalTok{c,}
+\NormalTok{(x, }\OperatorTok{{-}}\DecValTok{10}\NormalTok{, }\DecValTok{10}\NormalTok{), (y, }\OperatorTok{{-}}\DecValTok{10}\NormalTok{, }\DecValTok{10}\NormalTok{))}
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{ConformalMapping_files/figure-latex/unnamed-chunk-61-1.pdf}
+\begin{verbatim}
+## <sympy.plotting.plot.Plot object at 0x000001D77F7DD9C0>
+\end{verbatim}
+
+\includegraphics{ConformalMapping_files/figure-latex/unnamed-chunk-65-1.pdf}
+
 When we hold \(c\) constant and vary \(\theta\), we obtain various curves constituting the family of logarithmic spirals of inclination \(\theta\). For all that follows, when we speak of logarithmic spirals of inclination \(\theta\), these are what we mean.
 
 Let us show that, for any simply connected domain \(B\) that has boundary points, it is possible to map \(B\) onto the complex plane \(\mathbb{C}\) with a cut along an arc of a logarithmic spiral of inclination \(\theta\) in such a way that given points \(a\) and \(b\) of the domain \(B\) are mapped into \(0\) and \(\infty\), respectively. The expansion of the mapping function about \(z = b\) has the form:
@@ -834,7 +876,7 @@ Suppose that the point \(z = a\) is mapped into a point \(z' = a'\). Now, we nee
 in the class I. This problem was studied in Section 3 of Chapter IV (the first application of Theorem 1 with \(a = \frac{17}{2} - \epsilon\)). It was shown that this problem has a solution, and the extremal function (normalized by the condition \(F(a') = 0\)) provides the required mapping.
 
 \begin{lemma}
-\protect\hypertarget{lem:unnamed-chunk-62}{}\label{lem:unnamed-chunk-62}Of all functions
+\protect\hypertarget{lem:unnamed-chunk-66}{}\label{lem:unnamed-chunk-66}Of all functions
 \[
 \xi=F(z) := z + \frac{a}{z} + a_0 + \ldots
 \]
@@ -844,7 +886,7 @@ is minimized by the function \(F_0(z)\) that maps the disk \(|z| > R\) onto the 
 \end{lemma}
 
 \begin{theorem}
-\protect\hypertarget{thm:unnamed-chunk-63}{}\label{thm:unnamed-chunk-63}Every domain \(B\) in the \(z\)-plane can be mapped univalently onto a domain \(B'\) in the \(\omega\)-plane that includes the points 0 and \(\infty\), such that an arbitrary continuum of the complement of the domain \(B'\) with respect to the \(\omega\)-plane is an arc of a logarithmic spiral of given inclination \(\epsilon\). This mapping maps given points \(a\) and \(b\) of the domain \(B\) into 0 and \(\infty\), respectively, and the expansion of the mapping function about \(z = b\) has the form \((z - b)^{r_1} + a_0 + a_1 (z - b) + \ldots\) or \(z + a_0 + a_1 z^{-1} + \ldots\), according as \(b\) is finite or infinite.
+\protect\hypertarget{thm:unnamed-chunk-67}{}\label{thm:unnamed-chunk-67}Every domain \(B\) in the \(z\)-plane can be mapped univalently onto a domain \(B'\) in the \(\omega\)-plane that includes the points 0 and \(\infty\), such that an arbitrary continuum of the complement of the domain \(B'\) with respect to the \(\omega\)-plane is an arc of a logarithmic spiral of given inclination \(\epsilon\). This mapping maps given points \(a\) and \(b\) of the domain \(B\) into 0 and \(\infty\), respectively, and the expansion of the mapping function about \(z = b\) has the form \((z - b)^{r_1} + a_0 + a_1 (z - b) + \ldots\) or \(z + a_0 + a_1 z^{-1} + \ldots\), according as \(b\) is finite or infinite.
 \end{theorem}
 
   \bibliography{book.bib,packages.bib}

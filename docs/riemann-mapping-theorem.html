@@ -23,7 +23,7 @@
 <meta name="author" content="Ashan J" />
 
 
-<meta name="date" content="2024-06-03" />
+<meta name="date" content="2024-06-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -238,7 +238,7 @@ Then <span class="math inline">\(alpha(t) = \Re(\gamma(t)) = x(t)\)</span> defin
 <span class="math display">\[\int_\alpha \frac{|dz|}{1-|z|^2}=\int_0^1\frac{|dx(t)|}{1-(x(t))^2}\leq \int_0^1\frac{|dx(t)|}{1-(\gamma(t))^2}\leq \int_\gamma \frac{|dz|}{1-|z|^2}\]</span></p>
 <p>If <span class="math inline">\(y(t) \neq 0\)</span> for some <span class="math inline">\(t\)</span>, then <span class="math inline">\(|\gamma(t)| &gt; |x(t)|\)</span>, and the first inequality above is strict. In this case, the path <span class="math inline">\(a(t)\)</span> on the real axis is strictly shorter than the path <span class="math inline">\(\gamma(t)\)</span>. Further, if <span class="math inline">\(a(t)\)</span> is decreasing on some interval, we could reduce the integral by deleting a parameter interval over which <span class="math inline">\(a(t)\)</span> starts and ends at the same value. We conclude that the integral is a minimum exactly when <span class="math inline">\(\gamma(t)\)</span> is real and nondecreasing, in which case the path is the straight line segment from 0 to <span class="math inline">\(r\)</span>.</p>
 </div>
-<p><img src="figures/Riemann_Mapping_Therom/fig5.png" width="346" style="display: block; margin: auto;" /></p>
+<p><img src="figures/Riemann_Mapping_Therom/fig5.png" width="322" style="display: block; margin: auto;" /></p>
 </div>
 <div id="proof-of-riemann-mapping-theorem" class="section level2 hasAnchor" number="5.2">
 <h2><span class="header-section-number">5.2</span> Proof of Riemann Mapping Theorem<a href="riemann-mapping-theorem.html#proof-of-riemann-mapping-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -283,13 +283,18 @@ First fix <span class="math inline">\(z_0\)</span>. Let <span class="math inline
 <li>There exist <span class="math inline">\(g\in \mathcal{F}\)</span> such that <span class="math inline">\(|g&#39;(z)|\)</span> is maximal</li>
 <li>The function <span class="math inline">\(g\)</span> is a biholomorphic map from <span class="math inline">\(D\)</span> to <span class="math inline">\(\mathbb{D}\)</span></li>
 </ol>
-<p><img src="figures/Riemann_Mapping_Therom/fig5.png" width="346" style="display: block; margin: auto;" /></p>
+<p><img src="figures/Riemann_Mapping_Therom/fig5.png" width="322" style="display: block; margin: auto;" /></p>
 <p><img src="figures/Riemann_Mapping_Therom/fig6.png" width="418" style="display: block; margin: auto;" />
 <img src="figures/Riemann_Mapping_Therom/fig7.png" width="323" style="display: block; margin: auto;" /></p>
 <p><img src="figures/Riemann_Mapping_Therom/fig8.png" width="318" style="display: block; margin: auto;" /></p>
 <p><img src="figures/Riemann_Mapping_Therom/fig9.png" width="316" style="display: block; margin: auto;" /></p>
 <p><img src="figures/Riemann_Mapping_Therom/fig10.png" width="328" style="display: block; margin: auto;" /></p>
 <p><img src="figures/Riemann_Mapping_Therom/fig11.png" width="316" style="display: block; margin: auto;" /></p>
+<p><img src="figures/Riemann_Mapping_Therom/fig12.png" width="498" style="display: block; margin: auto;" /></p>
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-56" class="theorem"><strong>Theorem 5.5  (Montel Theorem) </strong></span>Suppose <span class="math inline">\(F\)</span> is a family of analytic functions on a domain <span class="math inline">\(D\)</span> such that <span class="math inline">\(F\)</span> is uniformly bounded on each compact subset of <span class="math inline">\(D\)</span>. Then every sequence in <span class="math inline">\(F\)</span> has a subsequence that converges normally on <span class="math inline">\(D\)</span>, that is, uniformly on each compact subset of <span class="math inline">\(D\)</span>.</p>
+</div>
+<p><img src="figures/Riemann_Mapping_Therom/fig13.png" width="504" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 <div id="latex" class="section level2 hasAnchor" number="5.3">

@@ -23,7 +23,7 @@
 <meta name="author" content="Ashan J" />
 
 
-<meta name="date" content="2024-06-03" />
+<meta name="date" content="2024-06-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -234,7 +234,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-39"><a href="codes.html#cb1-39" tabindex="-1"></a>xmin, xmax, ymin, ymax <span class="op">=</span> <span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span></span>
 <span id="cb1-40"><a href="codes.html#cb1-40" tabindex="-1"></a></span>
 <span id="cb1-41"><a href="codes.html#cb1-41" tabindex="-1"></a>plot_conformal_map(func, xmin, xmax, ymin, ymax, nb_grid, nb_points)</span></code></pre></div>
-<p><img src="ConformalMapping_files/figure-html/unnamed-chunk-55-1.png" width="672" /></p>
+<p><img src="ConformalMapping_files/figure-html/unnamed-chunk-58-1.png" width="672" /></p>
 </div>
 <div id="helical-domain" class="section level2 hasAnchor" number="6.2">
 <h2><span class="header-section-number">6.2</span> Helical Domain<a href="codes.html#helical-domain" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -247,7 +247,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb2-7"><a href="codes.html#cb2-7" tabindex="-1"></a>y<span class="ot">&lt;-</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">10</span>,<span class="dv">10</span>,<span class="at">length.out=</span><span class="dv">1000</span>)</span>
 <span id="cb2-8"><a href="codes.html#cb2-8" tabindex="-1"></a>z<span class="ot">&lt;-</span><span class="fu">outer</span>(x,y,<span class="cf">function</span>(x,y) <span class="fu">log</span>(x<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> y<span class="sc">^</span><span class="dv">2</span>)<span class="sc">*</span><span class="fu">sin</span>(theta) <span class="sc">+</span> <span class="fu">atan</span>(y<span class="sc">/</span>x)<span class="sc">*</span><span class="fu">cos</span>(theta) <span class="sc">-</span>c)</span>
 <span id="cb2-9"><a href="codes.html#cb2-9" tabindex="-1"></a><span class="fu">contour</span>(x,y,z,<span class="at">nlevels=</span><span class="dv">0</span>)</span></code></pre></div>
-<p><img src="ConformalMapping_files/figure-html/unnamed-chunk-56-3.png" width="672" /></p>
+<p><img src="ConformalMapping_files/figure-html/unnamed-chunk-59-3.png" width="672" /></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="codes.html#cb3-1" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb3-2"><a href="codes.html#cb3-2" tabindex="-1"></a>theta<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb3-3"><a href="codes.html#cb3-3" tabindex="-1"></a>c<span class="op">=</span><span class="dv">2</span></span>
+<span id="cb3-4"><a href="codes.html#cb3-4" tabindex="-1"></a>x, y <span class="op">=</span> symbols(<span class="st">&#39;x y&#39;</span>)</span>
+<span id="cb3-5"><a href="codes.html#cb3-5" tabindex="-1"></a><span class="co">#plot_implicit(x**3 + x**2 - y**2, (x, -2, 2), (y, -2, 2))</span></span>
+<span id="cb3-6"><a href="codes.html#cb3-6" tabindex="-1"></a>plot_implicit(log(x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> y<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>sin(theta) <span class="op">+</span> atan(y<span class="op">/</span>x)<span class="op">*</span>cos(theta) <span class="op">-</span>c,</span>
+<span id="cb3-7"><a href="codes.html#cb3-7" tabindex="-1"></a>(x, <span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>), (y, <span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>))</span></code></pre></div>
+<pre><code>## &lt;sympy.plotting.plot.Plot object at 0x00000265AA066620&gt;</code></pre>
+<p><img src="ConformalMapping_files/figure-html/unnamed-chunk-60-1.png" width="672" /></p>
 
 </div>
 </div>

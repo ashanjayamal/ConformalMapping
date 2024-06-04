@@ -9,42 +9,50 @@ For constant $\theta$ and $c$, the equation  $\Im(e^{-i\theta}\log(\xi))=c$ defi
   knitr::include_graphics('figures/Helical_Domain/fig1.png')
 ```
 
-```{r,}
-
-# The Logrithm Arc depend on the Constant theta and c
-theta<-pi/2
-c<-1
 
 
-x<-seq(-10,10,length.out=1000)
-y<-seq(-10,10,length.out=1000)
-z<-outer(x,y,function(x,y) log(x^2 + y^2)*sin(theta) + atan(y/x)*cos(theta)-c)
-contour(x,y,z,nlevels=0)
-```
 
 
 - For $\theta = 0$, the logarithmic spiral degenerates into a ray issuing from the origin. 
 ```{r echo=FALSE}
   knitr::include_graphics('figures/Helical_Domain/fig2.png')
 ```
+
+```{python}
+from sympy import *
+
+# The Logrithm Arc depend on the Constant theta and c
+theta=0
+c=1
+
+x, y = symbols('x y')
+
+plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,
+(x, -10, 10), (y, -10, 10))
+```
+
+
 - For $\theta = \frac{\pi}{2}$, it degenerates to a circle with center at the origin.
 
 ```{r echo=FALSE}
   knitr::include_graphics('figures/Helical_Domain/fig3.png')
 ```
 
-```{r,}
+
+
+```{python}
+from sympy import *
 
 # The Logrithm Arc depend on the Constant theta and c
-theta<-pi/2
-c<-2
+theta=pi/2
+c=2
 
+x, y = symbols('x y')
 
-x<-seq(-10,10,length.out=1000)
-y<-seq(-10,10,length.out=1000)
-z<-outer(x,y,function(x,y) log(x^2 + y^2)*sin(theta) + atan(y/x)*cos(theta) -c)
-contour(x,y,z,nlevels=0)
+plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,
+(x, -10, 10), (y, -10, 10))
 ```
+
 When we hold $c$ constant and vary $\theta$, we obtain various curves constituting the family of logarithmic spirals of inclination $\theta$. For all that follows, when we speak of logarithmic spirals of inclination $\theta$, these are what we mean. 
 
 Let us show that, for any simply connected domain \(B\) that has boundary points, it is possible to map \(B\) onto the complex plane \(\mathbb{C}\) with a cut along an arc of a logarithmic spiral of inclination \(\theta\) in such a way that given points \(a\) and \(b\) of the domain \(B\) are mapped into \(0\) and \(\infty\), respectively. The expansion of the mapping function about \(z = b\) has the form:

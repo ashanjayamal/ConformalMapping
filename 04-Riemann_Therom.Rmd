@@ -170,6 +170,17 @@ iv. The function $g$ is a biholomorphic map from $D$ to $\mathbb{D}$
  knitr::include_graphics('figures/Riemann_Mapping_Therom/fig11.png')
 ```
 
+```{r ,echo=FALSE,fig.align='center'}
+ knitr::include_graphics('figures/Riemann_Mapping_Therom/fig12.png')
+```
+
+```{theorem,name='Montel Theorem'}
+Suppose \(F\) is a family of analytic functions on a domain \(D\) such that \(F\) is uniformly bounded on each compact subset of \(D\). Then every sequence in \(F\) has a subsequence that converges normally on \(D\), that is, uniformly on each compact subset of \(D\).
+```
+
+```{r ,echo=FALSE,fig.align='center'}
+ knitr::include_graphics('figures/Riemann_Mapping_Therom/fig13.png')
+```
 
 
 

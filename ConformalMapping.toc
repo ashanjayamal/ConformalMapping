@@ -10,8 +10,8 @@
 \contentsline {section}{\numberline {5.1}Hyperbolic Geomeery}{21}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Proof of Riemann Mapping Theorem}{28}{section.5.2}%
 \contentsline {subsection}{\numberline {5.2.1}Adlof Proof}{28}{subsection.5.2.1}%
-\contentsline {section}{\numberline {5.3}LaTeX}{36}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Codes}{39}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Python Code}{39}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Helical Domain}{40}{section.6.2}%
-\contentsline {chapter}{\numberline {7}Helical Domain}{43}{chapter.7}%
+\contentsline {section}{\numberline {5.3}LaTeX}{38}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Codes}{41}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Python Code}{41}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Helical Domain}{42}{section.6.2}%
+\contentsline {chapter}{\numberline {7}Helical Domain}{45}{chapter.7}%

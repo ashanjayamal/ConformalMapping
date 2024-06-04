@@ -28,8 +28,9 @@ def:unnamed-chunk-40
 thm:thm1
 lem:unnamed-chunk-44
 thm:unnamed-chunk-46
-lem:unnamed-chunk-62
-thm:unnamed-chunk-63
+thm:unnamed-chunk-56
+lem:unnamed-chunk-66
+thm:unnamed-chunk-67
 the-convergence-of-sequences-of-analytic-and-harmonic-functions
 the-convergence-of-sequences-of-analytic-functions
 univalent-mapping-of-multiply-connected-domains
