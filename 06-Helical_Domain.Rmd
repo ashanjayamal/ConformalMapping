@@ -135,10 +135,11 @@ This follows, for example, from the fact that if we shift to the plane $t = \log
 |$-0.5$   |Cyan   |
 |$-1$     |Orange |
 |$0$      |Magenta|
+|$0.3$    |Black  |
 |$1$      |Blue   |
 |$1.5$    |Red    |
 |$2$      |Green  |
-|$3$      |Black  |
+
 
 ```{python,echo=FALSE}
 from sympy import *
@@ -161,7 +162,7 @@ p2=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5
 c=-1
 p3=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='orange')
 
-c=3
+c=0.3
 p4=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='black')
 
 c=0
