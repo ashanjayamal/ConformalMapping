@@ -293,12 +293,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb6-3"><a href="codes.html#cb6-3" tabindex="-1"></a>x, y <span class="op">=</span> symbols(<span class="st">&#39;x y&#39;</span>)</span>
 <span id="cb6-4"><a href="codes.html#cb6-4" tabindex="-1"></a></span>
 <span id="cb6-5"><a href="codes.html#cb6-5" tabindex="-1"></a><span class="co"># If Theta=pi and c=1</span></span>
-<span id="cb6-6"><a href="codes.html#cb6-6" tabindex="-1"></a>theta<span class="op">=</span><span class="dv">3</span></span>
-<span id="cb6-7"><a href="codes.html#cb6-7" tabindex="-1"></a>c<span class="op">=</span><span class="dv">1</span></span>
-<span id="cb6-8"><a href="codes.html#cb6-8" tabindex="-1"></a>p<span class="op">=</span>plot_implicit(log(x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> y<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>cos(theta) <span class="op">+</span> atan(y<span class="op">/</span>x)<span class="op">*</span>sin(theta) <span class="op">-</span>c,(x, <span class="op">-</span><span class="dv">100</span>, <span class="dv">100</span>), (y, <span class="op">-</span><span class="dv">100</span>, <span class="dv">100</span>))</span></code></pre></div>
+<span id="cb6-6"><a href="codes.html#cb6-6" tabindex="-1"></a>theta<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb6-7"><a href="codes.html#cb6-7" tabindex="-1"></a>c<span class="op">=</span><span class="dv">6</span></span>
+<span id="cb6-8"><a href="codes.html#cb6-8" tabindex="-1"></a>p<span class="op">=</span>plot_implicit(log(x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> y<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>cos(theta) <span class="op">+</span> atan(y<span class="op">/</span>x)<span class="op">*</span>sin(theta) <span class="op">-</span>c,(x, <span class="op">-</span><span class="dv">45</span>, <span class="dv">45</span>), (y, <span class="op">-</span><span class="dv">80</span>, <span class="dv">80</span>),show<span class="op">=</span><span class="va">False</span>,xlabel<span class="op">=</span><span class="st">&#39;Re&#39;</span>,ylabel<span class="op">=</span><span class="st">&#39;Im&#39;</span>)</span>
+<span id="cb6-9"><a href="codes.html#cb6-9" tabindex="-1"></a>p.show()</span></code></pre></div>
 <p><img src="ConformalMapping_files/figure-html/unnamed-chunk-62-11.png" width="672" /></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="codes.html#cb7-1" tabindex="-1"></a>p.show()</span></code></pre></div>
-<p><img src="ConformalMapping_files/figure-html/unnamed-chunk-62-12.png" width="672" /></p>
 
 </div>
 </div>
@@ -350,7 +349,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["ConformalMapping.pdf", "ConformalMapping.epub"],
+"download": ["ConformalMapping.pdf"],
 "search": {
 "engine": "fuse",
 "options": null

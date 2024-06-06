@@ -10,6 +10,7 @@ This following plot is drawing for $\theta=1$ and
 |c        |Colour |
 |:--------|:------|
 |$-0.5$   |Orange |
+|$0$      |Cyan   |
 |$-1$     |Magenta|
 |$1$      |Blue   |
 |$1.5$    |Red    |
@@ -27,44 +28,51 @@ x, y = symbols('x y')
 theta=1
 
 c=1
-p=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='blue')
+p=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='blue')
 
 c=1.5
-p1=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='red')
+p1=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='red')
 
 c=2
-p2=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='green')
+p2=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='green')
 
 c=-1
-p3=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='orange')
+p3=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='orange')
 
 c=3
-p4=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='black')
+p4=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='black')
 
 c=0
-p5=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='magenta')
+p5=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='magenta')
 
 
 c=-0.5
-p3=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='orange')
+p6=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='cyan')
 
 p.extend(p1)
 p.extend(p2)
 p.extend(p3)
 p.extend(p4)
 p.extend(p5)
+p.extend(p6)
 p.show()
 
 ```
+
+
 This following plot is drawing for $c=1$ and
+
 |$\theta$ |Colour |
 |:--------|:------|
-|$-0.5$   |Orange |
-|$-1$     |Magenta|
+|$-0.5$   |Cyan   |
+|$-1$     |Orange |
+|$0$      |Magenta|
 |$1$      |Blue   |
 |$1.5$    |Red    |
 |$2$      |Green  |
 |$3$      |Black  |
+
+
 
 ```{python,echo=FALSE}
 from sympy import *
@@ -75,32 +83,33 @@ x, y = symbols('x y')
 c=1
 
 theta=1
-p=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -10, 10), (y, -25, 25),show=False,line_color='blue')
+p=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -10, 10), (y, -20, 20),show=False,xlabel='Re',ylabel='Im',line_color='blue')
 
 theta=1.5
-p1=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -10, 10), (y, -25, 25),show=False,line_color='red')
+p1=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -10, 10), (y, -20, 20),show=False,xlabel='Re',ylabel='Im',line_color='red')
 
 theta=2
-p2=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -10, 10), (y, -25, 25),show=False,line_color='green')
+p2=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -10, 10), (y, -20, 20),show=False,xlabel='Re',ylabel='Im',line_color='green')
 
 theta=-1
-p3=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -10, 10), (y, -25, 25),show=False,line_color='orange')
+p3=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -10, 10), (y, -20, 20),show=False,xlabel='Re',ylabel='Im',line_color='orange')
 
 theta=3
-p4=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -10, 10), (y, -25, 25),show=False,line_color='black')
+p4=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -10, 10), (y, -20, 20),show=False,xlabel='Re',ylabel='Im',line_color='black')
 
 theta=0
-p5=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -10, 10), (y, -25, 25),show=False,line_color='magenta')
+p5=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -10, 10), (y, -20, 20),show=False,xlabel='Re',ylabel='Im',line_color='magenta')
 
 
 theta=-0.5
-p3=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -10, 10), (y, -10, 10),show=False,line_color='orange')
+p6=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -10, 10), (y, -20, 20),show=False,xlabel='Re',ylabel='Im',line_color='orange')
 
 p.extend(p1)
 p.extend(p2)
 p.extend(p3)
 p.extend(p4)
 p.extend(p5)
+p.extend(p6)
 p.show()
 
 ```
@@ -116,35 +125,58 @@ This follows, for example, from the fact that if we shift to the plane $t = \log
 
 
 - For $\theta = 0$, the logarithmic spiral degenerates into a ray issuing from the origin. 
-```{r echo=FALSE}
+
+```{r,echo=FALSE,fig.align='center'}
   knitr::include_graphics('figures/Helical_Domain/fig2.png')
 ```
 
-```{python}
+|$c$      |Colour |
+|:-------:|:------|
+|$-0.5$   |Cyan   |
+|$-1$     |Orange |
+|$0$      |Magenta|
+|$1$      |Blue   |
+|$1.5$    |Red    |
+|$2$      |Green  |
+|$3$      |Black  |
+
+```{python,echo=FALSE}
 from sympy import *
 
-# The Logrithm Arc depend on the Constant theta and c
+# The Logarithm Arc depend on the Constant theta and c
 theta=0
 c=1
 
 x, y = symbols('x y')
 
 c=1
-p=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='blue')
+p=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='blue')
+
+c=1.5
+p1=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='red')
+
+c=2
+p2=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='green')
 
 c=-1
-p1=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='red')
-
-c=1.55
-p2=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='green')
+p3=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='orange')
 
 c=3
-p3=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='orange')
+p4=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='black')
 
+c=0
+p5=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='magenta')
+
+
+c=-0.5
+p6=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='cyan')
 
 p.extend(p1)
 p.extend(p2)
 p.extend(p3)
+p.extend(p4)
+p.extend(p5)
+p.extend(p6)
 p.show()
 ```
 
@@ -161,6 +193,7 @@ This following plot is drawing for $\theta=\frac{\pi}{2}$ and
 |$c$      |Colour |
 |:--------|:------|
 |$-0.5$   |Orange |
+|$0$      |Cyan   |
 |$-1$     |Magenta|
 |$1$      |Blue   |
 |$1.5$    |Red    |
@@ -175,32 +208,33 @@ x, y = symbols('x y')
 theta=pi/2
 
 c=1
-p=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='blue')
+p=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='blue')
 
 c=1.5
-p1=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='red')
+p1=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='red')
 
 c=2
-p2=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='green')
+p2=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='green')
 
 c=-1
-p3=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='orange')
+p3=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='orange')
 
 c=3
-p4=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='black')
+p4=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='black')
 
 c=0
-p5=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='magenta')
+p5=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='magenta')
 
 
 c=-0.5
-p3=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='orange')
+p6=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='cyan')
 
 p.extend(p1)
 p.extend(p2)
 p.extend(p3)
 p.extend(p4)
 p.extend(p5)
+p.extend(p6)
 p.show()
 ```
 
@@ -246,7 +280,7 @@ Suppose that the point \(z = a\) is mapped into a point \(z' = a'\). Now, we nee
 in the class I. This problem was studied in Section 3 of Chapter IV (the first application of Theorem 1 with \(a = \frac{17}{2} - \epsilon\)). It was shown that this problem has a solution, and the extremal function (normalized by the condition \(F(a') = 0\)) provides the required mapping. 
 
 ```{lemma}
-Of all functions 
+Out of all functions 
 $$
 \xi=F(z) := z + \frac{a}{z} + a_0 + \ldots
 $$
