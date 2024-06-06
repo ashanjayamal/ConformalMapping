@@ -3,7 +3,109 @@
 In an analogous manner, we shall find the answer to the question of univalent mapping of multiply connected domains onto a plane with cuts along arcs of logarithmic spirals and, as limiting cases, onto the plane with radial cuts and with cuts along circular arcs of concentric circles. 
 
 
-For constant $\theta$ and $c$, the equation  $\Im(e^{-i\theta}\log(\xi))=c$ defines a logarithmic  spiral in the $\xi$-plane with asymptotic point at the origin.This spiral has the property that it is intersected by an arbitrary ray issuing from the origin at an angle $\theta$. This follows, for example, from the fact that if we shift to the plane $t = \log(\xi)$, this logarithmic spiral is mapped into the straight line $e^{-i\theta t} = c$ with inclination $\theta$ to the real axis, and the ray referred to is mapped into a straight line parallel to the real axis. 
+For constant $\theta$ and $c$, the equation  $\Im(e^{-i\theta}\log(\xi))=c$ defines a logarithmic  spiral in the $\xi$-plane with asymptotic point at the origin.This spiral has the property that it is intersected by an arbitrary ray issuing from the origin at an angle $\theta$. 
+
+This following plot is drawing for $\theta=1$ and
+
+|c        |Colour |
+|:--------|:------|
+|$-0.5$   |Orange |
+|$-1$     |Magenta|
+|$1$      |Blue   |
+|$1.5$    |Red    |
+|$2$      |Green  |
+|$3$      |Black  |
+
+
+
+```{python,echo=FALSE}
+from sympy import *
+
+x, y = symbols('x y')
+
+
+theta=1
+
+c=1
+p=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='blue')
+
+c=1.5
+p1=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='red')
+
+c=2
+p2=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='green')
+
+c=-1
+p3=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='orange')
+
+c=3
+p4=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='black')
+
+c=0
+p5=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='magenta')
+
+
+c=-0.5
+p3=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='orange')
+
+p.extend(p1)
+p.extend(p2)
+p.extend(p3)
+p.extend(p4)
+p.extend(p5)
+p.show()
+
+```
+This following plot is drawing for $c=1$ and
+|$\theta$ |Colour |
+|:--------|:------|
+|$-0.5$   |Orange |
+|$-1$     |Magenta|
+|$1$      |Blue   |
+|$1.5$    |Red    |
+|$2$      |Green  |
+|$3$      |Black  |
+
+```{python,echo=FALSE}
+from sympy import *
+
+x, y = symbols('x y')
+
+
+c=1
+
+theta=1
+p=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -10, 10), (y, -25, 25),show=False,line_color='blue')
+
+theta=1.5
+p1=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -10, 10), (y, -25, 25),show=False,line_color='red')
+
+theta=2
+p2=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -10, 10), (y, -25, 25),show=False,line_color='green')
+
+theta=-1
+p3=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -10, 10), (y, -25, 25),show=False,line_color='orange')
+
+theta=3
+p4=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -10, 10), (y, -25, 25),show=False,line_color='black')
+
+theta=0
+p5=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -10, 10), (y, -25, 25),show=False,line_color='magenta')
+
+
+theta=-0.5
+p3=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -10, 10), (y, -10, 10),show=False,line_color='orange')
+
+p.extend(p1)
+p.extend(p2)
+p.extend(p3)
+p.extend(p4)
+p.extend(p5)
+p.show()
+
+```
+
+This follows, for example, from the fact that if we shift to the plane $t = \log(\xi)$, this logarithmic spiral is mapped into the straight line $e^{-i\theta t} = c$ with inclination $\theta$ to the real axis, and the ray referred to is mapped into a straight line parallel to the real axis. 
 
 ```{r echo=FALSE}
   knitr::include_graphics('figures/Helical_Domain/fig1.png')
@@ -27,9 +129,25 @@ c=1
 
 x, y = symbols('x y')
 
-plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,
-(x, -10, 10), (y, -10, 10))
+c=1
+p=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='blue')
+
+c=-1
+p1=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='red')
+
+c=1.55
+p2=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='green')
+
+c=3
+p3=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='orange')
+
+
+p.extend(p1)
+p.extend(p2)
+p.extend(p3)
+p.show()
 ```
+
 
 
 - For $\theta = \frac{\pi}{2}$, it degenerates to a circle with center at the origin.
@@ -38,19 +156,52 @@ plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,
   knitr::include_graphics('figures/Helical_Domain/fig3.png')
 ```
 
+This following plot is drawing for $\theta=\frac{\pi}{2}$ and
 
+|$c$      |Colour |
+|:--------|:------|
+|$-0.5$   |Orange |
+|$-1$     |Magenta|
+|$1$      |Blue   |
+|$1.5$    |Red    |
+|$2$      |Green  |
+|$3$      |Black  |
 
-```{python}
+```{python,echo=FALSE}
 from sympy import *
+x, y = symbols('x y')
 
 # The Logrithm Arc depend on the Constant theta and c
 theta=pi/2
+
+c=1
+p=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='blue')
+
+c=1.5
+p1=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='red')
+
 c=2
+p2=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='green')
 
-x, y = symbols('x y')
+c=-1
+p3=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='orange')
 
-plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,
-(x, -10, 10), (y, -10, 10))
+c=3
+p4=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='black')
+
+c=0
+p5=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='magenta')
+
+
+c=-0.5
+p3=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,line_color='orange')
+
+p.extend(p1)
+p.extend(p2)
+p.extend(p3)
+p.extend(p4)
+p.extend(p5)
+p.show()
 ```
 
 When we hold $c$ constant and vary $\theta$, we obtain various curves constituting the family of logarithmic spirals of inclination $\theta$. For all that follows, when we speak of logarithmic spirals of inclination $\theta$, these are what we mean. 
@@ -105,5 +256,9 @@ is minimized by the function $F_0(z)$ that maps the disk \(|z| > R\) onto the $\
 ```
 
 ```{theorem}
- Every domain \(B\) in the \(z\)-plane can be mapped univalently onto a domain \(B'\) in the \(\omega\)-plane that includes the points 0 and \(\infty\), such that an arbitrary continuum of the complement of the domain \(B'\) with respect to the \(\omega\)-plane is an arc of a logarithmic spiral of given inclination \(\epsilon\). This mapping maps given points \(a\) and \(b\) of the domain \(B\) into 0 and \(\infty\), respectively, and the expansion of the mapping function about \(z = b\) has the form \((z - b)^{r_1} + a_0 + a_1 (z - b) + \ldots\) or \(z + a_0 + a_1 z^{-1} + \ldots\), according as \(b\) is finite or infinite.
+ Every domain \(B\) in the \(z\)-plane can be mapped univalently onto a domain \(B'\) in the \(\xi\)-plane that includes the points 0 and \(\infty\), such that an arbitrary continuum of the complement of the domain \(B'\) with respect to the \(\xi\)-plane is an arc of a logarithmic spiral of given inclination \(\theta\). This mapping maps given points \(a\) and \(b\) of the domain \(B\) into 0 and \(\infty\), respectively, and the expansion of the mapping function about \(z = b\) has the form \((z - b)^{-1} + a_0 + a_1 (z - b) + \cdots\) or \(z + a_0 + a_1 z^{-1} + \cdots\), according as \(b\) is finite or infinite.
 ```
+
+*Proof.* We may assume that \(b = \infty\) because, if this is not the case, we can use the transformation \(z^* = \frac{1}{z - b}\) to switch from domain \(B\) to a new domain \(B'\). Then we can prove the theorem for this last domain, replacing \(a\) and \(b\) with \(\frac{1}{ab}\) and \(\infty\).
+
+

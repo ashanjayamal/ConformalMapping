@@ -23,7 +23,7 @@
 <meta name="author" content="Ashan J" />
 
 
-<meta name="date" content="2024-06-04" />
+<meta name="date" content="2024-06-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -192,40 +192,125 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="helical-domain-1" class="section level1 hasAnchor" number="7">
 <h1><span class="header-section-number">Chapter 7</span> Helical Domain<a href="helical-domain-1.html#helical-domain-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>In an analogous manner, we shall find the answer to the question of univalent mapping of multiply connected domains onto a plane with cuts along arcs of logarithmic spirals and, as limiting cases, onto the plane with radial cuts and with cuts along circular arcs of concentric circles.</p>
-<p>For constant <span class="math inline">\(\theta\)</span> and <span class="math inline">\(c\)</span>, the equation <span class="math inline">\(\Im(e^{-i\theta}\log(\xi))=c\)</span> defines a logarithmic spiral in the <span class="math inline">\(\xi\)</span>-plane with asymptotic point at the origin.This spiral has the property that it is intersected by an arbitrary ray issuing from the origin at an angle <span class="math inline">\(\theta\)</span>. This follows, for example, from the fact that if we shift to the plane <span class="math inline">\(t = \log(\xi)\)</span>, this logarithmic spiral is mapped into the straight line <span class="math inline">\(e^{-i\theta t} = c\)</span> with inclination <span class="math inline">\(\theta\)</span> to the real axis, and the ray referred to is mapped into a straight line parallel to the real axis.</p>
+<p>For constant <span class="math inline">\(\theta\)</span> and <span class="math inline">\(c\)</span>, the equation <span class="math inline">\(\Im(e^{-i\theta}\log(\xi))=c\)</span> defines a logarithmic spiral in the <span class="math inline">\(\xi\)</span>-plane with asymptotic point at the origin.This spiral has the property that it is intersected by an arbitrary ray issuing from the origin at an angle <span class="math inline">\(\theta\)</span>.</p>
+<p>This following plot is drawing for <span class="math inline">\(\theta=1\)</span> and</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">c</th>
+<th align="left">Colour</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(-0.5\)</span></td>
+<td align="left">Orange</td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(-1\)</span></td>
+<td align="left">Magenta</td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\(1\)</span></td>
+<td align="left">Blue</td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(1.5\)</span></td>
+<td align="left">Red</td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\(2\)</span></td>
+<td align="left">Green</td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(3\)</span></td>
+<td align="left">Black</td>
+</tr>
+</tbody>
+</table>
+<p><img src="ConformalMapping_files/figure-html/unnamed-chunk-1-1.png" width="672" />
+This following plot is drawing for <span class="math inline">\(c=1\)</span> and
+|<span class="math inline">\(\theta\)</span> |Colour |
+|:——–|:——|
+|<span class="math inline">\(-0.5\)</span> |Orange |
+|<span class="math inline">\(-1\)</span> |Magenta|
+|<span class="math inline">\(1\)</span> |Blue |
+|<span class="math inline">\(1.5\)</span> |Red |
+|<span class="math inline">\(2\)</span> |Green |
+|<span class="math inline">\(3\)</span> |Black |</p>
+<p><img src="ConformalMapping_files/figure-html/unnamed-chunk-2-3.png" width="672" /></p>
+<p>This follows, for example, from the fact that if we shift to the plane <span class="math inline">\(t = \log(\xi)\)</span>, this logarithmic spiral is mapped into the straight line <span class="math inline">\(e^{-i\theta t} = c\)</span> with inclination <span class="math inline">\(\theta\)</span> to the real axis, and the ray referred to is mapped into a straight line parallel to the real axis.</p>
 <p><img src="figures/Helical_Domain/fig1.png" width="364" /></p>
 <ul>
 <li>For <span class="math inline">\(\theta = 0\)</span>, the logarithmic spiral degenerates into a ray issuing from the origin.
 <img src="figures/Helical_Domain/fig2.png" width="382" /></li>
 </ul>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="helical-domain-1.html#cb5-1" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> <span class="op">*</span></span>
-<span id="cb5-2"><a href="helical-domain-1.html#cb5-2" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="helical-domain-1.html#cb5-3" tabindex="-1"></a><span class="co"># The Logrithm Arc depend on the Constant theta and c</span></span>
-<span id="cb5-4"><a href="helical-domain-1.html#cb5-4" tabindex="-1"></a>theta<span class="op">=</span><span class="dv">0</span></span>
-<span id="cb5-5"><a href="helical-domain-1.html#cb5-5" tabindex="-1"></a>c<span class="op">=</span><span class="dv">1</span></span>
-<span id="cb5-6"><a href="helical-domain-1.html#cb5-6" tabindex="-1"></a></span>
-<span id="cb5-7"><a href="helical-domain-1.html#cb5-7" tabindex="-1"></a>x, y <span class="op">=</span> symbols(<span class="st">&#39;x y&#39;</span>)</span>
-<span id="cb5-8"><a href="helical-domain-1.html#cb5-8" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="helical-domain-1.html#cb5-9" tabindex="-1"></a>plot_implicit(log(x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> y<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>sin(theta) <span class="op">+</span> atan(y<span class="op">/</span>x)<span class="op">*</span>cos(theta) <span class="op">-</span>c,</span>
-<span id="cb5-10"><a href="helical-domain-1.html#cb5-10" tabindex="-1"></a>(x, <span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>), (y, <span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>))</span></code></pre></div>
-<pre><code>## &lt;sympy.plotting.plot.Plot object at 0x00000265AA115840&gt;</code></pre>
-<p><img src="ConformalMapping_files/figure-html/unnamed-chunk-63-1.png" width="672" /></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="helical-domain-1.html#cb1-1" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb1-2"><a href="helical-domain-1.html#cb1-2" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="helical-domain-1.html#cb1-3" tabindex="-1"></a><span class="co"># The Logrithm Arc depend on the Constant theta and c</span></span>
+<span id="cb1-4"><a href="helical-domain-1.html#cb1-4" tabindex="-1"></a>theta<span class="op">=</span><span class="dv">0</span></span>
+<span id="cb1-5"><a href="helical-domain-1.html#cb1-5" tabindex="-1"></a>c<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb1-6"><a href="helical-domain-1.html#cb1-6" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="helical-domain-1.html#cb1-7" tabindex="-1"></a>x, y <span class="op">=</span> symbols(<span class="st">&#39;x y&#39;</span>)</span>
+<span id="cb1-8"><a href="helical-domain-1.html#cb1-8" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="helical-domain-1.html#cb1-9" tabindex="-1"></a>c<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb1-10"><a href="helical-domain-1.html#cb1-10" tabindex="-1"></a>p<span class="op">=</span>plot_implicit(log(x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> y<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>sin(theta) <span class="op">+</span> atan(y<span class="op">/</span>x)<span class="op">*</span>cos(theta) <span class="op">-</span>c,(x, <span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>), (y, <span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>),show<span class="op">=</span><span class="va">False</span>,line_color<span class="op">=</span><span class="st">&#39;blue&#39;</span>)</span>
+<span id="cb1-11"><a href="helical-domain-1.html#cb1-11" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="helical-domain-1.html#cb1-12" tabindex="-1"></a>c<span class="op">=-</span><span class="dv">1</span></span>
+<span id="cb1-13"><a href="helical-domain-1.html#cb1-13" tabindex="-1"></a>p1<span class="op">=</span>plot_implicit(log(x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> y<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>sin(theta) <span class="op">+</span> atan(y<span class="op">/</span>x)<span class="op">*</span>cos(theta) <span class="op">-</span>c,(x, <span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>), (y, <span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>),show<span class="op">=</span><span class="va">False</span>,line_color<span class="op">=</span><span class="st">&#39;red&#39;</span>)</span>
+<span id="cb1-14"><a href="helical-domain-1.html#cb1-14" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="helical-domain-1.html#cb1-15" tabindex="-1"></a>c<span class="op">=</span><span class="fl">1.55</span></span>
+<span id="cb1-16"><a href="helical-domain-1.html#cb1-16" tabindex="-1"></a>p2<span class="op">=</span>plot_implicit(log(x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> y<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>sin(theta) <span class="op">+</span> atan(y<span class="op">/</span>x)<span class="op">*</span>cos(theta) <span class="op">-</span>c,(x, <span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>), (y, <span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>),show<span class="op">=</span><span class="va">False</span>,line_color<span class="op">=</span><span class="st">&#39;green&#39;</span>)</span>
+<span id="cb1-17"><a href="helical-domain-1.html#cb1-17" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="helical-domain-1.html#cb1-18" tabindex="-1"></a>c<span class="op">=</span><span class="dv">3</span></span>
+<span id="cb1-19"><a href="helical-domain-1.html#cb1-19" tabindex="-1"></a>p3<span class="op">=</span>plot_implicit(log(x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> y<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>sin(theta) <span class="op">+</span> atan(y<span class="op">/</span>x)<span class="op">*</span>cos(theta) <span class="op">-</span>c,(x, <span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>), (y, <span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>),show<span class="op">=</span><span class="va">False</span>,line_color<span class="op">=</span><span class="st">&#39;orange&#39;</span>)</span>
+<span id="cb1-20"><a href="helical-domain-1.html#cb1-20" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="helical-domain-1.html#cb1-21" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="helical-domain-1.html#cb1-22" tabindex="-1"></a>p.extend(p1)</span>
+<span id="cb1-23"><a href="helical-domain-1.html#cb1-23" tabindex="-1"></a>p.extend(p2)</span>
+<span id="cb1-24"><a href="helical-domain-1.html#cb1-24" tabindex="-1"></a>p.extend(p3)</span>
+<span id="cb1-25"><a href="helical-domain-1.html#cb1-25" tabindex="-1"></a>p.show()</span></code></pre></div>
+<p><img src="ConformalMapping_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 <ul>
 <li>For <span class="math inline">\(\theta = \frac{\pi}{2}\)</span>, it degenerates to a circle with center at the origin.</li>
 </ul>
 <p><img src="figures/Helical_Domain/fig3.png" width="756" /></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="helical-domain-1.html#cb7-1" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> <span class="op">*</span></span>
-<span id="cb7-2"><a href="helical-domain-1.html#cb7-2" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="helical-domain-1.html#cb7-3" tabindex="-1"></a><span class="co"># The Logrithm Arc depend on the Constant theta and c</span></span>
-<span id="cb7-4"><a href="helical-domain-1.html#cb7-4" tabindex="-1"></a>theta<span class="op">=</span>pi<span class="op">/</span><span class="dv">2</span></span>
-<span id="cb7-5"><a href="helical-domain-1.html#cb7-5" tabindex="-1"></a>c<span class="op">=</span><span class="dv">2</span></span>
-<span id="cb7-6"><a href="helical-domain-1.html#cb7-6" tabindex="-1"></a></span>
-<span id="cb7-7"><a href="helical-domain-1.html#cb7-7" tabindex="-1"></a>x, y <span class="op">=</span> symbols(<span class="st">&#39;x y&#39;</span>)</span>
-<span id="cb7-8"><a href="helical-domain-1.html#cb7-8" tabindex="-1"></a></span>
-<span id="cb7-9"><a href="helical-domain-1.html#cb7-9" tabindex="-1"></a>plot_implicit(log(x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> y<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>sin(theta) <span class="op">+</span> atan(y<span class="op">/</span>x)<span class="op">*</span>cos(theta) <span class="op">-</span>c,</span>
-<span id="cb7-10"><a href="helical-domain-1.html#cb7-10" tabindex="-1"></a>(x, <span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>), (y, <span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>))</span></code></pre></div>
-<pre><code>## &lt;sympy.plotting.plot.Plot object at 0x00000265AA114430&gt;</code></pre>
-<p><img src="ConformalMapping_files/figure-html/unnamed-chunk-65-1.png" width="672" /></p>
+<p>This following plot is drawing for <span class="math inline">\(\theta=\frac{\pi}{2}\)</span> and</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left"><span class="math inline">\(c\)</span></th>
+<th align="left">Colour</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(-0.5\)</span></td>
+<td align="left">Orange</td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(-1\)</span></td>
+<td align="left">Magenta</td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\(1\)</span></td>
+<td align="left">Blue</td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(1.5\)</span></td>
+<td align="left">Red</td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\(2\)</span></td>
+<td align="left">Green</td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(3\)</span></td>
+<td align="left">Black</td>
+</tr>
+</tbody>
+</table>
+<p><img src="ConformalMapping_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 <p>When we hold <span class="math inline">\(c\)</span> constant and vary <span class="math inline">\(\theta\)</span>, we obtain various curves constituting the family of logarithmic spirals of inclination <span class="math inline">\(\theta\)</span>. For all that follows, when we speak of logarithmic spirals of inclination <span class="math inline">\(\theta\)</span>, these are what we mean.</p>
 <p>Let us show that, for any simply connected domain <span class="math inline">\(B\)</span> that has boundary points, it is possible to map <span class="math inline">\(B\)</span> onto the complex plane <span class="math inline">\(\mathbb{C}\)</span> with a cut along an arc of a logarithmic spiral of inclination <span class="math inline">\(\theta\)</span> in such a way that given points <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> of the domain <span class="math inline">\(B\)</span> are mapped into <span class="math inline">\(0\)</span> and <span class="math inline">\(\infty\)</span>, respectively. The expansion of the mapping function about <span class="math inline">\(z = b\)</span> has the form:</p>
 <p><span class="math display">\[ \frac{1}{z - b} +a_0+a_1{(z - b)} +\cdots\text{ or }  z+a_0+\frac{a_1}{z} +  + \cdots, \]</span></p>
@@ -251,7 +336,7 @@ z&#39; = cP(z) = \frac{1}{b} + \frac{1}{1}z + \frac{1}{1!}z^2 + \frac{1}{0!}z^3 
 \]</span></p>
 <p>in the class I. This problem was studied in Section 3 of Chapter IV (the first application of Theorem 1 with <span class="math inline">\(a = \frac{17}{2} - \epsilon\)</span>). It was shown that this problem has a solution, and the extremal function (normalized by the condition <span class="math inline">\(F(a&#39;) = 0\)</span>) provides the required mapping.</p>
 <div class="lemma">
-<p><span id="lem:unnamed-chunk-66" class="lemma"><strong>Lemma 7.1  </strong></span>Of all functions
+<p><span id="lem:unnamed-chunk-8" class="lemma"><strong>Lemma 7.1  </strong></span>Of all functions
 <span class="math display">\[
 \xi=F(z) := z + \frac{a}{z} + a_0 + \ldots
 \]</span>
@@ -260,8 +345,9 @@ mapped into the poi nts <span class="math inline">\(0\)</span> and <span class="
 is minimized by the function <span class="math inline">\(F_0(z)\)</span> that maps the disk <span class="math inline">\(|z| &gt; R\)</span> onto the <span class="math inline">\(\xi\)</span>-plane with cut along an arc of a logarithmic spiral of inclination <span class="math inline">\(\theta\)</span>. Here <span class="math inline">\(\log F &#39;(z)\)</span> means the brooch that approaches <span class="math inline">\(0\)</span> as <span class="math inline">\(z \to \infty\)</span>.</p>
 </div>
 <div class="theorem">
-<p><span id="thm:unnamed-chunk-67" class="theorem"><strong>Theorem 7.1  </strong></span>Every domain <span class="math inline">\(B\)</span> in the <span class="math inline">\(z\)</span>-plane can be mapped univalently onto a domain <span class="math inline">\(B&#39;\)</span> in the <span class="math inline">\(\omega\)</span>-plane that includes the points 0 and <span class="math inline">\(\infty\)</span>, such that an arbitrary continuum of the complement of the domain <span class="math inline">\(B&#39;\)</span> with respect to the <span class="math inline">\(\omega\)</span>-plane is an arc of a logarithmic spiral of given inclination <span class="math inline">\(\epsilon\)</span>. This mapping maps given points <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> of the domain <span class="math inline">\(B\)</span> into 0 and <span class="math inline">\(\infty\)</span>, respectively, and the expansion of the mapping function about <span class="math inline">\(z = b\)</span> has the form <span class="math inline">\((z - b)^{r_1} + a_0 + a_1 (z - b) + \ldots\)</span> or <span class="math inline">\(z + a_0 + a_1 z^{-1} + \ldots\)</span>, according as <span class="math inline">\(b\)</span> is finite or infinite.</p>
+<p><span id="thm:unnamed-chunk-9" class="theorem"><strong>Theorem 7.1  </strong></span>Every domain <span class="math inline">\(B\)</span> in the <span class="math inline">\(z\)</span>-plane can be mapped univalently onto a domain <span class="math inline">\(B&#39;\)</span> in the <span class="math inline">\(\xi\)</span>-plane that includes the points 0 and <span class="math inline">\(\infty\)</span>, such that an arbitrary continuum of the complement of the domain <span class="math inline">\(B&#39;\)</span> with respect to the <span class="math inline">\(\xi\)</span>-plane is an arc of a logarithmic spiral of given inclination <span class="math inline">\(\theta\)</span>. This mapping maps given points <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> of the domain <span class="math inline">\(B\)</span> into 0 and <span class="math inline">\(\infty\)</span>, respectively, and the expansion of the mapping function about <span class="math inline">\(z = b\)</span> has the form <span class="math inline">\((z - b)^{-1} + a_0 + a_1 (z - b) + \cdots\)</span> or <span class="math inline">\(z + a_0 + a_1 z^{-1} + \cdots\)</span>, according as <span class="math inline">\(b\)</span> is finite or infinite.</p>
 </div>
+<p><em>Proof.</em> We may assume that <span class="math inline">\(b = \infty\)</span> because, if this is not the case, we can use the transformation <span class="math inline">\(z^* = \frac{1}{z - b}\)</span> to switch from domain <span class="math inline">\(B\)</span> to a new domain <span class="math inline">\(B&#39;\)</span>. Then we can prove the theorem for this last domain, replacing <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> with <span class="math inline">\(\frac{1}{ab}\)</span> and <span class="math inline">\(\infty\)</span>.</p>
 
 </div>
             </section>

@@ -120,7 +120,7 @@
 
 \title{Conformal Mapping}
 \author{Ashan J}
-\date{2024-06-04}
+\date{2024-06-06}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -738,15 +738,23 @@ belongs to the family \(\mathcal{F}\). Indeed, because it is obtained from the u
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# The Logrithm Arc depend on the Constant theta and c}
-\NormalTok{theta}\OtherTok{\textless{}{-}}\DecValTok{1}
-\NormalTok{c}\OtherTok{\textless{}{-}}\DecValTok{2}
+\ImportTok{from}\NormalTok{ sympy }\ImportTok{import} \OperatorTok{*}
 
+\NormalTok{x, y }\OperatorTok{=}\NormalTok{ symbols(}\StringTok{\textquotesingle{}x y\textquotesingle{}}\NormalTok{)}
 
-\NormalTok{x}\OtherTok{\textless{}{-}}\FunctionTok{seq}\NormalTok{(}\SpecialCharTok{{-}}\DecValTok{10}\NormalTok{,}\DecValTok{10}\NormalTok{,}\AttributeTok{length.out=}\DecValTok{1000}\NormalTok{)}
-\NormalTok{y}\OtherTok{\textless{}{-}}\FunctionTok{seq}\NormalTok{(}\SpecialCharTok{{-}}\DecValTok{10}\NormalTok{,}\DecValTok{10}\NormalTok{,}\AttributeTok{length.out=}\DecValTok{1000}\NormalTok{)}
-\NormalTok{z}\OtherTok{\textless{}{-}}\FunctionTok{outer}\NormalTok{(x,y,}\ControlFlowTok{function}\NormalTok{(x,y) }\FunctionTok{log}\NormalTok{(x}\SpecialCharTok{\^{}}\DecValTok{2} \SpecialCharTok{+}\NormalTok{ y}\SpecialCharTok{\^{}}\DecValTok{2}\NormalTok{)}\SpecialCharTok{*}\FunctionTok{sin}\NormalTok{(theta) }\SpecialCharTok{+} \FunctionTok{atan}\NormalTok{(y}\SpecialCharTok{/}\NormalTok{x)}\SpecialCharTok{*}\FunctionTok{cos}\NormalTok{(theta) }\SpecialCharTok{{-}}\NormalTok{c)}
-\FunctionTok{contour}\NormalTok{(x,y,z,}\AttributeTok{nlevels=}\DecValTok{0}\NormalTok{)}
+\CommentTok{\# If Theta=pi and c=2}
+\NormalTok{theta}\OperatorTok{=}\NormalTok{pi}
+\NormalTok{c}\OperatorTok{=}\DecValTok{1}
+\NormalTok{p}\OperatorTok{=}\NormalTok{plot\_implicit(log(x}\OperatorTok{**}\DecValTok{2} \OperatorTok{+}\NormalTok{ y}\OperatorTok{**}\DecValTok{2}\NormalTok{)}\OperatorTok{*}\NormalTok{sin(theta) }\OperatorTok{+}\NormalTok{ atan(y}\OperatorTok{/}\NormalTok{x)}\OperatorTok{*}\NormalTok{cos(theta) }\OperatorTok{{-}}\NormalTok{c,}
+\NormalTok{(x, }\OperatorTok{{-}}\DecValTok{10}\NormalTok{, }\DecValTok{10}\NormalTok{), (y, }\OperatorTok{{-}}\DecValTok{10}\NormalTok{, }\DecValTok{10}\NormalTok{), show}\OperatorTok{=}\VariableTok{False}\NormalTok{)}
+
+\CommentTok{\# If Theta=pi/2 and c=1}
+\NormalTok{theta}\OperatorTok{=}\NormalTok{pi}\OperatorTok{/}\DecValTok{2}
+\NormalTok{c}\OperatorTok{=}\DecValTok{1}
+\NormalTok{p1}\OperatorTok{=}\NormalTok{plot\_implicit(log(x}\OperatorTok{**}\DecValTok{2} \OperatorTok{+}\NormalTok{ y}\OperatorTok{**}\DecValTok{2}\NormalTok{)}\OperatorTok{*}\NormalTok{sin(theta) }\OperatorTok{+}\NormalTok{ atan(y}\OperatorTok{/}\NormalTok{x)}\OperatorTok{*}\NormalTok{cos(theta) }\OperatorTok{{-}}\NormalTok{c,(x, }\OperatorTok{{-}}\DecValTok{10}\NormalTok{, }\DecValTok{10}\NormalTok{), (y, }\OperatorTok{{-}}\DecValTok{10}\NormalTok{, }\DecValTok{10}\NormalTok{), show}\OperatorTok{=}\VariableTok{False}\NormalTok{,line\_color}\OperatorTok{=}\StringTok{\textquotesingle{}r\textquotesingle{}}\NormalTok{)}
+
+\NormalTok{p.extend(p1)}
+\NormalTok{p.show()}
 \end{Highlighting}
 \end{Shaded}
 
@@ -755,26 +763,119 @@ belongs to the family \(\mathcal{F}\). Indeed, because it is obtained from the u
 \begin{Shaded}
 \begin{Highlighting}[]
 \ImportTok{from}\NormalTok{ sympy }\ImportTok{import} \OperatorTok{*}
+
+\NormalTok{x, y }\OperatorTok{=}\NormalTok{ symbols(}\StringTok{\textquotesingle{}x y\textquotesingle{}}\NormalTok{)}
+
+\CommentTok{\# If Theta=pi and c=2}
+\NormalTok{theta}\OperatorTok{=}\DecValTok{1}
+\NormalTok{c}\OperatorTok{=}\DecValTok{1}
+\NormalTok{p}\OperatorTok{=}\NormalTok{plot\_implicit(log(x}\OperatorTok{**}\DecValTok{2} \OperatorTok{+}\NormalTok{ y}\OperatorTok{**}\DecValTok{2}\NormalTok{)}\OperatorTok{*}\NormalTok{sin(theta) }\OperatorTok{+}\NormalTok{ atan(y}\OperatorTok{/}\NormalTok{x)}\OperatorTok{*}\NormalTok{cos(theta) }\OperatorTok{{-}}\NormalTok{c,}
+\NormalTok{(x, }\OperatorTok{{-}}\DecValTok{10}\NormalTok{, }\DecValTok{10}\NormalTok{), (y, }\OperatorTok{{-}}\DecValTok{10}\NormalTok{, }\DecValTok{10}\NormalTok{), show}\OperatorTok{=}\VariableTok{False}\NormalTok{)}
+
+\CommentTok{\# If Theta=pi/2 and c=2}
 \NormalTok{theta}\OperatorTok{=}\DecValTok{1}
 \NormalTok{c}\OperatorTok{=}\DecValTok{2}
-\NormalTok{x, y }\OperatorTok{=}\NormalTok{ symbols(}\StringTok{\textquotesingle{}x y\textquotesingle{}}\NormalTok{)}
-\CommentTok{\#plot\_implicit(x**3 + x**2 {-} y**2, (x, {-}2, 2), (y, {-}2, 2))}
-\NormalTok{plot\_implicit(log(x}\OperatorTok{**}\DecValTok{2} \OperatorTok{+}\NormalTok{ y}\OperatorTok{**}\DecValTok{2}\NormalTok{)}\OperatorTok{*}\NormalTok{sin(theta) }\OperatorTok{+}\NormalTok{ atan(y}\OperatorTok{/}\NormalTok{x)}\OperatorTok{*}\NormalTok{cos(theta) }\OperatorTok{{-}}\NormalTok{c,}
-\NormalTok{(x, }\OperatorTok{{-}}\DecValTok{10}\NormalTok{, }\DecValTok{10}\NormalTok{), (y, }\OperatorTok{{-}}\DecValTok{10}\NormalTok{, }\DecValTok{10}\NormalTok{))}
+\NormalTok{p1}\OperatorTok{=}\NormalTok{plot\_implicit(log(x}\OperatorTok{**}\DecValTok{2} \OperatorTok{+}\NormalTok{ y}\OperatorTok{**}\DecValTok{2}\NormalTok{)}\OperatorTok{*}\NormalTok{sin(theta) }\OperatorTok{+}\NormalTok{ atan(y}\OperatorTok{/}\NormalTok{x)}\OperatorTok{*}\NormalTok{cos(theta) }\OperatorTok{{-}}\NormalTok{c,(x, }\OperatorTok{{-}}\DecValTok{10}\NormalTok{, }\DecValTok{10}\NormalTok{), (y, }\OperatorTok{{-}}\DecValTok{10}\NormalTok{, }\DecValTok{10}\NormalTok{), show}\OperatorTok{=}\VariableTok{False}\NormalTok{,line\_color}\OperatorTok{=}\StringTok{\textquotesingle{}r\textquotesingle{}}\NormalTok{)}
+
+\NormalTok{p.extend(p1)}
+\NormalTok{p.show()}
 \end{Highlighting}
 \end{Shaded}
 
-\begin{verbatim}
-## <sympy.plotting.plot.Plot object at 0x000001D77F5D7B20>
-\end{verbatim}
+\includegraphics{ConformalMapping_files/figure-latex/unnamed-chunk-60-5.pdf}
 
-\includegraphics{ConformalMapping_files/figure-latex/unnamed-chunk-60-1.pdf}
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{from}\NormalTok{ sympy }\ImportTok{import} \OperatorTok{*}
+
+\NormalTok{x, y }\OperatorTok{=}\NormalTok{ symbols(}\StringTok{\textquotesingle{}x y\textquotesingle{}}\NormalTok{)}
+
+\CommentTok{\# If Theta=pi and c=1}
+\NormalTok{theta}\OperatorTok{=}\DecValTok{1}
+\NormalTok{c}\OperatorTok{=}\DecValTok{1}
+\NormalTok{p}\OperatorTok{=}\NormalTok{plot\_implicit(log(x}\OperatorTok{**}\DecValTok{2} \OperatorTok{+}\NormalTok{ y}\OperatorTok{**}\DecValTok{2}\NormalTok{)}\OperatorTok{*}\NormalTok{cos(theta) }\OperatorTok{+}\NormalTok{ atan(y}\OperatorTok{/}\NormalTok{x)}\OperatorTok{*}\NormalTok{sin(theta) }\OperatorTok{{-}}\NormalTok{c,(x, }\OperatorTok{{-}}\DecValTok{10}\NormalTok{, }\DecValTok{10}\NormalTok{), (y, }\OperatorTok{{-}}\DecValTok{10}\NormalTok{, }\DecValTok{10}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ConformalMapping_files/figure-latex/unnamed-chunk-61-7.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{p1}\OperatorTok{=}\NormalTok{plot\_implicit(log(x}\OperatorTok{**}\DecValTok{2} \OperatorTok{+}\NormalTok{ y}\OperatorTok{**}\DecValTok{2}\NormalTok{)}\OperatorTok{*}\NormalTok{sin(theta) }\OperatorTok{+}\NormalTok{ atan(y}\OperatorTok{/}\NormalTok{x)}\OperatorTok{*}\NormalTok{cos(theta) }\OperatorTok{{-}}\NormalTok{c,(x, }\OperatorTok{{-}}\DecValTok{10}\NormalTok{, }\DecValTok{10}\NormalTok{), (y, }\OperatorTok{{-}}\DecValTok{10}\NormalTok{, }\DecValTok{10}\NormalTok{), show}\OperatorTok{=}\VariableTok{False}\NormalTok{,line\_color}\OperatorTok{=}\StringTok{\textquotesingle{}r\textquotesingle{}}\NormalTok{)}
+
+\NormalTok{p.extend(p1)}
+\NormalTok{p.show()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ConformalMapping_files/figure-latex/unnamed-chunk-61-8.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{from}\NormalTok{ sympy }\ImportTok{import} \OperatorTok{*}
+
+\NormalTok{x, y }\OperatorTok{=}\NormalTok{ symbols(}\StringTok{\textquotesingle{}x y\textquotesingle{}}\NormalTok{)}
+
+\CommentTok{\# If Theta=pi and c=1}
+\NormalTok{theta}\OperatorTok{=}\DecValTok{3}
+\NormalTok{c}\OperatorTok{=}\DecValTok{1}
+\NormalTok{p}\OperatorTok{=}\NormalTok{plot\_implicit(log(x}\OperatorTok{**}\DecValTok{2} \OperatorTok{+}\NormalTok{ y}\OperatorTok{**}\DecValTok{2}\NormalTok{)}\OperatorTok{*}\NormalTok{cos(theta) }\OperatorTok{+}\NormalTok{ atan(y}\OperatorTok{/}\NormalTok{x)}\OperatorTok{*}\NormalTok{sin(theta) }\OperatorTok{{-}}\NormalTok{c,(x, }\OperatorTok{{-}}\DecValTok{100}\NormalTok{, }\DecValTok{100}\NormalTok{), (y, }\OperatorTok{{-}}\DecValTok{100}\NormalTok{, }\DecValTok{100}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ConformalMapping_files/figure-latex/unnamed-chunk-62-11.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{p.show()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ConformalMapping_files/figure-latex/unnamed-chunk-62-12.pdf}
 
 \chapter{Helical Domain}\label{helical-domain-1}
 
 In an analogous manner, we shall find the answer to the question of univalent mapping of multiply connected domains onto a plane with cuts along arcs of logarithmic spirals and, as limiting cases, onto the plane with radial cuts and with cuts along circular arcs of concentric circles.
 
-For constant \(\theta\) and \(c\), the equation \(\Im(e^{-i\theta}\log(\xi))=c\) defines a logarithmic spiral in the \(\xi\)-plane with asymptotic point at the origin.This spiral has the property that it is intersected by an arbitrary ray issuing from the origin at an angle \(\theta\). This follows, for example, from the fact that if we shift to the plane \(t = \log(\xi)\), this logarithmic spiral is mapped into the straight line \(e^{-i\theta t} = c\) with inclination \(\theta\) to the real axis, and the ray referred to is mapped into a straight line parallel to the real axis.
+For constant \(\theta\) and \(c\), the equation \(\Im(e^{-i\theta}\log(\xi))=c\) defines a logarithmic spiral in the \(\xi\)-plane with asymptotic point at the origin.This spiral has the property that it is intersected by an arbitrary ray issuing from the origin at an angle \(\theta\).
+
+This following plot is drawing for \(\theta=1\) and
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+c & Colour \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(-0.5\) & Orange \\
+\(-1\) & Magenta \\
+\(1\) & Blue \\
+\(1.5\) & Red \\
+\(2\) & Green \\
+\(3\) & Black \\
+\end{longtable}
+
+\includegraphics{ConformalMapping_files/figure-latex/unnamed-chunk-63-15.pdf}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+\(\theta\) & Colour \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(-0.5\) & Orange \\
+\(-1\) & Magenta \\
+\(1\) & Blue \\
+\(1.5\) & Red \\
+\(2\) & Green \\
+\(3\) & Black \\
+\end{longtable}
+
+\includegraphics{ConformalMapping_files/figure-latex/unnamed-chunk-64-17.pdf}
+
+This follows, for example, from the fact that if we shift to the plane \(t = \log(\xi)\), this logarithmic spiral is mapped into the straight line \(e^{-i\theta t} = c\) with inclination \(\theta\) to the real axis, and the ray referred to is mapped into a straight line parallel to the real axis.
 
 \includegraphics[width=10.1in]{figures/Helical_Domain/fig1}
 
@@ -796,16 +897,27 @@ For constant \(\theta\) and \(c\), the equation \(\Im(e^{-i\theta}\log(\xi))=c\)
 
 \NormalTok{x, y }\OperatorTok{=}\NormalTok{ symbols(}\StringTok{\textquotesingle{}x y\textquotesingle{}}\NormalTok{)}
 
-\NormalTok{plot\_implicit(log(x}\OperatorTok{**}\DecValTok{2} \OperatorTok{+}\NormalTok{ y}\OperatorTok{**}\DecValTok{2}\NormalTok{)}\OperatorTok{*}\NormalTok{sin(theta) }\OperatorTok{+}\NormalTok{ atan(y}\OperatorTok{/}\NormalTok{x)}\OperatorTok{*}\NormalTok{cos(theta) }\OperatorTok{{-}}\NormalTok{c,}
-\NormalTok{(x, }\OperatorTok{{-}}\DecValTok{10}\NormalTok{, }\DecValTok{10}\NormalTok{), (y, }\OperatorTok{{-}}\DecValTok{10}\NormalTok{, }\DecValTok{10}\NormalTok{))}
+\NormalTok{c}\OperatorTok{=}\DecValTok{1}
+\NormalTok{p}\OperatorTok{=}\NormalTok{plot\_implicit(log(x}\OperatorTok{**}\DecValTok{2} \OperatorTok{+}\NormalTok{ y}\OperatorTok{**}\DecValTok{2}\NormalTok{)}\OperatorTok{*}\NormalTok{sin(theta) }\OperatorTok{+}\NormalTok{ atan(y}\OperatorTok{/}\NormalTok{x)}\OperatorTok{*}\NormalTok{cos(theta) }\OperatorTok{{-}}\NormalTok{c,(x, }\OperatorTok{{-}}\DecValTok{5}\NormalTok{, }\DecValTok{5}\NormalTok{), (y, }\OperatorTok{{-}}\DecValTok{5}\NormalTok{, }\DecValTok{5}\NormalTok{),show}\OperatorTok{=}\VariableTok{False}\NormalTok{,line\_color}\OperatorTok{=}\StringTok{\textquotesingle{}blue\textquotesingle{}}\NormalTok{)}
+
+\NormalTok{c}\OperatorTok{={-}}\DecValTok{1}
+\NormalTok{p1}\OperatorTok{=}\NormalTok{plot\_implicit(log(x}\OperatorTok{**}\DecValTok{2} \OperatorTok{+}\NormalTok{ y}\OperatorTok{**}\DecValTok{2}\NormalTok{)}\OperatorTok{*}\NormalTok{sin(theta) }\OperatorTok{+}\NormalTok{ atan(y}\OperatorTok{/}\NormalTok{x)}\OperatorTok{*}\NormalTok{cos(theta) }\OperatorTok{{-}}\NormalTok{c,(x, }\OperatorTok{{-}}\DecValTok{5}\NormalTok{, }\DecValTok{5}\NormalTok{), (y, }\OperatorTok{{-}}\DecValTok{5}\NormalTok{, }\DecValTok{5}\NormalTok{),show}\OperatorTok{=}\VariableTok{False}\NormalTok{,line\_color}\OperatorTok{=}\StringTok{\textquotesingle{}red\textquotesingle{}}\NormalTok{)}
+
+\NormalTok{c}\OperatorTok{=}\FloatTok{1.55}
+\NormalTok{p2}\OperatorTok{=}\NormalTok{plot\_implicit(log(x}\OperatorTok{**}\DecValTok{2} \OperatorTok{+}\NormalTok{ y}\OperatorTok{**}\DecValTok{2}\NormalTok{)}\OperatorTok{*}\NormalTok{sin(theta) }\OperatorTok{+}\NormalTok{ atan(y}\OperatorTok{/}\NormalTok{x)}\OperatorTok{*}\NormalTok{cos(theta) }\OperatorTok{{-}}\NormalTok{c,(x, }\OperatorTok{{-}}\DecValTok{5}\NormalTok{, }\DecValTok{5}\NormalTok{), (y, }\OperatorTok{{-}}\DecValTok{5}\NormalTok{, }\DecValTok{5}\NormalTok{),show}\OperatorTok{=}\VariableTok{False}\NormalTok{,line\_color}\OperatorTok{=}\StringTok{\textquotesingle{}green\textquotesingle{}}\NormalTok{)}
+
+\NormalTok{c}\OperatorTok{=}\DecValTok{3}
+\NormalTok{p3}\OperatorTok{=}\NormalTok{plot\_implicit(log(x}\OperatorTok{**}\DecValTok{2} \OperatorTok{+}\NormalTok{ y}\OperatorTok{**}\DecValTok{2}\NormalTok{)}\OperatorTok{*}\NormalTok{sin(theta) }\OperatorTok{+}\NormalTok{ atan(y}\OperatorTok{/}\NormalTok{x)}\OperatorTok{*}\NormalTok{cos(theta) }\OperatorTok{{-}}\NormalTok{c,(x, }\OperatorTok{{-}}\DecValTok{5}\NormalTok{, }\DecValTok{5}\NormalTok{), (y, }\OperatorTok{{-}}\DecValTok{5}\NormalTok{, }\DecValTok{5}\NormalTok{),show}\OperatorTok{=}\VariableTok{False}\NormalTok{,line\_color}\OperatorTok{=}\StringTok{\textquotesingle{}orange\textquotesingle{}}\NormalTok{)}
+
+
+\NormalTok{p.extend(p1)}
+\NormalTok{p.extend(p2)}
+\NormalTok{p.extend(p3)}
+\NormalTok{p.show()}
 \end{Highlighting}
 \end{Shaded}
 
-\begin{verbatim}
-## <sympy.plotting.plot.Plot object at 0x000001D77F6B2230>
-\end{verbatim}
-
-\includegraphics{ConformalMapping_files/figure-latex/unnamed-chunk-63-1.pdf}
+\includegraphics{ConformalMapping_files/figure-latex/unnamed-chunk-67-1.pdf}
 
 \begin{itemize}
 \tightlist
@@ -815,26 +927,24 @@ For constant \(\theta\) and \(c\), the equation \(\Im(e^{-i\theta}\log(\xi))=c\)
 
 \includegraphics[width=20.99in]{figures/Helical_Domain/fig3}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\ImportTok{from}\NormalTok{ sympy }\ImportTok{import} \OperatorTok{*}
+This following plot is drawing for \(\theta=\frac{\pi}{2}\) and
 
-\CommentTok{\# The Logrithm Arc depend on the Constant theta and c}
-\NormalTok{theta}\OperatorTok{=}\NormalTok{pi}\OperatorTok{/}\DecValTok{2}
-\NormalTok{c}\OperatorTok{=}\DecValTok{2}
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+\(c\) & Colour \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(-0.5\) & Orange \\
+\(-1\) & Magenta \\
+\(1\) & Blue \\
+\(1.5\) & Red \\
+\(2\) & Green \\
+\(3\) & Black \\
+\end{longtable}
 
-\NormalTok{x, y }\OperatorTok{=}\NormalTok{ symbols(}\StringTok{\textquotesingle{}x y\textquotesingle{}}\NormalTok{)}
-
-\NormalTok{plot\_implicit(log(x}\OperatorTok{**}\DecValTok{2} \OperatorTok{+}\NormalTok{ y}\OperatorTok{**}\DecValTok{2}\NormalTok{)}\OperatorTok{*}\NormalTok{sin(theta) }\OperatorTok{+}\NormalTok{ atan(y}\OperatorTok{/}\NormalTok{x)}\OperatorTok{*}\NormalTok{cos(theta) }\OperatorTok{{-}}\NormalTok{c,}
-\NormalTok{(x, }\OperatorTok{{-}}\DecValTok{10}\NormalTok{, }\DecValTok{10}\NormalTok{), (y, }\OperatorTok{{-}}\DecValTok{10}\NormalTok{, }\DecValTok{10}\NormalTok{))}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## <sympy.plotting.plot.Plot object at 0x000001D77F7DD9C0>
-\end{verbatim}
-
-\includegraphics{ConformalMapping_files/figure-latex/unnamed-chunk-65-1.pdf}
+\includegraphics{ConformalMapping_files/figure-latex/unnamed-chunk-69-1.pdf}
 
 When we hold \(c\) constant and vary \(\theta\), we obtain various curves constituting the family of logarithmic spirals of inclination \(\theta\). For all that follows, when we speak of logarithmic spirals of inclination \(\theta\), these are what we mean.
 
@@ -876,7 +986,7 @@ Suppose that the point \(z = a\) is mapped into a point \(z' = a'\). Now, we nee
 in the class I. This problem was studied in Section 3 of Chapter IV (the first application of Theorem 1 with \(a = \frac{17}{2} - \epsilon\)). It was shown that this problem has a solution, and the extremal function (normalized by the condition \(F(a') = 0\)) provides the required mapping.
 
 \begin{lemma}
-\protect\hypertarget{lem:unnamed-chunk-66}{}\label{lem:unnamed-chunk-66}Of all functions
+\protect\hypertarget{lem:unnamed-chunk-70}{}\label{lem:unnamed-chunk-70}Of all functions
 \[
 \xi=F(z) := z + \frac{a}{z} + a_0 + \ldots
 \]
@@ -886,8 +996,10 @@ is minimized by the function \(F_0(z)\) that maps the disk \(|z| > R\) onto the 
 \end{lemma}
 
 \begin{theorem}
-\protect\hypertarget{thm:unnamed-chunk-67}{}\label{thm:unnamed-chunk-67}Every domain \(B\) in the \(z\)-plane can be mapped univalently onto a domain \(B'\) in the \(\omega\)-plane that includes the points 0 and \(\infty\), such that an arbitrary continuum of the complement of the domain \(B'\) with respect to the \(\omega\)-plane is an arc of a logarithmic spiral of given inclination \(\epsilon\). This mapping maps given points \(a\) and \(b\) of the domain \(B\) into 0 and \(\infty\), respectively, and the expansion of the mapping function about \(z = b\) has the form \((z - b)^{r_1} + a_0 + a_1 (z - b) + \ldots\) or \(z + a_0 + a_1 z^{-1} + \ldots\), according as \(b\) is finite or infinite.
+\protect\hypertarget{thm:unnamed-chunk-71}{}\label{thm:unnamed-chunk-71}Every domain \(B\) in the \(z\)-plane can be mapped univalently onto a domain \(B'\) in the \(\xi\)-plane that includes the points 0 and \(\infty\), such that an arbitrary continuum of the complement of the domain \(B'\) with respect to the \(\xi\)-plane is an arc of a logarithmic spiral of given inclination \(\theta\). This mapping maps given points \(a\) and \(b\) of the domain \(B\) into 0 and \(\infty\), respectively, and the expansion of the mapping function about \(z = b\) has the form \((z - b)^{-1} + a_0 + a_1 (z - b) + \cdots\) or \(z + a_0 + a_1 z^{-1} + \cdots\), according as \(b\) is finite or infinite.
 \end{theorem}
+
+\emph{Proof.} We may assume that \(b = \infty\) because, if this is not the case, we can use the transformation \(z^* = \frac{1}{z - b}\) to switch from domain \(B\) to a new domain \(B'\). Then we can prove the theorem for this last domain, replacing \(a\) and \(b\) with \(\frac{1}{ab}\) and \(\infty\).
 
   \bibliography{book.bib,packages.bib}
 

@@ -51,26 +51,73 @@ plot_conformal_map(func, xmin, xmax, ymin, ymax, nb_grid, nb_points)
 
 ## Helical Domain
 
-```{r,}
 
-# The Logrithm Arc depend on the Constant theta and c
-theta<-1
-c<-2
-
-
-x<-seq(-10,10,length.out=1000)
-y<-seq(-10,10,length.out=1000)
-z<-outer(x,y,function(x,y) log(x^2 + y^2)*sin(theta) + atan(y/x)*cos(theta) -c)
-contour(x,y,z,nlevels=0)
-```
 
 ```{python}
 from sympy import *
+
+x, y = symbols('x y')
+
+# If Theta=pi and c=2
+theta=pi
+c=1
+p=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,
+(x, -10, 10), (y, -10, 10), show=False)
+
+# If Theta=pi/2 and c=1
+theta=pi/2
+c=1
+p1=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -10, 10), (y, -10, 10), show=False,line_color='r')
+
+p.extend(p1)
+p.show()
+```
+```{python}
+from sympy import *
+
+x, y = symbols('x y')
+
+# If Theta=pi and c=2
+theta=1
+c=1
+p=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,
+(x, -10, 10), (y, -10, 10), show=False)
+
+# If Theta=pi/2 and c=2
 theta=1
 c=2
+p1=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -10, 10), (y, -10, 10), show=False,line_color='r')
+
+p.extend(p1)
+p.show()
+```
+```{python}
+from sympy import *
+
 x, y = symbols('x y')
-#plot_implicit(x**3 + x**2 - y**2, (x, -2, 2), (y, -2, 2))
-plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,
-(x, -10, 10), (y, -10, 10))
+
+# If Theta=pi and c=1
+theta=1
+c=1
+p=plot_implicit(log(x**2 + y**2)*cos(theta) + atan(y/x)*sin(theta) -c,(x, -10, 10), (y, -10, 10))
+
+p1=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -10, 10), (y, -10, 10), show=False,line_color='r')
+
+p.extend(p1)
+p.show()
+
+
 ```
 
+
+```{python}
+from sympy import *
+
+x, y = symbols('x y')
+
+# If Theta=pi and c=1
+theta=3
+c=1
+p=plot_implicit(log(x**2 + y**2)*cos(theta) + atan(y/x)*sin(theta) -c,(x, -100, 100), (y, -100, 100))
+p.show()
+```
