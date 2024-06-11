@@ -21,42 +21,123 @@ This following plot is drawing for $\theta=1$ and
 
 ```{python,echo=FALSE}
 from sympy import *
-
 x, y = symbols('x y')
-
-
-theta=1
-
-c=1
-p=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='blue')
-
-c=1.5
-p1=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='red')
-
-c=2
-p2=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='green')
-
-c=-1
-p3=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='orange')
-
-c=3
-p4=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='black')
-
-c=0
-p5=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='magenta')
-
+theta=1 # We fixed theta
+p=plot_implicit(x+y-1, (x, -5, 5), (y, -5, 5), show=False,line_color='white',xlabel='Im', ylabel='Re')
 
 c=-0.5
-p6=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='cyan')
 
-p.extend(p1)
-p.extend(p2)
-p.extend(p3)
-p.extend(p4)
-p.extend(p5)
-p.extend(p6)
+p11=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0, 5), (y, -5, 5), show=False,line_color='orange')
+p12=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+pi)*cos(theta) -c,
+(x, -5, 0), (y, 0,5), show=False,line_color='orange')
+p13=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)-pi)*cos(theta) -c,
+(x,  -5,0), (y, -5,0), show=False,line_color='orange')
+
+
+p.extend(p11)
+p.extend(p12)
+p.extend(p13)
+
+
+
+c=0
+
+p21=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0, 5), (y, -5, 5), show=False,line_color='cyan')
+p22=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+pi)*cos(theta) -c,
+(x, -5, 0), (y, 0,5), show=False,line_color='cyan')
+p23=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)-pi)*cos(theta) -c,
+(x,  -5,0), (y, -5,0), show=False,line_color='cyan')
+
+
+
+p.extend(p21)
+p.extend(p22)
+p.extend(p23)
+
+
+
+c=-1
+p31=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0, 5), (y, -5, 5), show=False,line_color='magenta')
+p32=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+pi)*cos(theta) -c,
+(x, -5, 0), (y, 0,5), show=False,line_color='magenta')
+p33=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)-pi)*cos(theta) -c,
+(x,  -5,0), (y, -5,0), show=False,line_color='magenta')
+
+
+p.extend(p31)
+p.extend(p32)
+p.extend(p33)
+
+
+c=1
+
+p41=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0, 5), (y, -5, 5), show=False,line_color='blue')
+p42=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+pi)*cos(theta) -c,
+(x, -5, 0), (y, 0,5), show=False,line_color='blue')
+p43=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)-pi)*cos(theta) -c,
+(x,  -5,0), (y, -5,0), show=False,line_color='blue')
+
+ 
+
+
+p.extend(p41)
+p.extend(p42)
+p.extend(p43)
+
+
+
+c=1.5
+
+p51=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0, 5), (y, -5, 5), show=False,line_color='red')
+p52=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+pi)*cos(theta) -c,
+(x, -5, 0), (y, 0,5), show=False,line_color='red')
+p53=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)-pi)*cos(theta) -c,
+(x,  -5,0), (y, -5,0), show=False,line_color='red')
+
+
+
+p.extend(p51)
+p.extend(p52)
+p.extend(p53)
+
+
+
+c=2
+p61=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0, 5), (y, -5, 5), show=False,line_color='green')
+p62=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+pi)*cos(theta) -c,
+(x, -5, 0), (y, 0,5), show=False,line_color='green')
+p63=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)-pi)*cos(theta) -c,
+(x,  -5,0), (y, -5,0), show=False,line_color='green')
+
+ 
+
+p.extend(p61)
+p.extend(p62)
+p.extend(p63)
+
+
+c=3
+
+p71=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0, 5), (y, -5, 5), show=False,line_color='black')
+p72=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+pi)*cos(theta) -c,
+(x, -5, 0), (y, 0,5), show=False,line_color='black')
+p73=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)-pi)*cos(theta) -c,
+(x,  -5,0), (y, -5,0), show=False,line_color='black')
+
+
+
+p.extend(p71)
+p.extend(p72)
+p.extend(p73)
+
 p.show()
-
 ```
 
 
@@ -64,54 +145,134 @@ This following plot is drawing for $c=1$ and
 
 |$\theta$ |Colour |
 |:--------|:------|
-|$-0.5$   |Cyan   |
 |$-1$     |Orange |
+|$-0.5$   |Cyan   |
 |$0$      |Magenta|
 |$1$      |Blue   |
 |$1.5$    |Red    |
 |$2$      |Green  |
-|$3$      |Black  |
+|$2.5$    |Black  |
 
 
 
 ```{python,echo=FALSE}
 from sympy import *
-
 x, y = symbols('x y')
+c=1 # We fixed constant c
 
-
-c=1
-
-theta=1
-p=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -10, 10), (y, -20, 20),show=False,xlabel='Re',ylabel='Im',line_color='blue')
-
-theta=1.5
-p1=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -10, 10), (y, -20, 20),show=False,xlabel='Re',ylabel='Im',line_color='red')
-
-theta=2
-p2=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -10, 10), (y, -20, 20),show=False,xlabel='Re',ylabel='Im',line_color='green')
+p=plot_implicit(x+y-1, (x, -5, 5), (y, -5, 5), show=False,line_color='white',xlabel='Im', ylabel='Re')
 
 theta=-1
-p3=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -10, 10), (y, -20, 20),show=False,xlabel='Re',ylabel='Im',line_color='orange')
+p11=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0, 5), (y, -5, 5), show=False,line_color='orange')
+p12=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+pi)*cos(theta) -c,
+(x, -5, 0), (y, 0,5), show=False,line_color='orange')
+p13=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)-pi)*cos(theta) -c,
+(x,  -5,0), (y, -5,0), show=False,line_color='orange')
 
-theta=3
-p4=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -10, 10), (y, -20, 20),show=False,xlabel='Re',ylabel='Im',line_color='black')
 
-theta=0
-p5=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -10, 10), (y, -20, 20),show=False,xlabel='Re',ylabel='Im',line_color='magenta')
+p.extend(p11)
+p.extend(p12)
+p.extend(p13)
 
 
 theta=-0.5
-p6=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -10, 10), (y, -20, 20),show=False,xlabel='Re',ylabel='Im',line_color='orange')
 
-p.extend(p1)
-p.extend(p2)
-p.extend(p3)
-p.extend(p4)
-p.extend(p5)
-p.extend(p6)
+p21=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0, 5), (y, -5, 5), show=False,line_color='cyan')
+p22=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+pi)*cos(theta) -c,
+(x, -5, 0), (y, 0,5), show=False,line_color='cyan')
+p23=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)-pi)*cos(theta) -c,
+(x,  -5,0), (y, -5,0), show=False,line_color='cyan')
+
+
+
+p.extend(p21)
+p.extend(p22)
+p.extend(p23)
+
+
+
+theta=0
+p31=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0, 5), (y, -5, 5), show=False,line_color='magenta')
+p32=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+pi)*cos(theta) -c,
+(x, -5, 0), (y, 0,5), show=False,line_color='magenta')
+p33=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)-pi)*cos(theta) -c,
+(x,  -5,0), (y, -5,0), show=False,line_color='magenta')
+
+
+p.extend(p31)
+p.extend(p32)
+p.extend(p33)
+
+
+theta=1.5
+
+p41=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0, 5), (y, -5, 5), show=False,line_color='blue')
+p42=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+pi)*cos(theta) -c,
+(x, -5, 0), (y, 0,5), show=False,line_color='blue')
+p43=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)-pi)*cos(theta) -c,
+(x,  -5,0), (y, -5,0), show=False,line_color='blue')
+
+
+
+p.extend(p41)
+p.extend(p42)
+p.extend(p43)
+
+
+
+theta=1.5
+
+p51=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0, 5), (y, -5, 5), show=False,line_color='red')
+p52=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+pi)*cos(theta) -c,
+(x, -5, 0), (y, 0,5), show=False,line_color='red')
+p53=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)-pi)*cos(theta) -c,
+(x,  -5,0), (y, -5,0), show=False,line_color='red')
+
+ 
+
+
+p.extend(p51)
+p.extend(p52)
+p.extend(p53)
+
+
+
+theta=2
+p61=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0, 5), (y, -5, 5), show=False,line_color='green')
+p62=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+pi)*cos(theta) -c,
+(x, -5, 0), (y, 0,5), show=False,line_color='green')
+p63=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)-pi)*cos(theta) -c,
+(x,  -5,0), (y, -5,0), show=False,line_color='green')
+
+ 
+
+p.extend(p61)
+p.extend(p62)
+p.extend(p63)
+
+
+theta=2.5
+
+p71=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0, 5), (y, -5, 5), show=False,line_color='black')
+p72=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+pi)*cos(theta) -c,
+(x, -5, 0), (y, 0,5), show=False,line_color='black')
+p73=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)-pi)*cos(theta) -c,
+(x,  -5,0), (y, -5,0), show=False,line_color='black')
+
+
+
+p.extend(p71)
+p.extend(p72)
+p.extend(p73)
+
 p.show()
-
 ```
 
 This follows, for example, from the fact that if we shift to the plane $t = \log(\xi)$, this logarithmic spiral is mapped into the straight line $e^{-i\theta t} = c$ with inclination $\theta$ to the real axis, and the ray referred to is mapped into a straight line parallel to the real axis. 
@@ -140,47 +301,145 @@ This follows, for example, from the fact that if we shift to the plane $t = \log
 |$1.5$    |Red    |
 |$2$      |Green  |
 
-
 ```{python,echo=FALSE}
 from sympy import *
-
-# The Logarithm Arc depend on the Constant theta and c
-theta=0
-c=1
-
 x, y = symbols('x y')
+theta=0 # We fixed theta
+p=plot_implicit(x+y-1, (x, -5, 5), (y, -5, 5), show=False,line_color='white',xlabel='Im', ylabel='Re',title='Logrithmic Spiral \n (theta=0)')
 
-c=1
-p=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='blue')
 
-c=1.5
-p1=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='red')
-
-c=2
-p2=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='green')
-
-c=-1
-p3=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='orange')
-
-c=0.3
-p4=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='black')
-
-c=0
-p5=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='magenta')
 
 
 c=-0.5
-p6=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='cyan')
 
-p.extend(p1)
-p.extend(p2)
-p.extend(p3)
-p.extend(p4)
-p.extend(p5)
-p.extend(p6)
+p11=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0, 5), (y, -5, 5), show=False,line_color='orange')
+p12=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+pi)*cos(theta) -c,
+(x, -5, 0), (y, 0,5), show=False,line_color='orange')
+p13=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)-pi)*cos(theta) -c,
+(x,  -5,0), (y, -5,0), show=False,line_color='orange')
+
+
+p.extend(p11)
+p.extend(p12)
+p.extend(p13)
+
+
+c=0
+
+p21=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0, 5), (y, -5, 5), show=False,line_color='cyan')
+p22=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+pi)*cos(theta) -c,
+(x, -5, 0), (y, 0,5), show=False,line_color='cyan')
+p23=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)-pi)*cos(theta) -c,
+(x,  -5,0), (y, -5,0), show=False,line_color='cyan')
+
+
+
+p.extend(p21)
+p.extend(p22)
+p.extend(p23)
+
+
+
+c=-1
+p31=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0, 5), (y, -5, 5), show=False,line_color='magenta')
+p32=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+pi)*cos(theta) -c,
+(x, -5, 0), (y, 0,5), show=False,line_color='magenta')
+p33=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)-pi)*cos(theta) -c,
+(x,  -5,0), (y, -5,0), show=False,line_color='magenta')
+
+
+p.extend(p31)
+p.extend(p32)
+p.extend(p33)
+
+
+c=1
+
+p41=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0, 5), (y, -5, 5), show=False,line_color='blue')
+p42=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+pi)*cos(theta) -c,
+(x, -5, 0), (y, 0,5), show=False,line_color='blue')
+p43=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)-pi)*cos(theta) -c,
+(x,  -5,0), (y, -5,0), show=False,line_color='blue')
+
+ 
+
+
+p.extend(p41)
+p.extend(p42)
+p.extend(p43)
+
+
+
+c=1.5
+
+p51=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0, 5), (y, -5, 5), show=False,line_color='red')
+p52=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+pi)*cos(theta) -c,
+(x, -5, 0), (y, 0,5), show=False,line_color='red')
+p53=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)-pi)*cos(theta) -c,
+(x,  -5,0), (y, -5,0), show=False,line_color='red')
+
+ 
+
+
+p.extend(p51)
+p.extend(p52)
+p.extend(p53)
+
+
+
+c=2
+p61=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0, 5), (y, -5, 5), show=False,line_color='green')
+p62=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+pi)*cos(theta) -c,
+(x, -5, 0), (y, 0,5), show=False,line_color='green')
+p63=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)-pi)*cos(theta) -c,
+(x,  -5,0), (y, -5,0), show=False,line_color='green')
+
+ 
+
+p.extend(p61)
+p.extend(p62)
+p.extend(p63)
+
+
+c=3
+
+p71=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0, 5), (y, -5, 5), show=False,line_color='black')
+p72=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+pi)*cos(theta) -c,
+(x, -5, 0), (y, 0,5), show=False,line_color='black')
+p73=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)-pi)*cos(theta) -c,
+(x,  -5,0), (y, -5,0), show=False,line_color='black')
+
+
+
+p.extend(p71)
+p.extend(p72)
+p.extend(p73)
+
+
+c=-2
+
+p81=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0, 5), (y, -5, 5), show=False,line_color='olive')
+p82=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+pi)*cos(theta) -c,
+(x,-5, 0), (y, 0,5), show=False,line_color='olive')
+p83=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)-pi)*cos(theta) -c,
+(x,-5,0), (y, -5,0), show=False,line_color='olive')
+
+ 
+p.extend(p81)
+p.extend(p82)
+p.extend(p83)
+
+
 p.show()
 ```
-
 
 
 - For $\theta = \frac{\pi}{2}$, it degenerates to a circle with center at the origin.
@@ -204,38 +463,123 @@ This following plot is drawing for $\theta=\frac{\pi}{2}$ and
 ```{python,echo=FALSE}
 from sympy import *
 x, y = symbols('x y')
-
-# The Logrithm Arc depend on the Constant theta and c
-theta=pi/2
-
-c=1
-p=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='blue')
-
-c=1.5
-p1=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='red')
-
-c=2
-p2=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='green')
-
-c=-1
-p3=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='orange')
-
-c=3
-p4=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='black')
-
-c=0
-p5=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='magenta')
+theta=pi/2 # We fixed theta
+p=plot_implicit(x+y-1,
+(x, -5, 5), (y, -5, 5), show=False,line_color='white',xlabel='Im', ylabel='Re',title='Logrithmic Spiral \n (theta$=\pi/2$)')
 
 
 c=-0.5
-p6=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -5, 5), (y, -5, 5),show=False,xlabel='Re',ylabel='Im',line_color='cyan')
 
-p.extend(p1)
-p.extend(p2)
-p.extend(p3)
-p.extend(p4)
-p.extend(p5)
-p.extend(p6)
+p11=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0, 5), (y, -5, 5), show=False,line_color='orange')
+p12=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+pi)*cos(theta) -c,
+(x, -5, 0), (y, 0,5), show=False,line_color='orange')
+p13=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)-pi)*cos(theta) -c,
+(x,  -5,0), (y, -5,0), show=False,line_color='orange')
+p14=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0,5), (y, -5,0), show=False,line_color='orange')
+
+p.extend(p11)
+p.extend(p12)
+p.extend(p13)
+
+
+c=0
+
+p21=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0, 5), (y, -5, 5), show=False,line_color='cyan')
+p22=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+pi)*cos(theta) -c,
+(x, -5, 0), (y, 0,5), show=False,line_color='cyan')
+p23=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)-pi)*cos(theta) -c,
+(x,  -5,0), (y, -5,0), show=False,line_color='cyan')
+
+
+
+p.extend(p21)
+p.extend(p22)
+p.extend(p23)
+
+
+
+c=-1
+p31=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0, 5), (y, -5, 5), show=False,line_color='magenta')
+p32=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+pi)*cos(theta) -c,
+(x, -5, 0), (y, 0,5), show=False,line_color='magenta')
+p33=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)-pi)*cos(theta) -c,
+(x,  -5,0), (y, -5,0), show=False,line_color='magenta')
+
+
+p.extend(p31)
+p.extend(p32)
+p.extend(p33)
+
+
+c=1
+
+p41=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0, 5), (y, -5, 5), show=False,line_color='blue')
+p42=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+pi)*cos(theta) -c,
+(x, -5, 0), (y, 0,5), show=False,line_color='blue')
+p43=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)-pi)*cos(theta) -c,
+(x,  -5,0), (y, -5,0), show=False,line_color='blue')
+
+ 
+
+
+p.extend(p41)
+p.extend(p42)
+p.extend(p43)
+
+
+c=1.5
+
+p51=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0, 5), (y, -5, 5), show=False,line_color='red')
+p52=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+pi)*cos(theta) -c,
+(x, -5, 0), (y, 0,5), show=False,line_color='red')
+p53=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)-pi)*cos(theta) -c,
+(x,  -5,0), (y, -5,0), show=False,line_color='red')
+
+ 
+
+
+p.extend(p51)
+p.extend(p52)
+p.extend(p53)
+
+
+
+c=2
+p61=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0, 5), (y, -5, 5), show=False,line_color='green')
+p62=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+pi)*cos(theta) -c,
+(x, -5, 0), (y, 0,5), show=False,line_color='green')
+p63=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)-pi)*cos(theta) -c,
+(x,  -5,0), (y, -5,0), show=False,line_color='green')
+
+ 
+
+p.extend(p61)
+p.extend(p62)
+p.extend(p63)
+
+
+c=3
+
+p71=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0, 5), (y, -5, 5), show=False,line_color='black')
+p72=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+pi)*cos(theta) -c,
+(x, -5, 0), (y, 0,5), show=False,line_color='black')
+p73=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)-pi)*cos(theta) -c,
+(x,  -5,0), (y, -5,0), show=False,line_color='black')
+
+
+
+p.extend(p71)
+p.extend(p72)
+p.extend(p73)
+
 p.show()
 ```
 
@@ -258,7 +602,7 @@ let us first map \(B\) conformally onto the domain \(\{z' : |z'| > 1\}\) in such
 
 
 
-Let \(z'\) be the mapping function \(cP(z)\) in a neighborhood of \(z = b\). The expansion can be expressed as:
+Let \(z'\) be the mapping function \(cP(z)\) in a neighbourhood of \(z = b\). The expansion can be expressed as:
 
 \[
 z' = cP(z) = \frac{1}{b} + \frac{1}{1} (z - b) + \frac{1}{1!} (z - b)^2 + \frac{1}{0!} (z - b)^3 + \ldots
@@ -294,6 +638,17 @@ is minimized by the function $F_0(z)$ that maps the disk \(|z| > R\) onto the $\
  Every domain \(B\) in the \(z\)-plane can be mapped univalently onto a domain \(B'\) in the \(\xi\)-plane that includes the points 0 and \(\infty\), such that an arbitrary continuum of the complement of the domain \(B'\) with respect to the \(\xi\)-plane is an arc of a logarithmic spiral of given inclination \(\theta\). This mapping maps given points \(a\) and \(b\) of the domain \(B\) into 0 and \(\infty\), respectively, and the expansion of the mapping function about \(z = b\) has the form \((z - b)^{-1} + a_0 + a_1 (z - b) + \cdots\) or \(z + a_0 + a_1 z^{-1} + \cdots\), according as \(b\) is finite or infinite.
 ```
 
-*Proof.* We may assume that \(b = \infty\) because, if this is not the case, we can use the transformation \(z^* = \frac{1}{z - b}\) to switch from domain \(B\) to a new domain \(B'\). Then we can prove the theorem for this last domain, replacing \(a\) and \(b\) with \(\frac{1}{ab}\) and \(\infty\).
+*Proof.* We may assume that \(b = \infty\) because, if this is not the case, we can use the transformation \(z^* = \frac{1}{z - b}\) to switch from domain \(B\) to a new domain \(B'\). Then we can prove the theorem for this last domain, replacing \(a\) and \(b\) with \(\frac{1}{a-b}\) and \(\infty\).
+
+- **Simply Connected Domains**
+- **Multiple Connected Domains**\
+Let $B$ be an multiply connected domain.
+\[\mathcal{F}:=\left\{ f:B \rightarrow \hat{\mathbb{C}}\left|
+\begin{array}{l}
+f \text{ is univalent on  } B \text { and } \\
+f(a)=0 \text{ and } f(\infty)=\infty \text { and }\\ 
+\text{that have an exapansion }f(z)=z+a_0+\frac{a_1}{z}+cdots \text{ as } n\rightarrow \infty\end{array}\right. \right\}\]
+
+
 
 

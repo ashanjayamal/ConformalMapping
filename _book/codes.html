@@ -23,7 +23,7 @@
 <meta name="author" content="Ashan J" />
 
 
-<meta name="date" content="2024-06-06" />
+<meta name="date" content="2024-06-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -170,7 +170,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="7" data-path="helical-domain-1.html"><a href="helical-domain-1.html"><i class="fa fa-check"></i><b>7</b> Helical Domain</a></li>
 <li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Ashan Jayamal</a></li>
 
 </ul>
 
@@ -278,7 +278,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb4-2"><a href="codes.html#cb4-2" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="codes.html#cb4-3" tabindex="-1"></a>x, y <span class="op">=</span> symbols(<span class="st">&#39;x y&#39;</span>)</span>
 <span id="cb4-4"><a href="codes.html#cb4-4" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="codes.html#cb4-5" tabindex="-1"></a><span class="co"># If Theta=pi and c=1</span></span>
+<span id="cb4-5"><a href="codes.html#cb4-5" tabindex="-1"></a><span class="co"># If Theta=1 and c=1</span></span>
 <span id="cb4-6"><a href="codes.html#cb4-6" tabindex="-1"></a>theta<span class="op">=</span><span class="dv">1</span></span>
 <span id="cb4-7"><a href="codes.html#cb4-7" tabindex="-1"></a>c<span class="op">=</span><span class="dv">1</span></span>
 <span id="cb4-8"><a href="codes.html#cb4-8" tabindex="-1"></a>p<span class="op">=</span>plot_implicit(log(x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> y<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>cos(theta) <span class="op">+</span> atan(y<span class="op">/</span>x)<span class="op">*</span>sin(theta) <span class="op">-</span>c,(x, <span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>), (y, <span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>))</span></code></pre></div>
@@ -292,12 +292,70 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb6-2"><a href="codes.html#cb6-2" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="codes.html#cb6-3" tabindex="-1"></a>x, y <span class="op">=</span> symbols(<span class="st">&#39;x y&#39;</span>)</span>
 <span id="cb6-4"><a href="codes.html#cb6-4" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="codes.html#cb6-5" tabindex="-1"></a><span class="co"># If Theta=pi and c=1</span></span>
+<span id="cb6-5"><a href="codes.html#cb6-5" tabindex="-1"></a><span class="co"># If Theta=1 and c=1</span></span>
 <span id="cb6-6"><a href="codes.html#cb6-6" tabindex="-1"></a>theta<span class="op">=</span><span class="dv">1</span></span>
 <span id="cb6-7"><a href="codes.html#cb6-7" tabindex="-1"></a>c<span class="op">=</span><span class="dv">6</span></span>
 <span id="cb6-8"><a href="codes.html#cb6-8" tabindex="-1"></a>p<span class="op">=</span>plot_implicit(log(x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> y<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>cos(theta) <span class="op">+</span> atan(y<span class="op">/</span>x)<span class="op">*</span>sin(theta) <span class="op">-</span>c,(x, <span class="op">-</span><span class="dv">45</span>, <span class="dv">45</span>), (y, <span class="op">-</span><span class="dv">80</span>, <span class="dv">80</span>),show<span class="op">=</span><span class="va">False</span>,xlabel<span class="op">=</span><span class="st">&#39;Re&#39;</span>,ylabel<span class="op">=</span><span class="st">&#39;Im&#39;</span>)</span>
 <span id="cb6-9"><a href="codes.html#cb6-9" tabindex="-1"></a>p.show()</span></code></pre></div>
 <p><img src="ConformalMapping_files/figure-html/unnamed-chunk-62-11.png" width="672" /></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="codes.html#cb7-1" tabindex="-1"></a>theta<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb7-2"><a href="codes.html#cb7-2" tabindex="-1"></a>c<span class="op">=</span><span class="fl">0.5</span></span>
+<span id="cb7-3"><a href="codes.html#cb7-3" tabindex="-1"></a>p<span class="op">=</span>plot_implicit(x<span class="op">+</span>y<span class="op">-</span><span class="dv">1</span>,</span>
+<span id="cb7-4"><a href="codes.html#cb7-4" tabindex="-1"></a>(x, <span class="op">-</span><span class="dv">50</span>, <span class="dv">50</span>), (y, <span class="op">-</span><span class="dv">50</span>, <span class="dv">50</span>), show<span class="op">=</span><span class="va">False</span>,line_color<span class="op">=</span><span class="st">&#39;white&#39;</span>)</span>
+<span id="cb7-5"><a href="codes.html#cb7-5" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="codes.html#cb7-6" tabindex="-1"></a>p11<span class="op">=</span>plot_implicit(log(x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> y<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>sin(theta) <span class="op">+</span> (atan(y<span class="op">/</span>x)<span class="op">+</span><span class="dv">0</span>)<span class="op">*</span>cos(theta) <span class="op">-</span>c,</span>
+<span id="cb7-7"><a href="codes.html#cb7-7" tabindex="-1"></a>(x, <span class="dv">0</span>, <span class="dv">10</span>), (y, <span class="dv">0</span>, <span class="dv">10</span>), show<span class="op">=</span><span class="va">False</span>,line_color<span class="op">=</span><span class="st">&#39;black&#39;</span>)</span>
+<span id="cb7-8"><a href="codes.html#cb7-8" tabindex="-1"></a>p12<span class="op">=</span>plot_implicit(log(x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> y<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>sin(theta) <span class="op">+</span> (atan(y<span class="op">/</span>x)<span class="op">+</span>pi)<span class="op">*</span>cos(theta) <span class="op">-</span>c,</span>
+<span id="cb7-9"><a href="codes.html#cb7-9" tabindex="-1"></a>(x, <span class="op">-</span><span class="dv">10</span>, <span class="dv">0</span>), (y, <span class="dv">0</span>,<span class="dv">10</span>), show<span class="op">=</span><span class="va">False</span>,line_color<span class="op">=</span><span class="st">&#39;black&#39;</span>)</span>
+<span id="cb7-10"><a href="codes.html#cb7-10" tabindex="-1"></a>p13<span class="op">=</span>plot_implicit(log(x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> y<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>sin(theta) <span class="op">+</span> (atan(y<span class="op">/</span>x)<span class="op">-</span>pi)<span class="op">*</span>cos(theta) <span class="op">-</span>c,</span>
+<span id="cb7-11"><a href="codes.html#cb7-11" tabindex="-1"></a>(x,  <span class="op">-</span><span class="dv">10</span>,<span class="dv">0</span>), (y, <span class="op">-</span><span class="dv">10</span>,<span class="dv">0</span>), show<span class="op">=</span><span class="va">False</span>,line_color<span class="op">=</span><span class="st">&#39;black&#39;</span>)</span>
+<span id="cb7-12"><a href="codes.html#cb7-12" tabindex="-1"></a>p14<span class="op">=</span>plot_implicit(log(x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> y<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>sin(theta) <span class="op">+</span> (atan(y<span class="op">/</span>x)<span class="op">+</span><span class="dv">0</span>)<span class="op">*</span>cos(theta) <span class="op">-</span>c,</span>
+<span id="cb7-13"><a href="codes.html#cb7-13" tabindex="-1"></a>(x, <span class="dv">0</span>,<span class="dv">10</span>), (y, <span class="op">-</span><span class="dv">10</span>,<span class="dv">0</span>), show<span class="op">=</span><span class="va">False</span>,line_color<span class="op">=</span><span class="st">&#39;black&#39;</span>)</span>
+<span id="cb7-14"><a href="codes.html#cb7-14" tabindex="-1"></a></span>
+<span id="cb7-15"><a href="codes.html#cb7-15" tabindex="-1"></a>p.extend(p11)</span>
+<span id="cb7-16"><a href="codes.html#cb7-16" tabindex="-1"></a>p.extend(p12)</span>
+<span id="cb7-17"><a href="codes.html#cb7-17" tabindex="-1"></a>p.extend(p13)</span>
+<span id="cb7-18"><a href="codes.html#cb7-18" tabindex="-1"></a>p.extend(p14)</span>
+<span id="cb7-19"><a href="codes.html#cb7-19" tabindex="-1"></a></span>
+<span id="cb7-20"><a href="codes.html#cb7-20" tabindex="-1"></a>p.show()</span></code></pre></div>
+<p><img src="ConformalMapping_files/figure-html/unnamed-chunk-63-13.png" width="672" /></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="codes.html#cb8-1" tabindex="-1"></a>theta<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb8-2"><a href="codes.html#cb8-2" tabindex="-1"></a>c<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb8-3"><a href="codes.html#cb8-3" tabindex="-1"></a>p<span class="op">=</span>plot_implicit(x<span class="op">+</span>y<span class="op">-</span><span class="dv">1</span>,</span>
+<span id="cb8-4"><a href="codes.html#cb8-4" tabindex="-1"></a>(x, <span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>), (y, <span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>), show<span class="op">=</span><span class="va">False</span>,line_color<span class="op">=</span><span class="st">&#39;white&#39;</span>)</span>
+<span id="cb8-5"><a href="codes.html#cb8-5" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="codes.html#cb8-6" tabindex="-1"></a>p11<span class="op">=</span>plot_implicit(log(x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> y<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>sin(theta) <span class="op">+</span> (atan(y<span class="op">/</span>x)<span class="op">+</span><span class="dv">0</span>)<span class="op">*</span>cos(theta) <span class="op">-</span>c,</span>
+<span id="cb8-7"><a href="codes.html#cb8-7" tabindex="-1"></a>(x, <span class="dv">0</span>, <span class="dv">5</span>), (y, <span class="dv">0</span>, <span class="dv">5</span>), show<span class="op">=</span><span class="va">False</span>,line_color<span class="op">=</span><span class="st">&#39;b&#39;</span>)</span>
+<span id="cb8-8"><a href="codes.html#cb8-8" tabindex="-1"></a>p12<span class="op">=</span>plot_implicit(log(x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> y<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>sin(theta) <span class="op">+</span> (atan(y<span class="op">/</span>x)<span class="op">+</span>pi)<span class="op">*</span>cos(theta) <span class="op">-</span>c,</span>
+<span id="cb8-9"><a href="codes.html#cb8-9" tabindex="-1"></a>(x, <span class="op">-</span><span class="dv">5</span>, <span class="dv">0</span>), (y, <span class="dv">0</span>,<span class="dv">5</span>), show<span class="op">=</span><span class="va">False</span>,line_color<span class="op">=</span><span class="st">&#39;b&#39;</span>)</span>
+<span id="cb8-10"><a href="codes.html#cb8-10" tabindex="-1"></a>p13<span class="op">=</span>plot_implicit(log(x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> y<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>sin(theta) <span class="op">+</span> (atan(y<span class="op">/</span>x)<span class="op">-</span>pi)<span class="op">*</span>cos(theta) <span class="op">-</span>c,</span>
+<span id="cb8-11"><a href="codes.html#cb8-11" tabindex="-1"></a>(x,  <span class="op">-</span><span class="dv">5</span>,<span class="dv">0</span>), (y, <span class="op">-</span><span class="dv">5</span>,<span class="dv">0</span>), show<span class="op">=</span><span class="va">False</span>,line_color<span class="op">=</span><span class="st">&#39;b&#39;</span>)</span>
+<span id="cb8-12"><a href="codes.html#cb8-12" tabindex="-1"></a>p14<span class="op">=</span>plot_implicit(log(x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> y<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>sin(theta) <span class="op">+</span> (atan(y<span class="op">/</span>x)<span class="op">+</span><span class="dv">0</span>)<span class="op">*</span>cos(theta) <span class="op">-</span>c,</span>
+<span id="cb8-13"><a href="codes.html#cb8-13" tabindex="-1"></a>(x, <span class="dv">0</span>,<span class="dv">5</span>), (y, <span class="op">-</span><span class="dv">5</span>,<span class="dv">0</span>), show<span class="op">=</span><span class="va">False</span>,line_color<span class="op">=</span><span class="st">&#39;b&#39;</span>)</span>
+<span id="cb8-14"><a href="codes.html#cb8-14" tabindex="-1"></a></span>
+<span id="cb8-15"><a href="codes.html#cb8-15" tabindex="-1"></a>p.extend(p11)</span>
+<span id="cb8-16"><a href="codes.html#cb8-16" tabindex="-1"></a>p.extend(p12)</span>
+<span id="cb8-17"><a href="codes.html#cb8-17" tabindex="-1"></a>p.extend(p13)</span>
+<span id="cb8-18"><a href="codes.html#cb8-18" tabindex="-1"></a>p.extend(p14)</span>
+<span id="cb8-19"><a href="codes.html#cb8-19" tabindex="-1"></a></span>
+<span id="cb8-20"><a href="codes.html#cb8-20" tabindex="-1"></a>c<span class="op">=</span><span class="fl">1.5</span></span>
+<span id="cb8-21"><a href="codes.html#cb8-21" tabindex="-1"></a></span>
+<span id="cb8-22"><a href="codes.html#cb8-22" tabindex="-1"></a>p21<span class="op">=</span>plot_implicit(log(x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> y<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>sin(theta) <span class="op">+</span> (atan(y<span class="op">/</span>x)<span class="op">+</span><span class="dv">0</span>)<span class="op">*</span>cos(theta) <span class="op">-</span>c,</span>
+<span id="cb8-23"><a href="codes.html#cb8-23" tabindex="-1"></a>(x, <span class="dv">0</span>, <span class="dv">5</span>), (y, <span class="dv">0</span>, <span class="dv">5</span>), show<span class="op">=</span><span class="va">False</span>,line_color<span class="op">=</span><span class="st">&#39;red&#39;</span>)</span>
+<span id="cb8-24"><a href="codes.html#cb8-24" tabindex="-1"></a>p22<span class="op">=</span>plot_implicit(log(x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> y<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>sin(theta) <span class="op">+</span> (atan(y<span class="op">/</span>x)<span class="op">+</span>pi)<span class="op">*</span>cos(theta) <span class="op">-</span>c,</span>
+<span id="cb8-25"><a href="codes.html#cb8-25" tabindex="-1"></a>(x, <span class="op">-</span><span class="dv">5</span>, <span class="dv">0</span>), (y, <span class="dv">0</span>,<span class="dv">5</span>), show<span class="op">=</span><span class="va">False</span>,line_color<span class="op">=</span><span class="st">&#39;red&#39;</span>)</span>
+<span id="cb8-26"><a href="codes.html#cb8-26" tabindex="-1"></a>p23<span class="op">=</span>plot_implicit(log(x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> y<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>sin(theta) <span class="op">+</span> (atan(y<span class="op">/</span>x)<span class="op">-</span>pi)<span class="op">*</span>cos(theta) <span class="op">-</span>c,</span>
+<span id="cb8-27"><a href="codes.html#cb8-27" tabindex="-1"></a>(x,  <span class="op">-</span><span class="dv">5</span>,<span class="dv">0</span>), (y, <span class="op">-</span><span class="dv">5</span>,<span class="dv">0</span>), show<span class="op">=</span><span class="va">False</span>,line_color<span class="op">=</span><span class="st">&#39;red&#39;</span>)</span>
+<span id="cb8-28"><a href="codes.html#cb8-28" tabindex="-1"></a>p24<span class="op">=</span>plot_implicit(log(x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> y<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>sin(theta) <span class="op">+</span> (atan(y<span class="op">/</span>x)<span class="op">+</span><span class="dv">0</span>)<span class="op">*</span>cos(theta) <span class="op">-</span>c,</span>
+<span id="cb8-29"><a href="codes.html#cb8-29" tabindex="-1"></a>(x, <span class="dv">0</span>,<span class="dv">5</span>), (y, <span class="op">-</span><span class="dv">5</span>,<span class="dv">0</span>), show<span class="op">=</span><span class="va">False</span>,line_color<span class="op">=</span><span class="st">&#39;red&#39;</span>)</span>
+<span id="cb8-30"><a href="codes.html#cb8-30" tabindex="-1"></a></span>
+<span id="cb8-31"><a href="codes.html#cb8-31" tabindex="-1"></a></span>
+<span id="cb8-32"><a href="codes.html#cb8-32" tabindex="-1"></a>p.extend(p21)</span>
+<span id="cb8-33"><a href="codes.html#cb8-33" tabindex="-1"></a>p.extend(p22)</span>
+<span id="cb8-34"><a href="codes.html#cb8-34" tabindex="-1"></a>p.extend(p23)</span>
+<span id="cb8-35"><a href="codes.html#cb8-35" tabindex="-1"></a>p.extend(p24)</span>
+<span id="cb8-36"><a href="codes.html#cb8-36" tabindex="-1"></a>p.show()</span></code></pre></div>
+<p><img src="ConformalMapping_files/figure-html/unnamed-chunk-64-15.png" width="672" /></p>
 
 </div>
 </div>

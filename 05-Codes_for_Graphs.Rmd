@@ -72,6 +72,8 @@ p1=plot_implicit(log(x**2 + y**2)*sin(theta) + atan(y/x)*cos(theta) -c,(x, -10, 
 p.extend(p1)
 p.show()
 ```
+
+
 ```{python}
 from sympy import *
 
@@ -96,7 +98,7 @@ from sympy import *
 
 x, y = symbols('x y')
 
-# If Theta=pi and c=1
+# If Theta=1 and c=1
 theta=1
 c=1
 p=plot_implicit(log(x**2 + y**2)*cos(theta) + atan(y/x)*sin(theta) -c,(x, -10, 10), (y, -10, 10))
@@ -115,9 +117,73 @@ from sympy import *
 
 x, y = symbols('x y')
 
-# If Theta=pi and c=1
+# If Theta=1 and c=1
 theta=1
 c=6
 p=plot_implicit(log(x**2 + y**2)*cos(theta) + atan(y/x)*sin(theta) -c,(x, -45, 45), (y, -80, 80),show=False,xlabel='Re',ylabel='Im')
+p.show()
+```
+
+```{python}
+
+theta=1
+c=0.5
+p=plot_implicit(x+y-1,
+(x, -50, 50), (y, -50, 50), show=False,line_color='white')
+
+p11=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0, 10), (y, 0, 10), show=False,line_color='black')
+p12=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+pi)*cos(theta) -c,
+(x, -10, 0), (y, 0,10), show=False,line_color='black')
+p13=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)-pi)*cos(theta) -c,
+(x,  -10,0), (y, -10,0), show=False,line_color='black')
+p14=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0,10), (y, -10,0), show=False,line_color='black')
+
+p.extend(p11)
+p.extend(p12)
+p.extend(p13)
+p.extend(p14)
+
+p.show()
+```
+
+```{python}
+
+theta=1
+c=1
+p=plot_implicit(x+y-1,
+(x, -5, 5), (y, -5, 5), show=False,line_color='white')
+
+p11=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0, 5), (y, 0, 5), show=False,line_color='b')
+p12=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+pi)*cos(theta) -c,
+(x, -5, 0), (y, 0,5), show=False,line_color='b')
+p13=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)-pi)*cos(theta) -c,
+(x,  -5,0), (y, -5,0), show=False,line_color='b')
+p14=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0,5), (y, -5,0), show=False,line_color='b')
+
+p.extend(p11)
+p.extend(p12)
+p.extend(p13)
+p.extend(p14)
+
+c=1.5
+
+p21=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0, 5), (y, 0, 5), show=False,line_color='red')
+p22=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+pi)*cos(theta) -c,
+(x, -5, 0), (y, 0,5), show=False,line_color='red')
+p23=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)-pi)*cos(theta) -c,
+(x,  -5,0), (y, -5,0), show=False,line_color='red')
+p24=plot_implicit(log(x**2 + y**2)*sin(theta) + (atan(y/x)+0)*cos(theta) -c,
+(x, 0,5), (y, -5,0), show=False,line_color='red')
+
+
+p.extend(p21)
+p.extend(p22)
+p.extend(p23)
+p.extend(p24)
 p.show()
 ```
